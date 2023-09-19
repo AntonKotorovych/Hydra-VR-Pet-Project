@@ -1,0 +1,27 @@
+@import 'colorMatrix.css';
+@import 'button.css';
+@import 'mainNavBar.css';
+@import 'mainHeader.css';
+@import 'mainHeaderFooter.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Main Font */
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  /* Margin */
+  margin: 20px 84px;
+
+  /* Colors */
+  background-color: var(--background-color);
+  color: var(--text-color);
+}

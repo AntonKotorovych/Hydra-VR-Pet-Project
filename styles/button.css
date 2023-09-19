@@ -1,0 +1,21 @@
+button:hover {
+  color: rgb(239, 255, 117);
+  cursor: pointer;
+  outline-style: solid;
+  font-size: 13px;
+}
+
+button {
+  width: 155px;
+  height: 48px;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+  color: var(--button-text-color);
+  font-family: inherit;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/*  */

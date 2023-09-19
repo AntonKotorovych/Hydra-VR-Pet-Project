@@ -1,0 +1,76 @@
+.main-header {
+  margin-top: 174px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header__title {
+  font-family: 'Montserrat';
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 450px;
+}
+
+.main-header__title-dive {
+  background: linear-gradient(92deg, #c0b7e8 -1.02%, #8176af 36.25%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.main-header__title-of-virtual-reality {
+  background: linear-gradient(92deg, #c0b7e8 -1.02%, #8176af 36.25%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.main-header__description {
+  color: #fff;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 36px;
+  display: inline-block;
+  width: 450px;
+}
+
+.main-header__navigation {
+  margin-top: 33px;
+  display: flex;
+  align-items: center;
+}
+
+.main-header__navigation button {
+  width: 214px;
+}
+
+.main-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-height: 700px;
+}
+
+.image-container {
+  width: 524px;
+  height: 455px;
+  overflow: hidden;
+  border-radius: 100px 100px 100px 240px;
+  outline-style: solid;
+  outline-color: rgba(42, 42, 42, 0.6);
+  outline-width: 18px;
+}
+
+.image-container img {
+  height: auto;
+  width: 100%;
+  transform: translateY(-7%);
+  object-fit: cover;
+}
