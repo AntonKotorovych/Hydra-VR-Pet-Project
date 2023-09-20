@@ -12,11 +12,9 @@
 
 body {
   /* Main Font */
-  font-family: 'Montserrat';
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+  font-family: 'Fasthand', cursive;
+
+  font-family: 'Montserrat', sans-serif;
 
   /* Margin */
   margin: 20px 84px;

@@ -23,11 +23,13 @@
 .navbar-menu li {
   display: inline-block;
   margin: 20px;
+  font-weight: bold;
 }
 
 .navbar-menu li a {
   display: inline-block;
   text-decoration: none;
+
   color: var(--text-color);
 }
 
