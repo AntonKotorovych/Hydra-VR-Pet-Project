@@ -13,6 +13,11 @@
   width: 450px;
 }
 
+.main-header__title:hover {
+  transition: transform 0.5s ease;
+  transform: scale(1.2);
+}
+
 .main-header__title-dive {
   background: linear-gradient(92deg, #c0b7e8 -1.02%, #8176af 36.25%);
   -webkit-background-clip: text;
@@ -41,6 +46,11 @@
   width: 450px;
 }
 
+.main-header__description:hover {
+  transition: transform 0.5s ease;
+  transform: scale(1.2);
+}
+
 .main-header__navigation {
   margin-top: 33px;
   display: flex;
@@ -49,6 +59,25 @@
 
 .main-header__navigation button {
   width: 214px;
+}
+
+header:hover .arrow-image {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.main-header-container:hover .arrow-image:hover {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: scale(1.7);
+  opacity: 0.6;
+}
+
+.main-header-container:hover .girl-image:hover {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: scale(1.1, 1.1);
+
+  opacity: 0.7;
 }
 
 .main-header-container {

@@ -2,7 +2,8 @@ button:hover {
   color: rgb(239, 255, 117);
   cursor: pointer;
   outline-style: solid;
-  font-size: 13px;
+  transition: transform 0.5s ease;
+  transform: scale(1.2);
 }
 
 button {
@@ -17,5 +18,3 @@ button {
   font-weight: 700;
   line-height: normal;
 }
-
-/*  */
