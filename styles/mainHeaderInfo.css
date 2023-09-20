@@ -1,4 +1,4 @@
-.main-header__footer {
+.main-header__info {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -14,7 +14,7 @@
   box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
 }
 
-.main-header__footer h2 {
+.main-header__info h2 {
   color: #fff;
   font-family: inherit;
   font-size: 24px;
@@ -23,7 +23,7 @@
   line-height: normal;
 }
 
-.main-header__footer span {
+.main-header__info span {
   color: #fff;
   font-family: inherit;
   font-size: 14px;
@@ -32,7 +32,7 @@
   line-height: normal;
 }
 
-.main-header__footer-wrapper {
+.main-header__info-wrapper {
   display: flex;
   align-items: center;
 }
