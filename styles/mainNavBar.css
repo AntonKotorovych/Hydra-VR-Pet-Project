@@ -16,13 +16,10 @@
   align-items: center;
 }
 
-.navbar-menu {
-  list-style-type: none;
-}
-
 .navbar-menu li {
   display: inline-block;
   margin: 20px;
+  text-transform: uppercase;
   font-weight: bold;
   font-size: var(--font-size-small);
 }
