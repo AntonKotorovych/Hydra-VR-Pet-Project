@@ -24,13 +24,14 @@
   display: inline-block;
   margin: 20px;
   font-weight: bold;
+  font-size: var(--font-size-small);
 }
 
 .navbar-menu li a {
   display: inline-block;
   text-decoration: none;
 
-  color: var(--text-color);
+  color: var(--text-color-white);
 }
 
 .navbar-menu a:hover {

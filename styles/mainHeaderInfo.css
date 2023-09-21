@@ -15,20 +15,16 @@
 }
 
 .main-header__info h2 {
-  color: #fff;
-  font-family: inherit;
-  font-size: 24px;
-  font-style: normal;
+  color: var(--text-color-white);
+  font-size: var(--font-size-large);
   font-weight: 700;
   line-height: normal;
 }
 
 .main-header__info span {
-  color: #fff;
+  color: var(--text-color-white);
   font-family: inherit;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
+  font-size: var(--font-size-normal);
   line-height: normal;
 }
 
