@@ -25,4 +25,23 @@
 .main-header__info-wrapper {
   display: flex;
   align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+#stroke::after {
+  content: '';
+  width: 1px;
+  height: 116.5px;
+  background-color: rgba(192, 183, 232, 0.33);
+  position: absolute;
+  left: -100px;
+}
+
+.main-header__call {
+  margin-left: 29px;
+}
+
+.main-header__message {
+  margin-left: 23px;
 }

@@ -19,10 +19,12 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: var(--font-size-small);
 
-  /* Margin */
-  margin: 20px 84px;
-
   /* Colors */
   background-color: var(--background-color);
   color: var(--text-color);
+}
+
+.container {
+  max-width: 85%;
+  margin: 0 auto;
 }
