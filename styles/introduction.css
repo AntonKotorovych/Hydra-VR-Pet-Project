@@ -1,0 +1,48 @@
+.introduction-container {
+  margin-top: 100px;
+}
+
+.introduction-title {
+  max-width: 50%;
+}
+
+.introduction-title h2 {
+  text-transform: uppercase;
+  color: var(--text-color-white);
+  font-size: var(--font-size-big);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.introduction-title h3 {
+  text-transform: uppercase;
+  color: var(--text-color-white);
+  font-size: var(--font-size-big);
+  font-weight: 300;
+  margin-top: 5px;
+}
+
+.long-arrow-flex {
+  display: flex;
+  align-items: center;
+  height: 15px;
+}
+
+.long-arrow-flex img {
+  margin-left: 30px;
+}
+
+.introduction-description {
+  max-width: 50%;
+}
+
+.introduction-description span {
+  color: var(--text-color-white);
+  font-size: var(--font-size-medium);
+}
+
+.introduction-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

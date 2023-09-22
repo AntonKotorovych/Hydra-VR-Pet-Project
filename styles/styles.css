@@ -5,6 +5,7 @@
 @import 'mainNavBar.css';
 @import 'mainHeader.css';
 @import 'mainHeaderInfo.css';
+@import 'introduction.css';
 
 * {
   margin: 0;
