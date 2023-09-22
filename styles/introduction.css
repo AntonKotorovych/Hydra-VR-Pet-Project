@@ -1,9 +1,11 @@
 .introduction-container {
   margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .introduction-title {
-  max-width: 50%;
+  padding-bottom: 42px;
 }
 
 .introduction-title h2 {
@@ -11,7 +13,7 @@
   color: var(--text-color-white);
   font-size: var(--font-size-big);
   font-weight: 700;
-  margin-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .introduction-title h3 {
@@ -19,7 +21,6 @@
   color: var(--text-color-white);
   font-size: var(--font-size-big);
   font-weight: 300;
-  margin-top: 5px;
 }
 
 .long-arrow-flex {
@@ -33,7 +34,8 @@
 }
 
 .introduction-description {
-  max-width: 50%;
+  padding-bottom: 28px;
+  max-width: 750px;
 }
 
 .introduction-description span {
@@ -41,8 +43,25 @@
   font-size: var(--font-size-medium);
 }
 
-.introduction-container {
+.boy {
+  width: 546px;
+  height: 500px;
+  object-fit: cover;
+  object-position: 80% 0%;
+  flex-shrink: 0;
+  border-radius: 250px 100px 250px 100px;
+}
+
+.about-container {
+  margin-top: 100px;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.about-description {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 700px;
 }
