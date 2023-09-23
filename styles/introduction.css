@@ -106,3 +106,9 @@
   color: var(--text-color-white);
   padding: 15px 0;
 }
+
+.h-line {
+  width: 50%;
+  height: 1px;
+  background-color: var(--h-line-color);
+}
