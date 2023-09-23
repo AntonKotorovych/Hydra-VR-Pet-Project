@@ -14,4 +14,10 @@
     #211e2e 100%
   );
   --main-header-box-shadow: rgba(192, 183, 232, 0.01);
+  --features-img-shadow: rgba(14, 14, 14, 0.32);
+  --features-item-background: radial-gradient(
+    50% 50% at 50% 50%,
+    #433d60 0%,
+    #211e2e 100%
+  );
 }
