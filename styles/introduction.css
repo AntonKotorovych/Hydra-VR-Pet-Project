@@ -4,11 +4,11 @@
   justify-content: space-between;
 }
 
-.introduction-title {
+.introduction__title {
   padding-bottom: 42px;
 }
 
-.introduction-title h2 {
+.introduction__title h2 {
   text-transform: uppercase;
   color: var(--text-color-white);
   font-size: var(--font-size-big);
@@ -16,7 +16,7 @@
   padding-bottom: 20px;
 }
 
-.introduction-title h3 {
+.introduction__title h3 {
   text-transform: uppercase;
   color: var(--text-color-white);
   font-size: var(--font-size-big);
@@ -33,12 +33,12 @@
   margin-left: 30px;
 }
 
-.introduction-description {
+.introduction__description {
   padding-bottom: 28px;
   max-width: 750px;
 }
 
-.introduction-description span {
+.introduction__description span {
   color: var(--text-color-white);
   font-size: var(--font-size-medium);
 }
@@ -50,9 +50,15 @@
   object-position: 80% 0%;
   flex-shrink: 0;
   border-radius: 250px 100px 250px 100px;
+  transition: object-position 0.5s ease, opacity 0.5s ease;
 }
 
-.about-container {
+.boy:hover {
+  object-position: 0% 5%;
+  opacity: 0.5;
+}
+
+.about {
   margin-top: 100px;
   display: flex;
   flex-direction: row;
@@ -60,7 +66,7 @@
   justify-content: space-between;
 }
 
-.about-description {
+.about__description {
   display: flex;
   flex-direction: column;
   flex-basis: 700px;
@@ -87,6 +93,12 @@
   height: 200px;
   width: 200px;
   border: solid 12px var(--features-img-shadow);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.features__item img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
 }
 
 .simulation-img {
