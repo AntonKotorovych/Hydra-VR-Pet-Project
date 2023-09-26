@@ -2,6 +2,15 @@
   margin-top: 100px;
   display: flex;
   justify-content: space-between;
+  width: 100%;
+}
+
+.introduction-container__left-item {
+  width: 40%;
+}
+
+.introduction-container__right-item {
+  width: 50%;
 }
 
 .introduction__title {
@@ -43,8 +52,12 @@
   font-size: var(--font-size-medium);
 }
 
+.image-container__boy {
+  width: 50%;
+}
+
 .boy {
-  width: 546px;
+  width: 80%;
   height: 500px;
   object-fit: cover;
   object-position: 80% 0%;
@@ -69,7 +82,7 @@
 .about__description {
   display: flex;
   flex-direction: column;
-  flex-basis: 700px;
+  width: 50%;
 }
 
 .features {
