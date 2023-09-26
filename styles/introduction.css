@@ -1,23 +1,23 @@
-.introduction-container {
+.content-container {
   margin-top: 100px;
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-.introduction-container__left-item {
+.content-container__left-item {
   width: 40%;
 }
 
-.introduction-container__right-item {
+.content-container__right-item {
   width: 50%;
 }
 
-.introduction__title {
+.content__title {
   padding-bottom: 42px;
 }
 
-.introduction__title h2 {
+.content__title h2 {
   text-transform: uppercase;
   color: var(--text-color-white);
   font-size: var(--font-size-big);
@@ -25,7 +25,7 @@
   padding-bottom: 20px;
 }
 
-.introduction__title h3 {
+.content__title h3 {
   text-transform: uppercase;
   color: var(--text-color-white);
   font-size: var(--font-size-big);
@@ -42,22 +42,23 @@
   margin-left: 30px;
 }
 
-.introduction__description {
+.content__description {
   padding-bottom: 28px;
   max-width: 750px;
+  line-height: 28px;
 }
 
-.introduction__description span {
+.content__description span {
   color: var(--text-color-white);
   font-size: var(--font-size-medium);
 }
 
-.image-container__boy {
+.about__image {
   width: 50%;
 }
 
 .boy {
-  width: 80%;
+  width: 70%;
   height: 500px;
   object-fit: cover;
   object-position: 80% 0%;
