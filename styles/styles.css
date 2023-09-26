@@ -6,6 +6,7 @@
 @import 'mainHeader.css';
 @import 'mainHeaderInfo.css';
 @import 'introduction.css';
+@import 'technologies.css';
 
 * {
   margin: 0;
