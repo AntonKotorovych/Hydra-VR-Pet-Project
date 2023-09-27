@@ -7,6 +7,7 @@
 @import 'mainHeaderInfo.css';
 @import 'introduction.css';
 @import 'technologies.css';
+@import 'technologiesBrands.css';
 
 * {
   margin: 0;
