@@ -1,16 +1,33 @@
 .technologies-container {
   width: 100%;
-  height: 350px;
+  height: 330px;
   margin: 40px 0;
-  border-radius: 200px 200px 200px 200px;
-  overflow: hidden;
+  position: relative;
 }
 
-.technologies-container img {
-  width: 100%;
+.sexy-girl {
   height: 100%;
-  object-fit: cover;
-  opacity: 0.25;
-  transform: scale(1.4) translateX(60px);
-  object-position: 100% 29%;
+  width: 100%;
+  border-radius: 200px;
+  overflow: hidden;
+  background-image: url('../images/sexyGirl.jpg');
+  background-position: -100px -285px;
+  background-size: 130%;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  position: absolute;
+  z-index: -1;
+}
+
+.technologies__title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.technologies__title h2,
+.technologies__title h3 {
+  opacity: 1;
 }
