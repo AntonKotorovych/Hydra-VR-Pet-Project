@@ -49,9 +49,9 @@
 
 .arrow-down {
   border-radius: 50%;
-  border-style: solid;
-  border-width: 13px;
-  border-color: rgb(23, 23, 23);
+  outline-style: solid;
+  outline-width: 20px;
+  outline-color: var(--outline-color);
   background: var(--arrow-gradient-color);
   position: absolute;
   bottom: -45px;

@@ -8,6 +8,7 @@
 @import 'introduction.css';
 @import 'technologies.css';
 @import 'technologiesBrands.css';
+@import 'buildFeatures.css';
 
 * {
   margin: 0;
