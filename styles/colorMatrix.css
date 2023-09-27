@@ -33,4 +33,9 @@
   );
   --h-line-color: rgba(192, 183, 232, 0.33);
   --outline-color: rgba(13, 13, 13, 0.32);
+  --form-background: radial-gradient(
+    50% 50% at 50% 50%,
+    #403a5f 0%,
+    #211e2e 100%
+  );
 }
