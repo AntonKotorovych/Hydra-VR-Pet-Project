@@ -1,6 +1,6 @@
 .form {
   width: 100%;
-  height: 1000px;
+  height: 1150px;
   border-radius: 100px;
   background: var(--form-background);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -39,7 +39,44 @@
 
 textarea {
   resize: none;
+  background: transparent;
+  width: 100%;
+  border: 2px solid var(--text-color-white);
+  border-radius: 40px;
+  margin: 30px 8px;
+  margin-bottom: 60px;
+  padding-left: 40px;
+  padding-top: 30px;
+  font-size: var(--font-size-normal);
+  color: var(--text-color-white);
+}
+
+form {
+  width: 100%;
+}
+
+form div {
+  display: flex;
+  justify-content: center;
 }
 
 form div input {
+  background: transparent;
+  height: 72px;
+  width: 50%;
+  border: 2px solid var(--text-color-white);
+  border-radius: 40px;
+  margin: 30px 8px;
+  font-size: var(--font-size-normal);
+  color: var(--text-color-white);
+  padding-left: 40px;
+}
+
+#subject {
+  width: 100%;
+}
+
+::placeholder {
+  font-size: var(--font-size-normal);
+  color: var(--text-color-white);
 }
