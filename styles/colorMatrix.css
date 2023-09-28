@@ -1,6 +1,7 @@
 :root {
   --background-color: #302c42;
   --text-color-white: #fff;
+  --text-color-link: #df8afb;
   --button-text-color: #343045;
   --text-color-black: #000;
   --button-gradient-color: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
@@ -13,4 +14,11 @@
     #211e2e 100%
   );
   --main-header-box-shadow: rgba(192, 183, 232, 0.01);
+  --features-img-shadow: rgba(14, 14, 14, 0.32);
+  --features-item-background: radial-gradient(
+    50% 50% at 50% 50%,
+    #433d60 0%,
+    #211e2e 100%
+  );
+  --h-line-color: rgba(192, 183, 232, 0.33);
 }
