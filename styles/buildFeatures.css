@@ -8,7 +8,6 @@
 }
 
 .build-features__item {
-  position: relative;
   display: flex;
   flex-direction: column;
   max-width: 190px;
@@ -32,6 +31,7 @@
 }
 
 .build-features__item-title {
+  position: relative;
   font-size: var(--font-size-large);
   font-weight: 700;
   color: var(--text-color-white);
