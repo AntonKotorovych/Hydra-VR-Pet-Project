@@ -66,4 +66,5 @@
 .image-container img:hover {
   transform: translateY(-3%);
   opacity: 0.5;
+
 }
