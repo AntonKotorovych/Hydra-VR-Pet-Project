@@ -36,3 +36,10 @@
   text-transform: none;
   margin-top: 20px;
 }
+
+textarea {
+  resize: none;
+}
+
+form div input {
+}
