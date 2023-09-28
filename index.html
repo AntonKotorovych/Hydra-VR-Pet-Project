@@ -95,8 +95,9 @@
                 <h2>
                   <a
                     href="mailto:Contact@HydraVTech.com?subject=Mail from customer of Hydra VR"
-                    >Send Us a Message</a
                   >
+                    Send Us a Message
+                  </a>
                 </h2>
                 <span>Contact@HydraVTech.com</span>
               </div>
@@ -249,17 +250,17 @@
                   <img
                     id="unreal-engine"
                     src="./images/unrealEngine.png"
-                    alt=""
+                    alt="Unreal Engine Logo"
                   />
                 </li>
                 <li>
-                  <img src="./images/unity.png" alt="" />
+                  <img src="./images/unity.png" alt="Unity Logo" />
                 </li>
                 <li>
-                  <img src="./images/oculus.png" alt="" />
+                  <img src="./images/oculus.png" alt="Oculus Logo" />
                 </li>
                 <li>
-                  <img src="./images/vive.png" alt="" />
+                  <img src="./images/vive.png" alt="Vive Logo" />
                 </li>
               </ul>
             </div>
@@ -295,21 +296,21 @@
             <ul>
               <li class="build-features__item">
                 <div class="build-features__item-circle">01</div>
-                <span class="build-features__item-title"
-                  >3D Conception & Design</span
-                >
+                <span class="build-features__item-title">
+                  3D Conception & Design
+                </span>
               </li>
               <li class="build-features__item">
                 <div class="build-features__item-circle">02</div>
-                <span class="build-features__item-title"
-                  >Interaction Design</span
-                >
+                <span class="build-features__item-title">
+                  Interaction Design
+                </span>
               </li>
               <li class="build-features__item">
                 <div class="build-features__item-circle">03</div>
-                <span class="build-features__item-title"
-                  >VR World User Testing</span
-                >
+                <span class="build-features__item-title">
+                  VR World User Testing
+                </span>
               </li>
               <li class="build-features__item">
                 <div class="build-features__item-circle">04</div>
@@ -331,6 +332,9 @@
                   id="first-name"
                   name="first-name"
                   placeholder="First Name"
+                  pattern="[A-Za-z]{1,25}"
+                  title="Only characters. No more than 25 characters"
+                  maxlength="25"
                   required
                 />
                 <input
@@ -338,6 +342,9 @@
                   id="last-name"
                   name="last-name"
                   placeholder="Last Name"
+                  pattern="[A-Za-z]{1,25}"
+                  title="Only characters. No more than 25 characters"
+                  maxlength="25"
                   required
                 />
               </div>
@@ -354,6 +361,8 @@
                   id="tel"
                   name="tel"
                   placeholder="Phone Number"
+                  pattern="\(\d{3}\) \d{3}-\d{4}"
+                  title='Enter your phone number in the format "(123) 456-7890"'
                   required
                 />
               </div>
@@ -363,6 +372,8 @@
                   id="subject"
                   name="subject"
                   placeholder="Subject"
+                  pattern="[^<>]*"
+                  title="Symbols < and > are not allowed"
                   required
                 />
               </div>

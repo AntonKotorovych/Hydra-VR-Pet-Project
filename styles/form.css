@@ -25,7 +25,7 @@
   content: '';
   height: 1px;
   width: 100%;
-  background-image: url('../images/hzLineSeparator.png');
+  background-image: url('../images/svg/hzLineSeparator.svg');
   position: absolute;
   bottom: 0;
   left: 0;
@@ -39,6 +39,7 @@
 
 textarea {
   resize: none;
+  font-family: inherit;
   background: transparent;
   width: 100%;
   border: 2px solid var(--text-color-white);
@@ -62,6 +63,7 @@ form div {
 
 form div input {
   background: transparent;
+  font-family: inherit;
   height: 72px;
   width: 50%;
   border: 2px solid var(--text-color-white);
