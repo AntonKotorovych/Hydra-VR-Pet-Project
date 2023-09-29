@@ -107,7 +107,7 @@
         <section>
           <div class="content-container">
             <div class="content-container__left-item">
-              <div class="content__title">
+              <div class="title">
                 <h2>introduction</h2>
                 <div class="long-arrow-flex">
                   <h3>to hydra vr</h3>
@@ -116,7 +116,7 @@
               </div>
             </div>
             <div class="content-container__right-item">
-              <div class="content__description">
+              <div class="description">
                 <span>
                   Vitae sapien pellentesque habitant morbi tristique senectus et
                   netus et. Feugiat nibh sed pulvinar proin gravida hendrerit
@@ -133,13 +133,13 @@
               <img class="boy" src="./images/boy.jpg" alt="boy" />
             </div>
             <div class="content-container__right-item">
-              <div class="content__title">
+              <div class="title">
                 <h2>about</h2>
                 <div class="long-arrow-flex">
                   <h3>hydra vr</h3>
                 </div>
               </div>
-              <div class="content__description">
+              <div class="description">
                 <span>
                   Eget mi proin sed libero enim sed faucibus turpis. Nisl
                   rhoncus mattis rhoncus urna neque viverra justo. Vivamus at
@@ -161,7 +161,7 @@
         <section>
           <div class="content-container">
             <div class="content-container__left-item">
-              <div class="content__title">
+              <div class="title">
                 <h2>why build</h2>
                 <div class="long-arrow-flex">
                   <h3>with hydra?</h3>
@@ -170,7 +170,7 @@
               </div>
             </div>
             <div class="content-container__right-item">
-              <div class="content__description">
+              <div class="description">
                 <span>
                   Vitae sapien pellentesque habitant morbi tristique senectus et
                   netus et. Feugiat nibh sed pulvinar proin gravida hendrerit
@@ -234,7 +234,7 @@
         <section>
           <div class="technologies-container">
             <div class="sexy-girl">
-              <div class="content__title technologies__title">
+              <div class="title technologies__title">
                 <h2>technologies & hardware</h2>
                 <h3>used by hydra vr.</h3>
               </div>
@@ -269,7 +269,7 @@
         <section>
           <div class="content-container">
             <div class="content-container__left-item">
-              <div class="content__title">
+              <div class="title">
                 <h2>how we build</h2>
                 <div class="long-arrow-flex">
                   <h3>with hydra vr?</h3>
@@ -278,7 +278,7 @@
               </div>
             </div>
             <div class="content-container__right-item">
-              <div class="content__description">
+              <div class="description">
                 <span>
                   Vitae sapien pellentesque habitant morbi tristique senectus et
                   netus et. Feugiat nibh sed pulvinar proin gravida hendrerit
@@ -315,52 +315,60 @@
         </section>
         <section>
           <div class="form">
-            <div class="content__title form__title">
+            <div class="title form__title">
               <h2>join hydra</h2>
               <h3>Let's Build Your VR Experience</h3>
             </div>
             <form class="main-form">
-              <div>
-                <input
-                  type="text"
-                  id="first-name"
-                  name="first-name"
-                  placeholder="First Name"
-                  pattern="[A-Za-z]{1,25}"
-                  title="Only characters. No more than 25 characters"
-                  maxlength="25"
-                  required
-                />
-                <input
-                  type="text"
-                  id="last-name"
-                  name="last-name"
-                  placeholder="Last Name"
-                  pattern="[A-Za-z]{1,25}"
-                  title="Only characters. No more than 25 characters"
-                  maxlength="25"
-                  required
-                />
+              <div class="main-form__wrap-inputs">
+                <div class="main-form__50width">
+                  <input
+                    type="text"
+                    id="first-name"
+                    name="first-name"
+                    placeholder="First Name"
+                    pattern="[A-Za-z]{1,25}"
+                    title="Only characters. No more than 25 characters"
+                    maxlength="25"
+                    required
+                  />
+                </div>
+                <div class="main-form__50width">
+                  <input
+                    type="text"
+                    id="last-name"
+                    name="last-name"
+                    placeholder="Last Name"
+                    pattern="[A-Za-z]{1,25}"
+                    title="Only characters. No more than 25 characters"
+                    maxlength="25"
+                    required
+                  />
+                </div>
               </div>
-              <div>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Email"
-                  required
-                />
-                <input
-                  type="text"
-                  id="tel"
-                  name="tel"
-                  placeholder="Phone Number"
-                  pattern="\(\d{3}\) \d{3}-\d{4}"
-                  title='Enter your phone number in the format "(123) 456-7890"'
-                  required
-                />
+              <div class="main-form__wrap-inputs">
+                <div class="main-form__50width">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div class="main-form__50width">
+                  <input
+                    type="text"
+                    id="tel"
+                    name="tel"
+                    placeholder="Phone Number"
+                    pattern="\(\d{3}\) \d{3}-\d{4}"
+                    title='Enter your phone number in the format "(123) 456-7890"'
+                    required
+                  />
+                </div>
               </div>
-              <div>
+              <div class="main-form__100width">
                 <input
                   type="text"
                   id="subject"
@@ -371,7 +379,7 @@
                   required
                 />
               </div>
-              <div>
+              <div class="main-form__100width">
                 <textarea
                   name=""
                   id=""
@@ -380,7 +388,7 @@
                   placeholder="Tell Us Something..."
                 ></textarea>
               </div>
-              <div>
+              <div class="main-form__button">
                 <button class="btn-primary" type="button">send to hydra</button>
               </div>
             </form>

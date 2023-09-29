@@ -10,6 +10,7 @@
 @import 'technologiesBrands.css';
 @import 'buildFeatures.css';
 @import 'form.css';
+@import 'input.css';
 
 * {
   margin: 0;
@@ -32,4 +33,35 @@ body {
 .container {
   max-width: 85%;
   margin: 0 auto;
+}
+
+.title {
+  padding-bottom: 42px;
+  line-height: 60px;
+}
+
+.title h2 {
+  text-transform: uppercase;
+  color: var(--text-color-white);
+  font-size: var(--font-size-big);
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+.title h3 {
+  text-transform: uppercase;
+  color: var(--text-color-white);
+  font-size: var(--font-size-big);
+  font-weight: 300;
+}
+
+.description {
+  padding-bottom: 28px;
+  max-width: 750px;
+  line-height: 28px;
+}
+
+.description span {
+  color: var(--text-color-white);
+  font-size: var(--font-size-medium);
 }

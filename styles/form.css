@@ -36,7 +36,7 @@
 
 .form__title h3 {
   text-transform: none;
-  margin-top: 20px;
+  padding-top: 30px;
 }
 
 textarea {
@@ -46,7 +46,7 @@ textarea {
   width: 100%;
   border: 2px solid var(--text-color-white);
   border-radius: 40px;
-  margin: 30px 8px;
+  margin: 20px 5px;
   margin-bottom: 60px;
   padding-left: 40px;
   padding-top: 30px;
@@ -56,29 +56,26 @@ textarea {
 
 .main-form {
   width: 100%;
-}
-
-.main-form div {
   display: flex;
-  justify-content: center;
-  width: 100%;
+  flex-direction: column;
 }
 
-.main-form div input {
-  background: transparent;
-  font-family: inherit;
-  height: 72px;
+.main-form__wrap-inputs {
+  display: flex;
+}
+
+.main-form__50width {
   width: 50%;
-  border: 2px solid var(--text-color-white);
-  border-radius: 40px;
-  margin: 30px 8px;
-  font-size: var(--font-size-normal);
-  color: var(--text-color-white);
-  padding-left: 40px;
+  margin: 20px 5px;
 }
 
-#subject {
+.main-form__100width {
+  margin: 20px 5px;
   width: 100%;
+}
+
+.main-form__button {
+  align-self: center;
 }
 
 ::placeholder {
