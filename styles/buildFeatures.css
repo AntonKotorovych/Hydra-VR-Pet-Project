@@ -13,7 +13,7 @@
   max-width: 190px;
 }
 
-.build-features__item-circle {
+.feature-circle {
   height: 150px;
   width: 150px;
   border-radius: 50%;
@@ -30,14 +30,14 @@
   margin: 40px 0;
 }
 
-.build-features__item-title {
+.feature-title {
   position: relative;
   font-size: var(--font-size-large);
   font-weight: 700;
   color: var(--text-color-white);
 }
 
-.build-features__item-title::before {
+.feature-title::before {
   content: '';
   width: 70px;
   height: 70px;
