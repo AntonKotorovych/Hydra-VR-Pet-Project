@@ -19,9 +19,11 @@
   list-style-type: none;
 }
 
-body {
+html {
   scroll-behavior: smooth;
+}
 
+body {
   /* Main Font */
   font-family: 'Fasthand', cursive;
   font-family: 'Montserrat', sans-serif;
