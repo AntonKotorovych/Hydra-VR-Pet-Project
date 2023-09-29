@@ -44,18 +44,18 @@ body {
   line-height: 60px;
 }
 
-.title h2 {
+.title-default {
   text-transform: uppercase;
   color: var(--text-color-white);
   font-size: var(--font-size-big);
+}
+
+.title-first {
   font-weight: 700;
   padding-bottom: 20px;
 }
 
-.title h3 {
-  text-transform: uppercase;
-  color: var(--text-color-white);
-  font-size: var(--font-size-big);
+.title-secondary {
   font-weight: 300;
 }
 
