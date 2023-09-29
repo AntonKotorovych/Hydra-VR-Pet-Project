@@ -53,6 +53,14 @@ textarea {
   color: var(--text-color-white);
 }
 
+textarea:invalid {
+  border-color: var(--invalid-input);
+}
+
+textarea:valid {
+  border-color: var(--valid-input);
+}
+
 .main-form {
   width: 100%;
   display: flex;
