@@ -1,0 +1,48 @@
+.footer-container {
+  margin-top: 130px;
+  display: flex;
+  justify-content: space-between;
+  max-height: 185px;
+  margin-bottom: 100px;
+}
+
+.footer-logo {
+  height: 185px;
+}
+
+.footer-nav h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text-color-white);
+  padding-bottom: 16px;
+}
+
+.footer-nav__wrapper {
+  position: relative;
+}
+
+.footer-nav__wrapper::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  right: -140px;
+  top: 0;
+  height: 196px;
+  background-image: url('../images/svg/footerVerticalStroke.svg');
+}
+
+.footer-nav__wrapper:last-child::after {
+  display: none;
+}
+
+.footer-icons {
+  margin-bottom: 20px;
+}
+
+.footer-icons img {
+  padding-right: 20px;
+}
+
+.footer-last div {
+  padding-bottom: 10px;
+}
