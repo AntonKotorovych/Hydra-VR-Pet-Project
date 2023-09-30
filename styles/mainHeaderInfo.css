@@ -28,13 +28,18 @@
   justify-content: center;
 }
 
-#stroke::after {
+.main-header__info-wrapper::after {
   content: '';
   width: 1px;
   height: 116.5px;
   background-color: rgba(192, 183, 232, 0.33);
   position: absolute;
-  left: -100px;
+  right: -120px;
+}
+
+.main-header__info .main-header__info-wrapper:last-child::after {
+  content: '';
+  width: 0px;
 }
 
 .main-header__call {
@@ -63,3 +68,4 @@
   transition: transform 0.4s ease;
   transform: scale(1.05);
 }
+

@@ -7,6 +7,17 @@
   --button-gradient-color: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
   --button-gradient-hover: linear-gradient(90deg, #595179 0%, #777191 100%);
   --text-gradient-color: linear-gradient(92deg, #c0b7e8 -1.02%, #8176af 36.25%);
+  --number-huge-color: #343045;
+  --arrow-gradient-color: linear-gradient(
+    268deg,
+    #c0b7e8 -0.6%,
+    #8176af 98.31%
+  );
+  --circle-gradient-color: linear-gradient(
+    251deg,
+    #c0b7e8 12.87%,
+    #8176af 89.33%
+  );
   --outline-image-color: rgba(42, 42, 42, 0.6);
   --main-header-gradient: radial-gradient(
     2900.76% 50.13% at 50% 53.89%,
@@ -21,4 +32,11 @@
     #211e2e 100%
   );
   --h-line-color: rgba(192, 183, 232, 0.33);
+  --outline-color: rgba(13, 13, 13, 0.32);
+  --form-background: radial-gradient(
+    50% 50% at 50% 50%,
+    #403a5f 0%,
+    #211e2e 100%
+  );
+  --form-shadow: rgba(0, 0, 0, 0.25);
 }

@@ -29,6 +29,7 @@
   font-size: var(--font-size-medium);
   display: inline-block;
   width: 450px;
+  line-height: 27px;
 }
 
 .main-header__navigation {
@@ -60,4 +61,11 @@
   width: 100%;
   transform: translateY(-7%);
   object-fit: cover;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.image-container img:hover {
+  transform: translateY(-3%);
+  opacity: 0.5;
+
 }
