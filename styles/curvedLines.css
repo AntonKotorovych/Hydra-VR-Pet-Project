@@ -1,0 +1,15 @@
+.build-features__curvedLine {
+  position: relative;
+}
+
+.build-features__curvedLine::before {
+  content: '';
+  position: absolute;
+  width: 117%;
+  height: 70%;
+  z-index: -1;
+  left: -140px;
+  background-image: url('../images/curvedLines/curvedLineHowTo.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}

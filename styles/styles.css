@@ -12,6 +12,7 @@
 @import 'form.css';
 @import 'input.css';
 @import 'footer.css';
+@import 'curvedLines.css';
 
 * {
   margin: 0;
