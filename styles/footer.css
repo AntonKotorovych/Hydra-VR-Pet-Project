@@ -1,10 +1,9 @@
 .top-footer-container {
-  margin-top: 130px;
+  margin: 130px 0 100px;
   display: flex;
   justify-content: space-between;
-  max-height: 185px;
-  margin-bottom: 100px;
   position: relative;
+  padding-bottom: 100px;
 }
 
 .top-footer-container::after {
@@ -12,7 +11,7 @@
   position: absolute;
   height: 10px;
   width: 100%;
-  bottom: -80px;
+  bottom: 0;
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url('../images/svg/hzLineSeparator.svg');
@@ -22,33 +21,48 @@
   height: 185px;
 }
 
+.top-footer-nav a {
+  text-decoration: none;
+  color: var(--text-color-white);
+}
+
+.top-footer-nav a:hover {
+  text-decoration: underline;
+  color: rgb(239, 255, 117);
+}
+
 .top-footer-nav h3 {
   text-transform: uppercase;
   font-weight: 700;
+  padding-bottom: 25px;
+  font-size: var(--font-size-medium);
   color: var(--text-color-white);
-  padding-bottom: 16px;
 }
 
-.top-footer-nav__wrapper {
+.top-footer-nav--wrapper {
   position: relative;
 }
 
-.top-footer-nav__wrapper::after {
+.top-footer-nav--wrapper::after {
   content: '';
   position: absolute;
   width: 6px;
-  right: -140px;
+  right: 0px;
   top: 0;
-  height: 196px;
+  height: 100%;
   background-image: url('../images/svg/footerVerticalStroke.svg');
 }
 
-.top-footer-nav__wrapper:last-child::after {
+.top-footer-nav--wrapper:last-child::after {
   display: none;
 }
 
 .top-footer-icons {
   margin-bottom: 20px;
+}
+
+.top-footer-icons a:hover {
+  text-decoration: none;
 }
 
 .top-footer-icons img {
@@ -66,8 +80,7 @@
 }
 
 .bottom-footer-container {
-  margin-top: 150px;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .bottom-footer-container h4 {

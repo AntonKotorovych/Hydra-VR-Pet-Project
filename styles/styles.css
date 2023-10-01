@@ -40,23 +40,23 @@ body {
   margin: 0 auto;
 }
 
-.title {
+.title-container {
   padding-bottom: 42px;
   line-height: 60px;
 }
 
-.title-default {
+.title--default {
   text-transform: uppercase;
   color: var(--text-color-white);
   font-size: var(--font-size-big);
 }
 
-.title-first {
+.title--primary {
   font-weight: 700;
   padding-bottom: 20px;
 }
 
-.title-secondary {
+.title--secondary {
   font-weight: 300;
 }
 
