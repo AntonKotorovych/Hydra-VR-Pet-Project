@@ -4,6 +4,7 @@
   --text-color-link: #df8afb;
   --button-text-color: #343045;
   --text-color-black: #000;
+  --anchor-hover-cover: rgb(239, 255, 117);
   --button-gradient-color: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
   --button-gradient-hover: linear-gradient(90deg, #595179 0%, #777191 100%);
   --text-gradient-color: linear-gradient(92deg, #c0b7e8 -1.02%, #8176af 36.25%);

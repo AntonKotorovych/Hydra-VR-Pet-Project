@@ -41,7 +41,7 @@
 
 .navbar-menu a:hover {
   text-decoration: underline;
-  color: rgb(239, 255, 117);
+  color: var(--anchor-hover-cover);
 }
 
 .navbar-buttons__contact {
