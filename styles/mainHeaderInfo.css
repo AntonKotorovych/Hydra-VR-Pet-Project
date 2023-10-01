@@ -28,13 +28,18 @@
   justify-content: center;
 }
 
-.main-header__info-wrapper::after {
+.main-header__info-separator {
+  position: relative;
+  width: 33.3%;
+}
+
+.main-header__info-separator::after {
   content: '';
   width: 1px;
   height: 116.5px;
   background-color: rgba(192, 183, 232, 0.33);
   position: absolute;
-  right: -120px;
+  right: 0;
 }
 
 .main-header__info .main-header__info-wrapper:last-child::after {
@@ -68,4 +73,3 @@
   transition: transform 0.4s ease;
   transform: scale(1.05);
 }
-
