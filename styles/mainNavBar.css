@@ -1,3 +1,10 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--background-color);
+}
+
 .navbar {
   width: 100%;
   height: 100px;
@@ -42,7 +49,7 @@
 
 .navbar-menu a:hover {
   text-decoration: underline;
-  color: rgb(239, 255, 117);
+  color: var(--anchor-hover-cover);
 }
 
 .navbar-buttons__contact {

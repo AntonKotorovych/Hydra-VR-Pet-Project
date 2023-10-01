@@ -1,0 +1,99 @@
+.top-footer-container {
+  margin: 130px 0 100px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.top-footer-container::after {
+  content: '';
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('../images/svg/hzLineSeparator.svg');
+}
+
+.top-footer-logo {
+  height: 185px;
+}
+
+.top-footer-nav a {
+  text-decoration: none;
+  color: var(--text-color-white);
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-bottom: 25px;
+  font-size: var(--font-size-medium);
+}
+
+.top-footer-nav a:hover {
+  text-decoration: underline;
+  color: var(--anchor-hover-cover);
+}
+
+.top-footer-nav h3 {
+  text-transform: uppercase;
+  color: var(--text-color-white);
+  font-size: var(--font-size-medium);
+  font-weight: 700;
+  padding-bottom: 25px;
+}
+
+.top-footer--separator {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+}
+
+.top-footer--separator::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  right: 0px;
+  top: 0;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: url('../images/svg/footerVerticalStroke.svg');
+}
+
+.top-footer-nav--wrapper:last-child::after {
+  display: none;
+}
+
+.top-footer-icons {
+  margin-bottom: 20px;
+}
+
+.top-footer-icons a:hover {
+  text-decoration: none;
+}
+
+.top-footer-icons img {
+  margin-right: 10px;
+  transition: transform 0.2s ease;
+}
+
+.top-footer-icons img:hover {
+  transform: scale(1.4);
+  cursor: pointer;
+}
+
+.top-footer-last div {
+  padding-bottom: 10px;
+}
+
+.bottom-footer-container {
+  padding-bottom: 50px;
+}
+
+.bottom-footer-container h4 {
+  font-size: var(--font-size-normal);
+  color: var(--text-color-white);
+  text-align: center;
+}
