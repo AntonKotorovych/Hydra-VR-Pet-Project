@@ -14,38 +14,38 @@
     <title>HYDRA VR</title>
   </head>
   <body>
-    <header class="header">
-      <nav class="navbar">
-        <!-- Container -->
-        <div class="navbar-container">
-          <!-- Brand Logo -->
-          <a href="#">
-            <div class="navbar-brand">
-              <img
-                src="./images/svg/logo.svg"
-                alt="Hydra VR Logo"
-                width="50px"
-                height="50px"
-              />
-              <img src="./images/svg/title.svg" alt="Hydra VR" />
-            </div>
-          </a>
-          <!-- Navbar menu -->
-          <ul class="navbar-menu">
-            <li><a href="#about">about</a></li>
-            <li><a href="#services">services</a></li>
-            <li><a href="#technologies">technologies</a></li>
-            <li><a href="#how-to">how to</a></li>
-          </ul>
-          <!-- Navbar buttons -->
-          <div class="navbar-buttons">
-            <button class="btn-outline">contact us</button>
-            <button class="btn-primary">join hydra</button>
-          </div>
-        </div>
-      </nav>
-    </header>
     <div class="container">
+      <header>
+        <nav class="navbar">
+          <!-- Container -->
+          <div class="navbar-container">
+            <!-- Brand Logo -->
+            <a href="index.html">
+              <div class="navbar-brand">
+                <img
+                  src="./images/svg/logo.svg"
+                  alt="Hydra Logo"
+                  width="50px"
+                  height="50px"
+                />
+                <img src="./images/svg/title.svg" alt="Hydra VR" />
+              </div>
+            </a>
+            <!-- Navbar menu -->
+            <ul class="navbar-menu">
+              <li><a href="#">about</a></li>
+              <li><a href="#">services</a></li>
+              <li><a href="#">technologies</a></li>
+              <li><a href="#">how to</a></li>
+            </ul>
+            <!-- Navbar buttons -->
+            <div class="navbar-buttons">
+              <button class="btn-outline">contact us</button>
+              <button class="btn-primary">join hydra</button>
+            </div>
+          </div>
+        </nav>
+      </header>
       <main>
         <section class="main-header-container">
           <article class="main-header">
@@ -82,14 +82,14 @@
                 <span>Union St, Seattle, WA 98101, United States</span>
               </div>
             </div>
-            <div class="main-header__info-wrapper main-header__info-separator">
+            <div class="main-header__info-wrapper" id="stroke">
               <img src="./images/svg/phoneCall.svg" alt="Call us" />
               <div class="main-header__call">
                 <h2><a href="tel:+11011111010"> Give Us a Call</a></h2>
                 <span>(110) 1111-1010</span>
               </div>
             </div>
-            <div class="main-header__info-wrapper main-header__info-separator">
+            <div class="main-header__info-wrapper" id="stroke">
               <img src="./images/svg/mail.svg" alt="Send us a message" />
               <div class="main-header__message">
                 <h2>
@@ -104,37 +104,33 @@
             </div>
           </div>
         </section>
-        <section id="about">
-          <div class="content-container">
-            <div class="content-container__left-item">
-              <div class="title-container">
-                <h2 class="title title--primary">introduction</h2>
-                <div class="long-arrow-flex">
-                  <h3 class="title title--secondary">to hydra vr</h3>
-                  <img src="./images/longArrow.png" alt="" />
-                </div>
+        <section class="introduction">
+          <div class="introduction-container">
+            <div class="introduction-title">
+              <h2>introduction</h2>
+              <div class="long-arrow-flex">
+                <h3>to hydra vr</h3>
+                <img src="./images/longArrow.png" alt="" />
               </div>
             </div>
-            <div class="content-container__right-item">
-              <div class="description">
-                <span>
-                  Vitae sapien pellentesque habitant morbi tristique senectus et
-                  netus et. Feugiat nibh sed pulvinar proin gravida hendrerit
-                  lectus. Mi sit amet mauris commodo quis imperdiet massa
-                  tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
-                  lectus sit amet est placerat in. Lectus magna fringilla urna
-                  porttitor rhoncus vitae.
-                </span>
-              </div>
+            <div class="introduction-description">
+              <span>
+                Vitae sapien pellentesque habitant morbi tristique senectus et
+                netus et. Feugiat nibh sed pulvinar proin gravida hendrerit
+                lectus. Mi sit amet mauris commodo quis imperdiet massa
+                tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
+                lectus sit amet est placerat in. Lectus magna fringilla urna
+                porttitor rhoncus vitae.
+              </span>
             </div>
           </div>
-          <div class="about">
-            <div class="about__image">
+          <div class="about-container">
+            <div class="image-container__boy">
               <img class="boy" src="./images/boy.jpg" alt="boy" />
             </div>
-            <div class="content-container__right-item">
-              <div class="title-container">
-                <h2 class="title title--primary">about</h2>
+            <div class="about-description">
+              <div class="introduction-title">
+                <h2>about</h2>
                 <div class="long-arrow-flex">
                   <h3 class="title title--secondary">hydra vr</h3>
                 </div>
@@ -158,243 +154,72 @@
             </div>
           </div>
         </section>
-        <section id="services">
-          <div class="content-container">
-            <div class="content-container__left-item">
-              <div class="title-container">
-                <h2 class="title title--primary">why build</h2>
-                <div class="long-arrow-flex">
-                  <h3 class="title title--secondary">with hydra?</h3>
-                  <img src="./images/longArrow.png" alt="" />
-                </div>
+        <section class="introduction">
+          <div class="introduction-container">
+            <div class="introduction-title">
+              <h2>why build</h2>
+              <div class="long-arrow-flex">
+                <h3>with hydra?</h3>
+                <img src="./images/longArrow.png" alt="" />
               </div>
             </div>
-            <div class="content-container__right-item">
-              <div class="description">
-                <span>
-                  Vitae sapien pellentesque habitant morbi tristique senectus et
-                  netus et. Feugiat nibh sed pulvinar proin gravida hendrerit
-                  lectus. Mi sit amet mauris commodo quis imperdiet massa
-                  tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
-                  lectus sit amet est placerat in. Lectus magna fringilla urna
-                  porttitor rhoncus vitae.
-                </span>
-              </div>
+            <div class="introduction-description">
+              <span>
+                Vitae sapien pellentesque habitant morbi tristique senectus et
+                netus et. Feugiat nibh sed pulvinar proin gravida hendrerit
+                lectus. Mi sit amet mauris commodo quis imperdiet massa
+                tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
+                lectus sit amet est placerat in. Lectus magna fringilla urna
+                porttitor rhoncus vitae.
+              </span>
             </div>
           </div>
-          <section>
-            <ul class="features">
-              <li class="features__item">
-                <img
-                  class="simulation-img"
-                  src="./images/simulation.jpg"
-                  alt="Simulation"
-                />
-                <h4>simulation</h4>
-                <div class="h-line"></div>
-                <span>
-                  Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet
-                  porttitor rhoncus libero justo laoreet sit amet vitae.
-                </span>
-                <button class="btn-primary">try it now</button>
-              </li>
-              <li class="features__item">
-                <img src="./images/education.jpg" alt="Education" />
-                <h4>education</h4>
-                <div class="h-line"></div>
-                <span>
-                  Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet
-                  porttitor rhoncus libero justo laoreet sit amet vitae.
-                </span>
-                <button class="btn-primary">try it now</button>
-              </li>
-              <li class="features__item">
-                <img src="./images/selfCare.jpg" alt="Education" />
-                <h4>self-care</h4>
-                <div class="h-line"></div>
-                <span>
-                  Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet
-                  porttitor rhoncus libero justo laoreet sit amet vitae.
-                </span>
-                <button class="btn-primary">try it now</button>
-              </li>
-              <li class="features__item">
-                <img src="./images/outdoor.jpg" alt="Education" />
-                <h4>outdoor</h4>
-                <div class="h-line"></div>
-                <span>
-                  Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet
-                  porttitor rhoncus libero justo laoreet sit amet vitae.
-                </span>
-                <button class="btn-primary">try it now</button>
-              </li>
-            </ul>
-          </section>
-        </section>
-        <section id="technologies">
-          <div class="technologies-container">
-            <div class="sexy-girl">
-              <div class="title-container technologies__title">
-                <h2 class="title title--primary">technologies & hardware</h2>
-                <h3 class="title title--secondary">used by hydra vr.</h3>
-              </div>
-            </div>
-            <div class="arrow-down">
-              <img src="./images/svg/arrowDown.svg" alt="" />
-            </div>
-          </div>
-          <section>
-            <div class="technologies-brands">
-              <ul>
-                <li>
-                  <img
-                    class="unreal-engine"
-                    src="./images/unrealEngine.png"
-                    alt="Unreal Engine Logo"
-                  />
-                </li>
-                <li>
-                  <img src="./images/unity.png" alt="Unity Logo" />
-                </li>
-                <li>
-                  <img src="./images/oculus.png" alt="Oculus Logo" />
-                </li>
-                <li>
-                  <img src="./images/vive.png" alt="Vive Logo" />
-                </li>
-              </ul>
-            </div>
-          </section>
-        </section>
-        <section id="how-to">
-          <div class="content-container">
-            <div class="content-container__left-item">
-              <div class="title-container">
-                <h2 class="title title--primary">how we build</h2>
-                <div class="long-arrow-flex">
-                  <h3 class="title title--secondary">with hydra vr?</h3>
-                  <img src="./images/longArrow.png" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="content-container__right-item">
-              <div class="description">
-                <span>
-                  Vitae sapien pellentesque habitant morbi tristique senectus et
-                  netus et. Feugiat nibh sed pulvinar proin gravida hendrerit
-                  lectus. Mi sit amet mauris commodo quis imperdiet massa
-                  tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
-                  lectus sit amet est placerat in. Lectus magna fringilla urna
-                  porttitor rhoncus vitae.
-                </span>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div class="build-features">
-            <ul>
-              <li class="build-features__item feature">
-                <div class="feature-circle">01</div>
-                <span class="feature-title"> 3D Conception & Design </span>
-              </li>
-              <li class="build-features__item feature">
-                <div class="feature-circle">02</div>
-                <span class="feature-title"> Interaction Design </span>
-              </li>
-              <li class="build-features__item feature">
-                <div class="feature-circle">03</div>
-                <span class="feature-title"> VR World User Testing </span>
-              </li>
-              <li class="build-features__item feature">
-                <div class="feature-circle">04</div>
-                <span class="feature-title">Hydra VR Deploy</span>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section>
-          <div class="form">
-            <div class="title-container form__title">
-              <h2 class="title title--primary">join hydra</h2>
-              <h3 class="title title--secondary">
-                Let's Build Your VR Experience
-              </h3>
-            </div>
-            <form class="main-form">
-              <div class="main-form__wrap-inputs">
-                <div class="main-form__container-half">
-                  <input
-                    type="text"
-                    id="first-name"
-                    name="first-name"
-                    placeholder="First Name"
-                    pattern="[A-Za-z]{1,25}"
-                    title="Only characters. No more than 25 characters"
-                    maxlength="25"
-                    required
-                  />
-                </div>
-                <div class="main-form__container-half">
-                  <input
-                    type="text"
-                    id="last-name"
-                    name="last-name"
-                    placeholder="Last Name"
-                    pattern="[A-Za-z]{1,25}"
-                    title="Only characters. No more than 25 characters"
-                    maxlength="25"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="main-form__wrap-inputs">
-                <div class="main-form__container-half">
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Email"
-                    required
-                  />
-                </div>
-                <div class="main-form__container-half">
-                  <input
-                    type="text"
-                    id="tel"
-                    name="tel"
-                    placeholder="Phone Number"
-                    pattern="\(\d{3}\) \d{3}-\d{4}"
-                    title='Enter your phone number in the format "(123) 456-7890"'
-                    required
-                  />
-                </div>
-              </div>
-              <div class="main-form__container-full">
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  placeholder="Subject"
-                  pattern="[^<>]*"
-                  title="Symbols < and > are not allowed"
-                  required
-                />
-              </div>
-              <div class="main-form__container-full">
-                <textarea
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="10"
-                  placeholder="Tell Us Something..."
-                ></textarea>
-              </div>
-              <div class="main-form__button">
-                <button class="btn-primary" type="button">send to hydra</button>
-              </div>
-            </form>
-          </div>
+          <ul class="features">
+            <li class="features__item">
+              <img
+                class="simulation-img"
+                src="./images/simulation.jpg"
+                alt="Simulation"
+              />
+              <h4>simulation</h4>
+              <div class="h-line"></div>
+              <span>
+                Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet
+                porttitor rhoncus libero justo laoreet sit amet vitae.
+              </span>
+              <button class="btn-primary">try it now</button>
+            </li>
+            <li class="features__item">
+              <img src="./images/education.jpg" alt="Education" />
+              <h4>education</h4>
+              <div class="h-line"></div>
+              <span>
+                Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet
+                porttitor rhoncus libero justo laoreet sit amet vitae.
+              </span>
+              <button class="btn-primary">try it now</button>
+            </li>
+            <li class="features__item">
+              <img src="./images/selfCare.jpg" alt="Education" />
+              <h4>self-care</h4>
+              <div class="h-line"></div>
+              <span>
+                Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet
+                porttitor rhoncus libero justo laoreet sit amet vitae.
+              </span>
+              <button class="btn-primary">try it now</button>
+            </li>
+            <li class="features__item">
+              <img src="./images/outdoor.jpg" alt="Education" />
+              <h4>outdoor</h4>
+              <div class="h-line"></div>
+              <span>
+                Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet
+                porttitor rhoncus libero justo laoreet sit amet vitae.
+              </span>
+              <button class="btn-primary">try it now</button>
+            </li>
+          </ul>
         </section>
       </main>
       <footer>
