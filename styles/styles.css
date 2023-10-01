@@ -45,7 +45,7 @@ body {
   line-height: 60px;
 }
 
-.title--default {
+.title {
   text-transform: uppercase;
   color: var(--text-color-white);
   font-size: var(--font-size-big);
