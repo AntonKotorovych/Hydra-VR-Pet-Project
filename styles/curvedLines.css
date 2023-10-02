@@ -96,13 +96,30 @@
 .about-curved-line::after {
   content: '';
   position: absolute;
-  /* width: 125%; */
   height: 40%;
   right: -120px;
   bottom: 30px;
   left: -230px;
   background-repeat: no-repeat;
   background-image: url('../images/curvedLines/curvedLineIntroduction2.png');
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.features-curved-line {
+  position: relative;
+}
+
+.features-curved-line::before {
+  content: '';
+  position: absolute;
+  height: 800px;
+  top: 80px;
+  right: -140px;
+  bottom: 30px;
+  left: -230px;
+  background-repeat: no-repeat;
+  background-image: url('../images/curvedLines/curvedLineFeatures.png');
   background-size: 100% 100%;
   z-index: -1;
 }
