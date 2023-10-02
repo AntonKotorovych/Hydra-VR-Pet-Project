@@ -65,13 +65,14 @@
 .image-container__curved-line--extra::before {
   content: '';
   position: absolute;
-  width: 200%;
+  width: 176%;
   height: 150%;
   top: 150px;
+  right: -500px;
   left: -270px;
   background-repeat: no-repeat;
   background-image: url('../images/curvedLines/curvedLineImg3.png');
-  background-size: 100% 60%;
+  background-size: 100% 80%;
   z-index: -1;
 }
 
@@ -120,6 +121,37 @@
   left: -230px;
   background-repeat: no-repeat;
   background-image: url('../images/curvedLines/curvedLineFeatures.png');
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.top-footer-container-curved-line {
+  position: relative;
+}
+
+.top-footer-container-curved-line::before {
+  content: '';
+  position: absolute;
+  height: 450px;
+  right: -140px;
+  bottom: 220px;
+  left: -230px;
+  background-repeat: no-repeat;
+  background-image: url('../images/curvedLines/curvedLineFooter1.png');
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.top-footer-container-curved-line::after {
+  content: '';
+  position: absolute;
+  height: 270px;
+  width: 122%;
+  right: -140px;
+  top: -10px;
+  left: -230px;
+  background-repeat: no-repeat;
+  background-image: url('../images/curvedLines/curvedLineFooter2.png');
   background-size: 100% 100%;
   z-index: -1;
 }
