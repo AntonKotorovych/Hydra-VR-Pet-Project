@@ -17,6 +17,37 @@
   background-image: url('../images/svg/hzLineSeparator.svg');
 }
 
+.top-footer-container-curved-line {
+  position: relative;
+}
+
+.top-footer-container-curved-line::before {
+  content: '';
+  position: absolute;
+  height: 450px;
+  right: -140px;
+  bottom: 220px;
+  left: -230px;
+  background-repeat: no-repeat;
+  background-image: url('../images/svg/curvedLines/curvedLineFooter1.svg');
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.top-footer-container-curved-line::after {
+  content: '';
+  position: absolute;
+  height: 270px;
+  width: 122%;
+  right: -140px;
+  top: -10px;
+  left: -230px;
+  background-repeat: no-repeat;
+  background-image: url('../images/svg/curvedLines/curvedLineFooter2.svg');
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
 .top-footer-logo {
   height: 185px;
 }
