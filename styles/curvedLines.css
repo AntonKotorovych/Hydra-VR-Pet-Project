@@ -1,8 +1,8 @@
-.build-features__curvedLine {
+.build-features__curved-line {
   position: relative;
 }
 
-.build-features__curvedLine::before {
+.build-features__curved-line::before {
   content: '';
   position: absolute;
   width: 117%;
@@ -14,11 +14,11 @@
   background-size: 100% 100%;
 }
 
-.main-header-container__curvedLine {
+.main-header-container__curved-line {
   position: relative;
 }
 
-.main-header-container__curvedLine::before {
+.main-header-container__curved-line::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -28,5 +28,49 @@
   left: -150px;
   background-image: url('../images/curvedLines/curvedLineHeaderTitle.png');
   background-size: 19% 100%;
+  z-index: -1;
+}
+
+.image-container__curved-line {
+  position: relative;
+}
+
+.image-container__curved-line::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  left: 100px;
+  bottom: 500px;
+  width: 145%;
+  height: 160%;
+  background-repeat: no-repeat;
+  background-image: url('../images/curvedLines/curvedLineImg1.png');
+  background-size: 50% 100%;
+  z-index: -1;
+}
+
+.image-container__curved-line::after {
+  content: '';
+  position: absolute;
+  width: 110%;
+  height: 145%;
+  top: -100px;
+  right: -220px;
+  background-repeat: no-repeat;
+  background-image: url('../images/curvedLines/curvedLineImg2.png');
+  background-size: 80% 110%;
+  z-index: -1;
+}
+
+.image-container__curved-line--extra::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 150%;
+  top: 150px;
+  left: -270px;
+  background-repeat: no-repeat;
+  background-image: url('../images/curvedLines/curvedLineImg3.png');
+  background-size: 100% 60%;
   z-index: -1;
 }
