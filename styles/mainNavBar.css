@@ -11,10 +11,7 @@
 }
 
 .navbar-container {
-  right: 145px;
-  left: 145px;
   z-index: 1;
-  position: fixed;
 }
 
 .navbar-brand {

@@ -8,8 +8,8 @@
   position: relative;
 }
 
-#technologies {
-  padding-top: 55px; /* для точного скроллу брейкпойнта */
+.correct-scroll-position {
+  padding-top: 55px;
 }
 
 .sexy-girl {
