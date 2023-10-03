@@ -8,6 +8,10 @@
   position: relative;
 }
 
+.correct-scroll-position {
+  padding-top: 55px;
+}
+
 .sexy-girl {
   height: 100%;
   width: 100%;
