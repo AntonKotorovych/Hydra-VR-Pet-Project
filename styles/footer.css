@@ -102,6 +102,10 @@
   cursor: pointer;
 }
 
+.top-footer-last {
+  width: 30%;
+}
+
 .top-footer-last div {
   padding-bottom: 10px;
 }
