@@ -1,3 +1,4 @@
+@import 'breakpoints.css';
 @import 'colorMatrix.css';
 @import 'fonts.css';
 
@@ -69,4 +70,34 @@ body {
 .description span {
   color: var(--text-color-white);
   font-size: var(--font-size-medium);
+}
+
+@media (min-width: 1150px) and (max-width: 1350px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .navbar-buttons {
+    justify-content: space-around;
+  }
+
+  button {
+    font-size: var(--font-size-small-tablet);
+    min-width: 50px;
+    max-width: 160px;
+    width: 160px;
+  }
+
+  /* Navbar */
+  .navbar-container {
+    left: 70px;
+    right: 90px;
+    z-index: 1;
+    position: fixed;
+  }
+
+  .navbar-menu li {
+    /* margin: 15px; */
+    /* font-size: var(--font-size-small-tablet); */
+  }
 }
