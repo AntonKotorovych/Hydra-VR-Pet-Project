@@ -131,7 +131,7 @@ body {
   }
 
   .boy__image {
-    border-radius: 200px 100px 200px 100px;
+    border-radius: 180px 100px 180px 100px;
   }
 
   /* Features */
@@ -146,5 +146,31 @@ body {
     margin: 10px;
     border-radius: 100px;
     padding: 20px;
+  }
+
+  /* Technologies */
+
+  .sexy-girl {
+    height: 70%;
+    background-position: 0px -200px;
+    background-size: 120%;
+  }
+
+  .arrow-down {
+    bottom: 15px;
+  }
+
+  .technologies-container {
+    margin: 0;
+  }
+
+  /* Technologies-brands */
+
+  .technologies-brands ul li img {
+    height: 200px;
+  }
+
+  .technologies-brands .unreal-engine {
+    height: 130px;
   }
 }
