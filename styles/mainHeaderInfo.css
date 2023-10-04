@@ -18,7 +18,7 @@
 .main-header__info span {
   color: var(--text-color-white);
   font-family: inherit;
-  font-size: var(--font-size-normal);
+  font-size: var(--font-size-small-tablet);
 }
 
 .main-header__info-wrapper {
