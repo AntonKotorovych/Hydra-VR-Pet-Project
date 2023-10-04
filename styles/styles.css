@@ -93,7 +93,6 @@ body {
   }
 
   .title--primary {
-    font-weight: 700;
     padding-bottom: 0px;
   }
 
@@ -172,5 +171,41 @@ body {
 
   .technologies-brands .unreal-engine {
     height: 130px;
+  }
+
+  /* Footer */
+
+  .top-footer-icons img {
+    margin: 0;
+  }
+
+  /* Curved-Lines */
+
+  .image-container__curved-line::after {
+    right: -40px;
+  }
+
+  .image-container__curved-line--extra::before {
+    width: 108%;
+    top: 150px;
+    left: 10px;
+  }
+
+  .features-curved-line::before {
+    top: 0px;
+    width: 121%;
+    height: 170%;
+  }
+
+  .top-footer-container-curved-line::before {
+    height: 450px;
+    width: 125%;
+    top: -350px;
+  }
+
+  .top-footer-container-curved-line::after {
+    height: 270px;
+    width: 125%;
+    top: 20px;
   }
 }
