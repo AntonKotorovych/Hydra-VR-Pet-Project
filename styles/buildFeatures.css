@@ -7,6 +7,22 @@
   justify-content: space-around;
 }
 
+.build-features__curved-line {
+  position: relative;
+}
+
+/* .build-features__curved-line::before {
+  content: '';
+  position: absolute;
+  width: 117%;
+  height: 70%;
+  z-index: -1;
+  left: -140px;
+  background-image: url('../images/svg/curvedLines/curvedLineHowTo.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+} */
+
 .build-features__item {
   display: flex;
   flex-direction: column;
