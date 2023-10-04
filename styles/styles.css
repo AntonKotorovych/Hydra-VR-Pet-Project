@@ -256,6 +256,15 @@ body {
     font-size: var(--font-size-small-tablet);
   }
 
+  .navbar-brand img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .navbar-buttons {
+    justify-content: space-around;
+  }
+
   /* Main Header */
 
   .main-header__title {
@@ -444,33 +453,63 @@ body {
     flex-direction: column;
   }
 
+  .top-footer-logo {
+    width: 140px;
+  }
+
   /* Curved-Lines */
 
+  .main-header-container__curved-line::before {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    top: 50px;
+    left: 0px;
+    z-index: -1;
+  }
+
+  .image-container__curved-line::before {
+    z-index: -1;
+    height: 200%;
+    left: -10px;
+  }
+
   .image-container__curved-line::after {
-    right: -40px;
+    z-index: -1;
+    width: 100%;
+    height: 200%;
+    left: 20px;
   }
 
   .image-container__curved-line--extra::before {
-    width: 108%;
-    top: 150px;
-    left: 10px;
+    width: 130%;
+    left: -90px;
+    z-index: -1;
   }
 
   .features-curved-line::before {
     top: 0px;
-    width: 121%;
+    width: 100%;
     height: 170%;
+  }
+
+  .build-features__curved-line::before {
+    width: 105%;
+    top: 20px;
+    height: 50%;
+    z-index: -1;
+    left: -30px;
   }
 
   .top-footer-container-curved-line::before {
     height: 450px;
-    width: 125%;
-    top: -350px;
+    width: 100%;
+    top: -300px;
   }
 
   .top-footer-container-curved-line::after {
     height: 270px;
-    width: 125%;
+    width: 100%;
     top: 20px;
   }
 }
