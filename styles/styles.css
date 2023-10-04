@@ -88,6 +88,28 @@ body {
     width: 160px;
   }
 
+  .title {
+    font-size: var(--font-size-big-tablet);
+  }
+
+  .title--primary {
+    font-weight: 700;
+    padding-bottom: 0px;
+  }
+
+  .title--secondary {
+    font-size: var(--font-size-large-tablet);
+  }
+
+  .description {
+    padding-bottom: 28px;
+    line-height: 24px;
+  }
+
+  .description span {
+    font-size: var(--font-size-medium);
+  }
+
   /* Navbar */
   .navbar-container {
     left: 70px;
@@ -96,8 +118,19 @@ body {
     position: fixed;
   }
 
-  .navbar-menu li {
-    /* margin: 15px; */
-    /* font-size: var(--font-size-small-tablet); */
+  /* Main-header-info */
+
+  .main-header__info h2 {
+    font-size: var(--font-size-large-tablet);
+  }
+
+  /* Introduction and about */
+
+  .boy {
+    height: 450px;
+  }
+
+  .boy__image {
+    border-radius: 200px 100px 200px 100px;
   }
 }
