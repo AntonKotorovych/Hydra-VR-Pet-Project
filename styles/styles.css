@@ -133,4 +133,18 @@ body {
   .boy__image {
     border-radius: 200px 100px 200px 100px;
   }
+
+  /* Features */
+
+  .features {
+    flex-wrap: wrap;
+  }
+
+  .features__item {
+    background: var(--features-item-background);
+    width: 48%;
+    margin: 10px;
+    border-radius: 100px;
+    padding: 20px;
+  }
 }
