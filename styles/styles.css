@@ -83,7 +83,6 @@ body {
   button {
     font-size: var(--font-size-small-tablet);
     min-width: 50px;
-    max-width: 160px;
     padding: 15px 40px;
   }
 
@@ -198,13 +197,13 @@ body {
     height: 170%;
   }
 
-  .top-footer-container-curved-line::before {
+  .top-footer-container--curved-line::before {
     height: 450px;
     width: 125%;
     top: -350px;
   }
 
-  .top-footer-container-curved-line::after {
+  .top-footer-container--curved-line::after {
     height: 270px;
     width: 125%;
     top: 20px;
@@ -491,7 +490,7 @@ body {
     height: 170%;
   }
 
-  .build-features__curved-line::before {
+  .build-features--curved-line::before {
     width: 105%;
     top: 20px;
     height: 50%;
@@ -499,13 +498,13 @@ body {
     left: -30px;
   }
 
-  .top-footer-container-curved-line::before {
+  .top-footer-container--curved-line::before {
     height: 450px;
     width: 100%;
     top: -300px;
   }
 
-  .top-footer-container-curved-line::after {
+  .top-footer-container--curved-line::after {
     height: 270px;
     width: 100%;
     top: 20px;
@@ -561,6 +560,10 @@ body {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
+  }
+
+  .main-header-container__curved-line::before {
+    display: none;
   }
 
   .main-header__title {
@@ -902,5 +905,23 @@ body {
     align-items: center;
     width: 100%;
     margin-top: 60px;
+  }
+
+  .top-footer-container--curved-line::before {
+    width: 110%;
+  }
+
+  .top-footer-container--curved-line::after {
+    content: '';
+    position: absolute;
+    height: 270px;
+    width: 122%;
+    right: -140px;
+    top: 50px;
+    left: -230px;
+    background-repeat: no-repeat;
+    background-image: url('../images/svg/curvedLines/curvedLineFooter2.svg');
+    background-size: 100% 100%;
+    z-index: -1;
   }
 }

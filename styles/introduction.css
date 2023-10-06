@@ -57,7 +57,7 @@
   justify-content: space-between;
 }
 
-/* .about-curved-line {
+.about-curved-line {
   position: relative;
 }
 
@@ -86,7 +86,7 @@
   background-image: url('../images/svg/curvedLines/curvedLineIntroduction2.svg');
   background-size: 100% 100%;
   z-index: -1;
-} */
+}
 
 .about__description {
   display: flex;

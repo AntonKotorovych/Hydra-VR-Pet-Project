@@ -5,11 +5,11 @@
   position: relative;
 }
 
-/* .top-footer-container-curved-line {
+.top-footer-container--curved-line {
   position: relative;
 }
 
-.top-footer-container-curved-line::before {
+.top-footer-container--curved-line::before {
   content: '';
   position: absolute;
   height: 450px;
@@ -22,7 +22,7 @@
   z-index: -1;
 }
 
-.top-footer-container-curved-line::after {
+.top-footer-container--curved-line::after {
   content: '';
   position: absolute;
   height: 270px;
@@ -34,7 +34,7 @@
   background-image: url('../images/svg/curvedLines/curvedLineFooter2.svg');
   background-size: 100% 100%;
   z-index: -1;
-} */
+}
 
 .top-footer-logo {
   height: 185px;
