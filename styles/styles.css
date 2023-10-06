@@ -75,6 +75,16 @@ body {
   display: none;
 }
 
+.btn-mobile-arrow--left,
+.btn-mobile-arrow--right {
+  display: none;
+}
+
+.btn-mobile-header--left,
+.btn-mobile-header--right {
+  display: none;
+}
+
 @media (min-width: 1150px) and (max-width: 1350px) {
   .container {
     max-width: 90%;
@@ -590,33 +600,33 @@ body {
     margin-top: 30px;
   }
 
-  .main-header__info::before {
-    content: '';
-    background-image: url('/images/svg/headerArrowPhone.svg');
-    transform: rotate(180deg);
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    left: 40px;
-    background-size: 100%;
-    background-repeat: no-repeat;
+  .btn-mobile-header--left {
+    display: inline-block;
+    height: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
   }
 
-  .main-header__info::after {
-    content: '';
-    background-image: url('/images/svg/headerArrowPhone.svg');
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    right: 40px;
-    background-size: 100%;
-    background-repeat: no-repeat;
+  .btn-mobile-header--right {
+    display: inline-block;
+    border: none;
+    height: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .btn-mobile-header--left img {
+    transform: rotate(180deg);
   }
 
   .main-header__info-wrapper {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-center;
   }
 
   .main-header__info-wrapper ~ div {
@@ -712,6 +722,7 @@ body {
   /* Features */
   .features {
     padding: 20px 0;
+    position: relative;
   }
 
   .features__item ~ li {
@@ -755,32 +766,59 @@ body {
     display: none;
   }
 
+  .technologies-brands ul li {
+    display: flex;
+    align-items: center;
+  }
+
   .technologies-brands {
     position: relative;
   }
 
-  .technologies-brands::after {
-    content: '';
-    background: url('../images/arrowRightPhone.png');
-    background-size: cover;
-    width: 70px;
-    height: 70px;
-    top: 20px;
-    right: 60px;
-    position: absolute;
-    background-repeat: no-repeat;
+  .btn-mobile-arrow--left {
+    display: inline-block;
+    border-radius: 50%;
+    min-width: 50px;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgb(27, 27, 27);
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
   }
 
-  .technologies-brands::before {
-    content: '';
-    background: url('../images/arrowLeftPhone.png');
-    background-size: cover;
-    width: 70px;
-    height: 70px;
-    top: 20px;
-    left: 60px;
+  .btn-mobile-arrow--left img {
+    max-width: 90%;
+    max-height: 90%;
     position: absolute;
-    background-repeat: no-repeat;
+    top: 3px;
+    left: 2px;
+  }
+
+  .btn-mobile-arrow--right {
+    display: inline-block;
+    border-radius: 50%;
+    min-width: 50px;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgb(27, 27, 27);
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .btn-mobile-arrow--right img {
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 3px;
+    left: 2px;
   }
 
   /* Build Features */
@@ -820,10 +858,16 @@ body {
 
   .build-features__item {
     align-items: center;
+    max-width: 100%;
   }
 
+  .feature {
+    max-width: 100%;
+  }
   .feature-title {
-    text-align: center;
+    padding: 0;
+    display: flex;
+    align-items: center;
   }
 
   .content-container--fix-padding-phone {
@@ -923,5 +967,19 @@ body {
     background-image: url('../images/svg/curvedLines/curvedLineFooter2.svg');
     background-size: 100% 100%;
     z-index: -1;
+  }
+
+  /* need to rewrite it somehow */
+
+  .btn-mobile-arrow--left--position {
+    position: absolute;
+    left: -20px;
+    top: 230px;
+  }
+
+  .btn-mobile-arrow--right--position {
+    position: absolute;
+    right: -15px;
+    top: 230px;
   }
 }
