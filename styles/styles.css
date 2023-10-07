@@ -906,7 +906,7 @@ body {
   /* Form */
   .form {
     padding: 20px;
-    margin: 80px 0;
+    margin: 80px 0 0;
   }
 
   .form__title {
