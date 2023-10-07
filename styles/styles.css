@@ -787,7 +787,7 @@ body {
   .sexy-girl {
     height: 200px;
     width: 100%;
-    background-position: -200px 550px;
+    background-position: 35% 31%;
     background-size: 230%;
   }
 
@@ -812,6 +812,9 @@ body {
 
   .technologies-brands {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .btn-mobile-arrow--left {
@@ -1017,5 +1020,17 @@ body {
   .boy__image {
     height: 350px;
     border-radius: 170px 100px 170px 100px;
+  }
+
+  .sexy-girl {
+    height: 140px;
+    width: 100%;
+    background-position: 35% 31%;
+    background-size: 230%;
+  }
+
+  .title--secondary--resize-phone {
+    font-size: var(--font-size-medium);
+    line-height: 20px;
   }
 }
