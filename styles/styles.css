@@ -740,7 +740,11 @@ body {
 
   .boy {
     width: 100%;
-    height: 620px;
+    height: 400px;
+  }
+
+  .boy__image {
+    border-radius: 230px 100px 230px 100px;
   }
 
   .long-arrow-flex img {
@@ -1004,5 +1008,10 @@ body {
   .btn-mobile-header--right {
     width: 30px;
     height: 30px;
+  }
+
+  .boy__image {
+    height: 350px;
+    border-radius: 170px 100px 170px 100px;
   }
 }
