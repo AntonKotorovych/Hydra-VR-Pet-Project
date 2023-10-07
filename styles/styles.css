@@ -923,7 +923,7 @@ body {
     text-align: center;
   }
 
-  .btn-primary--phone-margin-fix {
+  .button-phone {
     margin-top: 0;
     margin-bottom: 30px;
   }
