@@ -569,8 +569,6 @@ body {
 
   /* Main Header */
   .main-header {
-    display: flex;
-    align-items: center;
     margin-top: 50px;
     width: 100%;
   }
