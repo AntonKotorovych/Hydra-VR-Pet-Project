@@ -834,30 +834,6 @@ body {
     display: none;
   }
 
-  .build-features ul::after {
-    content: '';
-    background: url('../images/arrowRightPhone.png');
-    background-size: cover;
-    width: 70px;
-    height: 70px;
-    bottom: -10px;
-    right: 60px;
-    position: absolute;
-    background-repeat: no-repeat;
-  }
-
-  .build-features ul::before {
-    content: '';
-    background: url('../images/arrowLeftPhone.png');
-    background-size: cover;
-    width: 70px;
-    height: 70px;
-    bottom: -10px;
-    left: 60px;
-    position: absolute;
-    background-repeat: no-repeat;
-  }
-
   .build-features__item {
     align-items: center;
     max-width: 100%;
