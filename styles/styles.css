@@ -538,6 +538,10 @@ body {
 
   /* Navbar */
 
+  .header {
+    top: -1px;
+  }
+
   .navbar-container {
     margin: 0;
   }
@@ -557,6 +561,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    padding: 0;
   }
 
   /* Main Header */
