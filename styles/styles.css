@@ -539,9 +539,7 @@ body {
   /* Navbar */
 
   .navbar-container {
-    margin: 0 12px;
-    right: 0;
-    left: 0;
+    margin: 0;
   }
 
   .navbar-buttons {
@@ -555,8 +553,10 @@ body {
   .navbar-hamburger-menu {
     display: inline-block;
     cursor: pointer;
-    margin: 0;
-    padding: 0;
+    height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 
   /* Main Header */
@@ -569,7 +569,8 @@ body {
   .main-header-container {
     flex-direction: column-reverse;
     align-items: center;
-    justify-content: center;
+    margin-top: 150px;
+    justify-content: space-between;
   }
 
   .main-header-container__curved-line::before {
@@ -653,18 +654,18 @@ body {
     width: 100%;
     max-width: 100%;
     height: 400px;
+    width: 100%;
     display: flex;
     justify-content: center;
     border-radius: 130px 130px 130px 300px;
   }
 
   .image-container img {
-    transform: none;
-    height: 600px;
-  }
-
-  .girl-image {
-    width: 80%;
+    height: 500px;
+    width: 500px;
+    transform: scale(1);
+    object-fit: cover;
+    object-position: 100% 10%;
   }
 
   .features {
@@ -693,7 +694,7 @@ body {
   .about {
     flex-direction: column;
     justify-content: space-between;
-    height: 950px;
+    height: 1050px;
     margin-top: 40px;
   }
 
@@ -710,6 +711,7 @@ body {
 
   .boy {
     width: 100%;
+    height: 620px;
   }
 
   .long-arrow-flex img {
