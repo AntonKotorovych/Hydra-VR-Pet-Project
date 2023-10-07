@@ -1033,4 +1033,8 @@ body {
     font-size: var(--font-size-medium);
     line-height: 20px;
   }
+
+  .technologies-container {
+    height: 200px;
+  }
 }
