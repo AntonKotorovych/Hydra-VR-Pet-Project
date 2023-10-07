@@ -868,6 +868,9 @@ body {
   .build-features {
     margin: 0;
     position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
   }
 
   .build-features ul li ~ li {
@@ -882,10 +885,10 @@ body {
   .feature {
     max-width: 100%;
   }
+
   .feature-title {
     padding: 0;
-    display: flex;
-    align-items: center;
+    text-align: center;
   }
 
   .content-container--fix-padding-phone {
