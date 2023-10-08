@@ -58,7 +58,7 @@
   justify-content: space-between;
 }
 
-/* .about-curved-line {
+.about-curved-line {
   position: relative;
 }
 
@@ -87,7 +87,7 @@
   background-image: url('../images/svg/curvedLines/curvedLineIntroduction2.svg');
   background-size: 100% 100%;
   z-index: -1;
-} */
+}
 
 .about__description {
   display: flex;
@@ -100,21 +100,21 @@
   padding: 100px 0;
 }
 
-/* .features-curved-line {
+.features-curved-line {
   position: relative;
 }
 
 .features-curved-line::before {
   content: '';
   position: absolute;
-  height: 130%;
+  height: 100%;
   width: 100%;
-  left: -170px;
+  left: 0;
   background-repeat: no-repeat;
   background-image: url('../images/svg/curvedLines/curvedLineFeatures.svg');
   background-size: 100% 100%;
   z-index: -1;
-} */
+}
 
 .features__item {
   display: flex;
