@@ -46,7 +46,6 @@
   color: var(--text-color-white);
   text-transform: uppercase;
   font-weight: 700;
-  padding-bottom: 25px;
   font-size: var(--font-size-medium);
 }
 
@@ -86,7 +85,7 @@
 }
 
 .top-footer-icons {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .top-footer-icons a:hover {
@@ -105,10 +104,6 @@
 
 .top-footer-last {
   width: 30%;
-}
-
-.top-footer-last div {
-  padding-bottom: 10px;
 }
 
 .bottom-footer-container {
