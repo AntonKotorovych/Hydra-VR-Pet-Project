@@ -568,7 +568,7 @@ body {
     max-width: 100%;
     flex-direction: column-reverse;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 120px;
     justify-content: space-between;
     padding: 60px 0;
   }
@@ -1031,6 +1031,10 @@ body {
 }
 
 @media only screen and (max-width: 440px) {
+  .main-header-container {
+    margin-top: 55px;
+  }
+
   .main-header__title {
     font-size: var(--font-size-large);
   }
