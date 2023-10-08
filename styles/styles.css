@@ -219,6 +219,10 @@ body {
     max-width: 95%;
   }
 
+  .content-container--fix-padding-phone {
+    padding: 0;
+  }
+
   button {
     font-size: var(--font-size-small-tablet);
     min-width: 50px;
