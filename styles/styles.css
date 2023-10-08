@@ -85,7 +85,7 @@ body {
   display: none;
 }
 
-@media (min-width: 1150px) and (max-width: 1350px) {
+@media (min-width: 1150px) and (max-width: 1370px) {
   .container {
     max-width: 90%;
   }
