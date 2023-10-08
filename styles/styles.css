@@ -721,12 +721,12 @@ body {
   .about {
     flex-direction: column;
     justify-content: space-around;
-    height: 1050px;
     margin-top: 40px;
   }
 
   .about__image {
     width: 100%;
+    margin-bottom: 40px;
   }
 
   .title-container {
@@ -861,10 +861,14 @@ body {
     left: 4px;
   }
 
+  .technologies-brands .unreal-engine {
+    height: 160px;
+  }
+
   /* Build Features */
 
   .build-features {
-    margin: 0;
+    margin: 40px 0 100px;
     position: relative;
     display: flex;
     align-items: flex-end;
