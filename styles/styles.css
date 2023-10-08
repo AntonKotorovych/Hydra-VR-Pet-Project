@@ -764,6 +764,11 @@ body {
   }
 
   /* Features */
+  .features-container {
+    display: flex;
+    align-items: center;
+  }
+
   .features {
     padding: 20px 0;
     position: relative;
