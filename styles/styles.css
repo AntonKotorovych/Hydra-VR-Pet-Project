@@ -993,7 +993,6 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: 60px;
   }
 
   .top-footer-icons {
@@ -1080,5 +1079,9 @@ body {
 
   .btn-mobile-arrow--right--position {
     right: -3px;
+  }
+
+  .top-footer-last {
+    margin-top: 0;
   }
 }
