@@ -531,7 +531,11 @@ body {
     height: 65px;
     width: 100%;
     margin-top: 30px;
-    max-width: 70%;
+    max-width: 100%;
+  }
+
+  .btn-primary-container {
+    width: 75%;
   }
 
   /* Navbar */
@@ -957,7 +961,8 @@ body {
 
   .main-form__button {
     width: 85%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 
   .button-phone {
@@ -986,6 +991,12 @@ body {
     align-items: center;
     width: 100%;
     margin-top: 60px;
+  }
+
+  .top-footer-icons {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
   }
 
   .top-footer-container--curved-line::before {
