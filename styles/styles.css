@@ -483,7 +483,6 @@ body {
   }
 
   .image-container__curved-line--extra::before {
-    width: 130%;
     left: -90px;
     z-index: -1;
   }

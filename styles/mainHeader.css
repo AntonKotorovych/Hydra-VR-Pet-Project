@@ -46,7 +46,7 @@
   padding: 80px 0;
 }
 
-/* .main-header-container__curved-line {
+.main-header-container__curved-line {
   position: relative;
 }
 
@@ -61,7 +61,7 @@
   background-image: url('../images/svg/curvedLines/curvedLineHeaderTitle.svg');
   background-size: 19% 100%;
   z-index: -1;
-} */
+}
 
 .image-container {
   width: 524px;
@@ -87,7 +87,7 @@
   opacity: 0.5;
 }
 
-/* .image-container__curved-line {
+.image-container__curved-line {
   position: relative;
 }
 
@@ -120,7 +120,7 @@
 .image-container__curved-line--extra::before {
   content: '';
   position: absolute;
-  width: 170%;
+  width: 100%;
   height: 150%;
   top: 150px;
   right: -500px;
@@ -129,4 +129,4 @@
   background-image: url('../images/svg/curvedLines/curvedLineImg3.svg');
   background-size: 100% 80%;
   z-index: -1;
-} */
+}

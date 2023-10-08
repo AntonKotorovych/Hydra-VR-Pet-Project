@@ -1,5 +1,6 @@
 .build-features {
   margin: 120px 0;
+  position: relative;
 }
 
 .build-features ul {
@@ -9,18 +10,17 @@
 
 /* .build-features--curved-line {
   position: relative;
-}
+} */
 
-.build-features--curved-line::before {
+/* .build-features::before {
   content: '';
   position: absolute;
-  width: 117%;
-  height: 70%;
+  width: 80%;
+  height: 40%;
   z-index: -1;
-  left: -140px;
   background-image: url('../images/svg/curvedLines/curvedLineHowTo.svg');
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 50% 50%;
 } */
 
 .build-features__item {
