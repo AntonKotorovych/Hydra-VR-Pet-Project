@@ -557,8 +557,8 @@ body {
 
   .navbar-hamburger-menu {
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 26px;
+    height: 26px;
     background-color: transparent;
     background-image: linear-gradient(
       45deg,
@@ -712,15 +712,17 @@ body {
 
   .btn-mobile-arrow--left-features {
     position: absolute;
-    left: -3%;
-    top: 300px;
+    left: -20px;
+    top: 48%;
+    transform: translateY(-50%);
     z-index: 1;
   }
 
   .btn-mobile-arrow--right-features {
     position: absolute;
-    top: -285px;
-    right: -80%;
+    right: -2%;
+    top: 48%;
+    transform: translateY(-50%);
     z-index: 1;
   }
 
@@ -852,16 +854,11 @@ body {
     border-width: 8px;
     border-color: rgb(27, 27, 27);
     background-color: transparent;
-    position: relative;
-    cursor: pointer;
   }
 
   .btn-mobile-arrow--left img {
     max-width: 90%;
     max-height: 90%;
-    position: absolute;
-    top: 3px;
-    left: 2px;
   }
 
   .btn-mobile-arrow--right {
@@ -875,16 +872,11 @@ body {
     border-width: 8px;
     border-color: rgb(27, 27, 27);
     background-color: transparent;
-    position: relative;
-    cursor: pointer;
   }
 
   .btn-mobile-arrow--right img {
     max-width: 90%;
     max-height: 90%;
-    position: absolute;
-    top: 3px;
-    left: 4px;
   }
 
   .technologies-brands .unreal-engine {
