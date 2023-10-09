@@ -710,6 +710,20 @@ body {
     flex-wrap: wrap;
   }
 
+  .btn-mobile-arrow--left-features {
+    position: absolute;
+    left: -3%;
+    top: 300px;
+    z-index: 1;
+  }
+
+  .btn-mobile-arrow--right-features {
+    position: absolute;
+    top: -285px;
+    right: -80%;
+    z-index: 1;
+  }
+
   /* Introduction  */
 
   .content-container {
@@ -768,10 +782,6 @@ body {
   }
 
   /* Features */
-  .features-container {
-    display: flex;
-    align-items: center;
-  }
 
   .features {
     padding: 20px 0;
@@ -1095,6 +1105,9 @@ body {
     height: 200px;
   }
 
+  .features {
+    position: relative;
+  }
   .top-footer-last {
     margin-top: 0;
   }
