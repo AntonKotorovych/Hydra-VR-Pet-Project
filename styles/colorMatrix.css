@@ -42,4 +42,5 @@
   --form-shadow: rgba(0, 0, 0, 0.25);
   --invalid-input: rgba(255, 76, 76, 0.519);
   --valid-input: rgba(0, 192, 0, 0.558);
+  --transparent-full: rgba(0, 0, 0, 0);
 }
