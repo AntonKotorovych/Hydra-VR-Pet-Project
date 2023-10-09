@@ -555,7 +555,6 @@ body {
       var(--transparent-full),
       var(--transparent-full)
     );
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -620,7 +619,6 @@ body {
     min-width: 0px;
     padding: 0;
     background-image: inherit;
-    cursor: pointer;
   }
 
   .btn-mobile-header--left img {
@@ -639,7 +637,6 @@ body {
     min-width: 0px;
     padding: 0;
     background-image: inherit;
-    cursor: pointer;
   }
 
   .btn-mobile-header--right img {

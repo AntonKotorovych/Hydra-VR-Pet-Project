@@ -13,6 +13,7 @@ button {
   text-transform: uppercase;
   background-image: var(--button-gradient-color);
   transition: transform 0.5s ease, background-image 0.5s ease, color 0.5s ease;
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -20,7 +21,6 @@ button {
 }
 
 .btn-primary:hover {
-  cursor: pointer;
   color: var(--text-color-white);
   background-image: var(--button-gradient-hover);
   transform: scale(1.2);
@@ -33,7 +33,6 @@ button {
 }
 
 .btn-outline:hover {
-  cursor: pointer;
   transition: transform 0.5s ease, background-color 0.5s ease, color 0.5s ease;
   color: var(--text-color-black);
   background-color: var(--text-color-white);
