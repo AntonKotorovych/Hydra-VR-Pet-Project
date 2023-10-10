@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-.technologies-brands ul li img {
+.technologies-brands__logo {
   height: 260px;
   opacity: 0.36;
 }

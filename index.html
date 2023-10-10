@@ -15,35 +15,36 @@
   </head>
   <body>
     <header class="header">
-      <nav class="navbar">
-        <!-- Container -->
-        <div class="container navbar-container">
-          <!-- Brand Logo -->
-          <a href="#">
-            <div class="navbar-brand">
-              <img
-                src="./images/svg/logo.svg"
-                alt="Hydra VR Logo"
-                width="50px"
-                height="50px"
-              />
-              <img src="./images/svg/title.svg" alt="Hydra VR" />
+      <div class="container">
+        <nav class="navbar">
+          <div class="navbar-container">
+            <a href="#">
+              <div class="navbar-brand">
+                <img
+                  src="./images/svg/logo.svg"
+                  alt="Hydra VR Logo"
+                  width="50px"
+                  height="50px"
+                />
+                <img src="./images/svg/title.svg" alt="Hydra VR" />
+              </div>
+            </a>
+            <ul class="navbar-menu">
+              <li><a href="#about">about</a></li>
+              <li><a href="#services">services</a></li>
+              <li><a href="#technologies">technologies</a></li>
+              <li><a href="#how-to">how to</a></li>
+            </ul>
+            <div class="navbar-buttons">
+              <button class="btn-outline">contact us</button>
+              <button class="btn-primary">join hydra</button>
             </div>
-          </a>
-          <!-- Navbar menu -->
-          <ul class="navbar-menu">
-            <li><a href="#about">about</a></li>
-            <li><a href="#services">services</a></li>
-            <li><a href="#technologies">technologies</a></li>
-            <li><a href="#how-to">how to</a></li>
-          </ul>
-          <!-- Navbar buttons -->
-          <div class="navbar-buttons">
-            <button class="btn-outline">contact us</button>
-            <button class="btn-primary">join hydra</button>
+            <button class="navbar-hamburger-menu">
+              <img src="./images/svg/hamburgerMenu.svg" alt="" />
+            </button>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
     <div class="container">
       <main>
@@ -51,11 +52,18 @@
           class="main-header-container main-header-container__curved-line"
         >
           <article class="main-header">
-            <h1 class="main-header__title">
-              <span class="main-header__title-gradient">Dive</span> Into The
-              Depths of
-              <span class="main-header__title-gradient"> Virtual Reality </span>
-            </h1>
+            <div class="main-header__title">
+              <div>
+                <span class="main-header__title-gradient">Dive</span> Into The
+                Depths
+              </div>
+              <div>
+                of
+                <span class="main-header__title-gradient">
+                  Virtual Reality
+                </span>
+              </div>
+            </div>
             <p class="main-header__description">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
               excepturi itaque obcaecati iure, nihil iusto consectetur error
@@ -63,7 +71,9 @@
             </p>
             <br />
             <div class="main-header__navigation">
-              <button class="btn-primary">build your world</button>
+              <div class="btn-primary-container">
+                <button class="btn-primary">build your world</button>
+              </div>
               <img
                 class="arrow-image"
                 src="./images/svg/arrowRight.svg"
@@ -79,6 +89,9 @@
         </section>
         <section>
           <div class="main-header__info">
+            <button class="btn-mobile-header--left">
+              <img src="./images/svg/headerArrowPhone.svg" alt="" />
+            </button>
             <div class="main-header__info-wrapper main-header__info-separator">
               <img src="./images/svg/location.svg" alt="Geolocation" />
               <div class="main-header__geolocation">
@@ -106,6 +119,9 @@
                 <span>Contact@HydraVTech.com</span>
               </div>
             </div>
+            <button class="btn-mobile-header--right">
+              <img src="./images/svg/headerArrowPhone.svg" alt="" />
+            </button>
           </div>
         </section>
         <section id="about">
@@ -119,7 +135,9 @@
                 </div>
               </div>
             </div>
-            <div class="content-container__right-item">
+            <div
+              class="content-container__right-item content-container__right-item--hide-phone"
+            >
               <div class="description">
                 <span>
                   Vitae sapien pellentesque habitant morbi tristique senectus et
@@ -160,7 +178,9 @@
                   bibendum. Leo a diam sollicitudi n tempor.
                 </span>
               </div>
-              <button class="btn-primary">let's get in touch</button>
+              <div class="btn-primary-container">
+                <button class="btn-primary">let's get in touch</button>
+              </div>
             </div>
           </div>
         </section>
@@ -175,7 +195,9 @@
                 </div>
               </div>
             </div>
-            <div class="content-container__right-item">
+            <div
+              class="content-container__right-item content-container__right-item--hide-phone"
+            >
               <div class="description">
                 <span>
                   Vitae sapien pellentesque habitant morbi tristique senectus et
@@ -189,91 +211,143 @@
             </div>
           </div>
           <section class="features-curved-line">
-            <ul class="features">
-              <li class="features__item">
-                <img
-                  class="simulation-img"
-                  src="./images/simulation.jpg"
-                  alt="Simulation"
-                />
-                <h4>simulation</h4>
-                <div class="h-line"></div>
-                <span>
-                  Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet
-                  porttitor rhoncus libero justo laoreet sit amet vitae.
-                </span>
-                <button class="btn-primary">try it now</button>
-              </li>
-              <li class="features__item">
-                <img src="./images/education.jpg" alt="Education" />
-                <h4>education</h4>
-                <div class="h-line"></div>
-                <span>
-                  Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet
-                  porttitor rhoncus libero justo laoreet sit amet vitae.
-                </span>
-                <button class="btn-primary">try it now</button>
-              </li>
-              <li class="features__item">
-                <img src="./images/selfCare.jpg" alt="Education" />
-                <h4>self-care</h4>
-                <div class="h-line"></div>
-                <span>
-                  Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet
-                  porttitor rhoncus libero justo laoreet sit amet vitae.
-                </span>
-                <button class="btn-primary">try it now</button>
-              </li>
-              <li class="features__item">
-                <img src="./images/outdoor.jpg" alt="Education" />
-                <h4>outdoor</h4>
-                <div class="h-line"></div>
-                <span>
-                  Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet
-                  porttitor rhoncus libero justo laoreet sit amet vitae.
-                </span>
-                <button class="btn-primary">try it now</button>
-              </li>
-            </ul>
+            <div class="features-container">
+              <button class="btn-mobile-arrow btn-mobile-arrow--left-features">
+                <img src="./images/svg/arrLeftPhone.svg" alt="" />
+              </button>
+              <ul class="features">
+                <li class="features__item">
+                  <div class="features__item-image">
+                    <img
+                      class="simulation-img"
+                      src="./images/simulation.jpg"
+                      alt="Simulation"
+                    />
+                  </div>
+                  <h4>simulation</h4>
+                  <div class="h-line"></div>
+                  <span>
+                    Vitae sapien pellentesque habitant morbi nunc. Viverra
+                    aliquet porttitor rhoncus libero justo laoreet sit amet
+                    vitae.
+                  </span>
+                  <div class="btn-primary-container">
+                    <button class="btn-primary">try it now</button>
+                  </div>
+                </li>
+                <li class="features__item">
+                  <div class="features__item-image">
+                    <img src="./images/education.jpg" alt="Education" />
+                  </div>
+                  <h4>education</h4>
+                  <div class="h-line"></div>
+                  <span>
+                    Vitae sapien pellentesque habitant morbi nunc. Viverra
+                    aliquet porttitor rhoncus libero justo laoreet sit amet
+                    vitae.
+                  </span>
+                  <div class="btn-primary-container">
+                    <button class="btn-primary">try it now</button>
+                  </div>
+                </li>
+                <li class="features__item">
+                  <div class="features__item-image">
+                    <img src="./images/selfCare.jpg" alt="Education" />
+                  </div>
+                  <h4>self-care</h4>
+                  <div class="h-line"></div>
+                  <span>
+                    Vitae sapien pellentesque habitant morbi nunc. Viverra
+                    aliquet porttitor rhoncus libero justo laoreet sit amet
+                    vitae.
+                  </span>
+                  <div class="btn-primary-container">
+                    <button class="btn-primary">try it now</button>
+                  </div>
+                </li>
+                <li class="features__item">
+                  <div class="features__item-image">
+                    <img src="./images/outdoor.jpg" alt="Education" />
+                  </div>
+                  <h4>outdoor</h4>
+                  <div class="h-line"></div>
+                  <span>
+                    Vitae sapien pellentesque habitant morbi nunc. Viverra
+                    aliquet porttitor rhoncus libero justo laoreet sit amet
+                    vitae.
+                  </span>
+                  <div class="btn-primary-container">
+                    <button class="btn-primary">try it now</button>
+                  </div>
+                </li>
+              </ul>
+              <button class="btn-mobile-arrow btn-mobile-arrow--right-features">
+                <img src="./images/svg/arrRightPhone.svg" alt="" />
+              </button>
+            </div>
           </section>
         </section>
         <section class="correct-scroll-position" id="technologies">
           <div class="technologies-container">
             <div class="sexy-girl">
               <div class="title-container technologies__title">
-                <h2 class="title title--primary">technologies & hardware</h2>
-                <h3 class="title title--secondary">used by hydra vr.</h3>
+                <h2 class="title title--primary title--primary--resize-phone">
+                  technologies & hardware
+                </h2>
+                <h3
+                  class="title title--secondary title--secondary--resize-phone"
+                >
+                  used by hydra vr.
+                </h3>
               </div>
             </div>
-            <div class="arrow-down">
-              <img src="./images/svg/arrowDown.svg" alt="" />
-            </div>
+            <button class="btn-arrow-down">
+              <img src="./images/svg/arrRightPhone.svg" alt="" />
+            </button>
           </div>
           <section>
             <div class="technologies-brands">
+              <button class="btn-mobile-arrow">
+                <img src="./images/svg/arrLeftPhone.svg" alt="" />
+              </button>
               <ul>
                 <li>
                   <img
-                    class="unreal-engine"
+                    class="unreal-engine technologies-brands__logo"
                     src="./images/unrealEngine.png"
                     alt="Unreal Engine Logo"
                   />
                 </li>
                 <li>
-                  <img src="./images/unity.png" alt="Unity Logo" />
+                  <img
+                    class="technologies-brands__logo"
+                    src="./images/unity.png"
+                    alt="Unity Logo"
+                  />
                 </li>
                 <li>
-                  <img src="./images/oculus.png" alt="Oculus Logo" />
+                  <img
+                    class="technologies-brands__logo"
+                    src="./images/oculus.png"
+                    alt="Oculus Logo"
+                  />
                 </li>
                 <li>
-                  <img src="./images/vive.png" alt="Vive Logo" />
+                  <img
+                    class="technologies-brands__logo"
+                    src="./images/vive.png"
+                    alt="Vive Logo"
+                  />
                 </li>
               </ul>
+              <button class="btn-mobile-arrow">
+                <img src="./images/svg/arrRightPhone.svg" alt="" />
+              </button>
             </div>
           </section>
         </section>
         <section id="how-to">
-          <div class="content-container">
+          <div class="content-container content-container--fix-padding-phone">
             <div class="content-container__left-item">
               <div class="title-container">
                 <h2 class="title title--primary">how we build</h2>
@@ -283,7 +357,9 @@
                 </div>
               </div>
             </div>
-            <div class="content-container__right-item">
+            <div
+              class="content-container__right-item content-container__right-item--hide-phone"
+            >
               <div class="description">
                 <span>
                   Vitae sapien pellentesque habitant morbi tristique senectus et
@@ -298,7 +374,10 @@
           </div>
         </section>
         <section>
-          <div class="build-features build-features__curved-line">
+          <div class="build-features">
+            <button class="btn-mobile-arrow">
+              <img src="./images/svg/arrLeftPhone.svg" alt="" />
+            </button>
             <ul>
               <li class="build-features__item feature">
                 <div class="feature-circle">01</div>
@@ -317,6 +396,9 @@
                 <span class="feature-title">Hydra VR Deploy</span>
               </li>
             </ul>
+            <button class="btn-mobile-arrow">
+              <img src="./images/svg/arrRightPhone.svg" alt="" />
+            </button>
           </div>
         </section>
         <section>
@@ -397,7 +479,11 @@
                 ></textarea>
               </div>
               <div class="main-form__button">
-                <button class="btn-primary" type="button">send to hydra</button>
+                <div class="btn-primary-container">
+                  <button class="btn-primary button-phone" type="button">
+                    send to hydra
+                  </button>
+                </div>
               </div>
             </form>
           </div>
@@ -405,7 +491,7 @@
       </main>
       <footer>
         <section>
-          <div class="top-footer-container top-footer-container-curved-line">
+          <div class="top-footer-container top-footer-container--curved-line">
             <div class="top-footer-nav--wrapper top-footer--separator">
               <img
                 class="top-footer-logo"
@@ -480,7 +566,9 @@
                   <img src="./images/svg/pinterest.svg" alt="Pinterest" />
                 </a>
               </div>
-              <button class="btn-primary">build your world</button>
+              <div class="btn-primary-container">
+                <button class="btn-primary">build your world</button>
+              </div>
             </div>
           </div>
         </section>

@@ -37,12 +37,12 @@
   content: '';
   width: 1px;
   height: 116.5px;
-  background-color: rgba(192, 183, 232, 0.33);
+  background-color: var(--info-separator-background-color);
   position: absolute;
   right: 0;
 }
 
-.main-header__info .main-header__info-wrapper:last-child::after {
+.main-header__info .main-header__info-wrapper:nth-last-child(2)::after {
   content: '';
   width: 0px;
 }
