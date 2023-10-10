@@ -1069,6 +1069,10 @@ body {
     background-size: 230%;
   }
 
+  .btn-arrow-down {
+    bottom: -10px;
+  }
+
   .title--secondary--resize-phone {
     font-size: var(--font-size-medium);
     line-height: 20px;
