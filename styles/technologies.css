@@ -34,7 +34,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(55, 55, 55, 0.8);
+  background-color: var(--sexy-girl-background-color);
 }
 
 .technologies__title {
@@ -57,7 +57,7 @@
   padding: 0;
   border-style: solid;
   border-width: 8px;
-  border-color: rgb(27, 27, 27);
+  border-color: var(--arrow-mobile-color);
   background-color: transparent;
 }
 

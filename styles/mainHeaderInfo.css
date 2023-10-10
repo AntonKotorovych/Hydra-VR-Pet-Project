@@ -37,7 +37,7 @@
   content: '';
   width: 1px;
   height: 116.5px;
-  background-color: rgba(192, 183, 232, 0.33);
+  background-color: var(--info-separator-background-color);
   position: absolute;
   right: 0;
 }

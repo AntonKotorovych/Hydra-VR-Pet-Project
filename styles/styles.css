@@ -833,7 +833,7 @@ body {
     padding: 0;
     border-style: solid;
     border-width: 8px;
-    border-color: rgb(27, 27, 27);
+    border-color: var(--arrow-mobile-color);
     background-color: transparent;
   }
 
@@ -851,7 +851,7 @@ body {
     padding: 0;
     border-style: solid;
     border-width: 8px;
-    border-color: rgb(27, 27, 27);
+    border-color: var(--arrow-mobile-color);
     background-color: transparent;
   }
 
