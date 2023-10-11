@@ -89,7 +89,11 @@ body {
   display: none;
 }
 
-.navbar-hamburger-menu__button-close {
+.navbar-hamburger-button--open {
+  display: none;
+}
+
+.navbar-hamburger-button--close {
   display: none;
 }
 
@@ -586,6 +590,7 @@ body {
   }
 
   .navbar-hamburger-button--close {
+    display: none;
     align-self: flex-end;
     height: 30px;
     border-radius: 0;
@@ -616,7 +621,7 @@ body {
 
   .navbar-hamburger-menu-container::before {
     content: '';
-    width: 500px;
+    width: 600px;
     height: 200px;
     background-image: url('../images/svg/curvedLines/curvedLineImg3.svg');
     background-size: 100% 100%;
@@ -642,17 +647,6 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     font-size: var(--font-size-small);
-  }
-
-  .navbar-hamburger-menu__list li a {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--text-color-white);
-  }
-
-  .navbar-hamburger-menu__list a:hover {
-    text-decoration: underline;
-    color: var(--anchor-hover-cover);
   }
 
   .navbar-hamburger-menu__buttons {

@@ -32,13 +32,13 @@
   font-size: var(--font-size-small);
 }
 
-.navbar-menu li a {
+.navbar-menu__link {
   display: inline-block;
   text-decoration: none;
   color: var(--text-color-white);
 }
 
-.navbar-menu a:hover {
+.navbar-menu__link:hover {
   text-decoration: underline;
   color: var(--anchor-hover-cover);
 }
