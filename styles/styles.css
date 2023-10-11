@@ -530,7 +530,7 @@ body {
 
   .btn-nav-menu {
     max-width: none;
-    width: 80%;
+    width: 60%;
     height: 50px;
     margin-top: 15px;
     padding: 0 10px;
@@ -586,6 +586,18 @@ body {
     position: fixed;
     right: 0;
     background-color: var(--background-color);
+    overflow: hidden;
+  }
+
+  .navbar-hamburger-menu-container::before {
+    content: '';
+    width: 500px;
+    height: 1200px;
+    background-image: url('../images/svg/curvedLines/curvedLineImg3.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 15;
   }
 
   .navbar-hamburger-menu-wrapper {
@@ -639,6 +651,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 40px 0;
+    z-index: 20;
   }
 
   /* Main Header */
