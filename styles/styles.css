@@ -570,6 +570,11 @@ body {
     display: none;
   }
 
+  .navbar-menu--mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
   .navbar-hamburger-button--open {
     display: none;
     height: 30px;
@@ -636,12 +641,7 @@ body {
     flex-direction: column;
   }
 
-  .navbar-hamburger-menu__list {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .navbar-hamburger-menu__list li {
+  .navbar-menu--mobile li {
     display: inline-block;
     margin: 10px 30px;
     text-transform: uppercase;
