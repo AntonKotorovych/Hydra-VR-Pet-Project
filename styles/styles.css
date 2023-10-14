@@ -618,6 +618,7 @@ body {
     top: 68px;
     background-color: var(--background-color);
     overflow: hidden;
+    transition: bottom 0.3s ease;
   }
 
   .navbar-hamburger-menu--open {
