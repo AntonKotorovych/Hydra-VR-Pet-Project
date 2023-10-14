@@ -349,12 +349,12 @@
               <h2 class="title title--primary">join hydra</h2>
               <h3 class="title title--secondary">Let's Build Your VR Experience</h3>
             </div>
-            <form class="main-form">
+            <form id="mainForm" class="main-form" method="post">
               <div class="main-form__wrap-inputs">
                 <div class="main-form__container-half">
                   <input
                     type="text"
-                    id="first-name"
+                    id="firstName"
                     name="first-name"
                     placeholder="First Name"
                     pattern="[A-Za-z]{1,25}"
@@ -365,7 +365,7 @@
                 <div class="main-form__container-half">
                   <input
                     type="text"
-                    id="last-name"
+                    id="lastName"
                     name="last-name"
                     placeholder="Last Name"
                     pattern="[A-Za-z]{1,25}"
@@ -400,7 +400,7 @@
                   required />
               </div>
               <div class="main-form__container-full">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Tell Us Something..."></textarea>
+                <textarea name="" cols="30" rows="10" placeholder="Tell Us Something..."></textarea>
               </div>
               <div class="main-form__button">
                 <div class="btn-primary-container">
@@ -480,5 +480,6 @@
       </footer>
     </div>
     <script src="./src/main.js"></script>
+    <script src="./src/validateMainForm.js"></script>
   </body>
 </html>
