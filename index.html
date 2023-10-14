@@ -349,12 +349,11 @@
               <h2 class="title title--primary">join hydra</h2>
               <h3 class="title title--secondary">Let's Build Your VR Experience</h3>
             </div>
-            <form id="mainForm" class="main-form" method="post">
+            <form id="mainForm" name="main-form" class="main-form" method="post">
               <div class="main-form__wrap-inputs">
                 <div class="main-form__container-half">
                   <input
                     type="text"
-                    id="firstName"
                     name="first-name"
                     placeholder="First Name"
                     pattern="[A-Za-z]{1,25}"
@@ -365,7 +364,6 @@
                 <div class="main-form__container-half">
                   <input
                     type="text"
-                    id="lastName"
                     name="last-name"
                     placeholder="Last Name"
                     pattern="[A-Za-z]{1,25}"
@@ -381,8 +379,7 @@
                 <div class="main-form__container-half">
                   <input
                     type="text"
-                    id="tel"
-                    name="tel"
+                    name="phone-number"
                     placeholder="Phone Number"
                     pattern="\(\d{3}\) \d{3}-\d{4}"
                     title='Enter your phone number in the format "(123) 456-7890"'
@@ -390,21 +387,14 @@
                 </div>
               </div>
               <div class="main-form__container-full">
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  placeholder="Subject"
-                  pattern="[^<>]*"
-                  title="Symbols < and > are not allowed"
-                  required />
+                <input type="text" name="subject" placeholder="Subject" pattern="[^<>]*" title="Symbols < and > are not allowed" required />
               </div>
               <div class="main-form__container-full">
                 <textarea name="" cols="30" rows="10" placeholder="Tell Us Something..."></textarea>
               </div>
               <div class="main-form__button">
                 <div class="btn-primary-container">
-                  <button class="btn-primary button-phone" type="button">send to hydra</button>
+                  <button class="btn-primary button-phone" type="submit">send to hydra</button>
                 </div>
               </div>
             </form>
@@ -480,6 +470,6 @@
       </footer>
     </div>
     <script src="./src/hamburgerMenu.js"></script>
-    <script src="./validateMainForm.js"></script>
+    <script src="./src/validateMainForm.js"></script>
   </body>
 </html>

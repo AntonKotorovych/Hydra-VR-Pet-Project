@@ -1,11 +1,14 @@
-const firstName = document.getElementById('firstName');
-const lastName = document.getElementById('lastName');
-const email = document.getElementById('email');
-const tel = document.getElementById('tel');
-const subject = document.getElementById('subject');
+const mainForm = document.querySelector('form[name="main-form"]');
 
-firstName.addEventListener('input', () => {
-  console.log(firstName);
-});
+const firstName = document.querySelector('input[name="first-name"]');
+const lastName = document.querySelector('input[name="last-name"]');
+const email = document.querySelector('input[name="email"]');
+const phoneNumber = document.querySelector('input[name="phone-number"]');
+const subject = document.querySelector('input[name="subject"]');
 
-function validateMainForm() {}
+console.log(mainForm);
+console.log(firstName);
+console.log(lastName);
+console.log(email);
+console.log(phoneNumber);
+console.log(subject);
