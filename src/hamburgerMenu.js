@@ -4,22 +4,20 @@ const navCloseButton = document.querySelector('.navbar-hamburger-button--close')
 const navBarLogo = document.querySelector('.navbar-brand');
 const navBarLinks = document.querySelectorAll("[data-element='nav-bar-link']");
 
-console.log(navBarLogo);
-
-const navMenuChangeButton = () => {
+const navMenuChangeState = () => {
   navHamburgerMenu.classList.toggle('navbar-hamburger-menu--open');
   navOpenButton.classList.toggle('navbar-button--show');
   navCloseButton.classList.toggle('navbar-button--show');
 };
 
-navBarLinks.forEach(link => link.addEventListener('click', navMenuChangeButton));
+navBarLinks.forEach(link => link.addEventListener('click', navMenuChangeState));
 
 navOpenButton.addEventListener('click', () => {
-  navMenuChangeButton();
+  navMenuChangeState();
 });
 
 navCloseButton.addEventListener('click', () => {
-  navMenuChangeButton();
+  navMenuChangeState();
 });
 
 navBarLogo.addEventListener('click', () => {
