@@ -23,12 +23,13 @@ mainForm.addEventListener('submit', e => {
   function validateFullName(firstName, lastName) {
     let nameIsValid = true;
     let lastNameIsValid = true;
+    const regExp = /^[a-zA-Z]{1,25}$/;
 
-    if (!firstName.trim().match(/^[a-zA-Z]{1,25}$/)) {
+    if (!firstName.trim().match(regExp)) {
       nameIsValid = false;
     }
 
-    if (!lastName.trim().match(/^[a-zA-Z]{1,25}$/)) {
+    if (!lastName.trim().match(regExp)) {
       lastNameIsValid = false;
     }
 
@@ -36,6 +37,8 @@ mainForm.addEventListener('submit', e => {
   }
 
   const [nameIsValid, lastNameIsValid] = validateFullName(formData.firstName, formData.lastName);
+
+  console.log(nameIsValid, lastNameIsValid);
 
   console.log(formData);
 });
