@@ -9,11 +9,12 @@ input {
   color: var(--text-color-white);
   padding-left: 40px;
 }
-
+/* 
 input:invalid {
   border-color: var(--invalid-input);
 }
 
 input:valid {
   border-color: var(--valid-input);
-}
+  border-color: none;
+} */

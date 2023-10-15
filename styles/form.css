@@ -58,7 +58,8 @@ textarea:invalid {
 }
 
 textarea:valid {
-  border-color: var(--valid-input);
+  /* border-color: var(--valid-input); */
+  border-color: none;
 }
 
 .main-form {
