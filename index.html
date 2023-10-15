@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fasthand&family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Fasthand&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
     <title>HYDRA VR</title>
   </head>
@@ -20,53 +17,69 @@
           <div class="navbar-container">
             <a href="#">
               <div class="navbar-brand">
-                <img
-                  src="./images/svg/logo.svg"
-                  alt="Hydra VR Logo"
-                  width="50px"
-                  height="50px"
-                />
+                <img src="./images/svg/logo.svg" alt="Hydra VR Logo" width="50px" height="50px" />
                 <img src="./images/svg/title.svg" alt="Hydra VR" />
               </div>
             </a>
             <ul class="navbar-menu">
-              <li><a href="#about">about</a></li>
-              <li><a href="#services">services</a></li>
-              <li><a href="#technologies">technologies</a></li>
-              <li><a href="#how-to">how to</a></li>
+              <li><a class="navbar-menu__link" href="#about">about</a></li>
+              <li>
+                <a class="navbar-menu__link" href="#services">services</a>
+              </li>
+              <li>
+                <a class="navbar-menu__link" href="#technologies">technologies</a>
+              </li>
+              <li><a class="navbar-menu__link" href="#how-to">how to</a></li>
             </ul>
             <div class="navbar-buttons">
               <button class="btn-outline">contact us</button>
               <button class="btn-primary">join hydra</button>
             </div>
-            <button class="navbar-hamburger-menu">
+            <button class="navbar-hamburger-button--open navbar-button--show">
               <img src="./images/svg/hamburgerMenu.svg" alt="" />
+            </button>
+            <button class="navbar-hamburger-button--close">
+              <img src="./images/svg/crossSvg.svg" alt="" />
             </button>
           </div>
         </nav>
+        <aside class="navbar-hamburger-menu">
+          <div class="navbar-hamburger-menu-wrapper">
+            <ul class="navbar-menu navbar-menu--mobile">
+              <li>
+                <a class="navbar-menu__link" data-element="nav-bar-link" href="#about">about</a>
+              </li>
+              <li>
+                <a class="navbar-menu__link" data-element="nav-bar-link" href="#services">services</a>
+              </li>
+              <li>
+                <a class="navbar-menu__link" data-element="nav-bar-link" href="#technologies">technologies</a>
+              </li>
+              <li>
+                <a class="navbar-menu__link" data-element="nav-bar-link" href="#how-to">how to</a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-hamburger-menu__buttons container">
+            <button class="btn-outline btn-nav-menu">contact us</button>
+            <button class="btn-primary btn-nav-menu">join hydra</button>
+          </div>
+        </aside>
       </div>
     </header>
     <div class="container">
       <main>
-        <section
-          class="main-header-container main-header-container__curved-line"
-        >
+        <section class="main-header-container main-header-container__curved-line">
           <article class="main-header">
             <div class="main-header__title">
-              <div>
-                <span class="main-header__title-gradient">Dive</span> Into The
-                Depths
-              </div>
+              <div><span class="main-header__title-gradient">Dive</span> Into The Depths</div>
               <div>
                 of
-                <span class="main-header__title-gradient">
-                  Virtual Reality
-                </span>
+                <span class="main-header__title-gradient"> Virtual Reality </span>
               </div>
             </div>
             <p class="main-header__description">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
-              excepturi itaque obcaecati iure, nihil iusto consectetur error
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem excepturi itaque obcaecati iure, nihil iusto consectetur error
               cupiditate. Fugiat asperiores itaque magnam vitae ab nisi!
             </p>
             <br />
@@ -74,11 +87,7 @@
               <div class="btn-primary-container">
                 <button class="btn-primary">build your world</button>
               </div>
-              <img
-                class="arrow-image"
-                src="./images/svg/arrowRight.svg"
-                alt="Next"
-              />
+              <img class="arrow-image" src="./images/svg/arrowRight.svg" alt="Next" />
             </div>
           </article>
           <div class="image-container__curved-line">
@@ -102,7 +111,7 @@
             <div class="main-header__info-wrapper main-header__info-separator">
               <img src="./images/svg/phoneCall.svg" alt="Call us" />
               <div class="main-header__call">
-                <h2><a href="tel:+11011111010"> Give Us a Call</a></h2>
+                <h2><a href="tel:+11011111010">Give Us a Call</a></h2>
                 <span>(110) 1111-1010</span>
               </div>
             </div>
@@ -110,11 +119,7 @@
               <img src="./images/svg/mail.svg" alt="Send us a message" />
               <div class="main-header__message">
                 <h2>
-                  <a
-                    href="mailto:Contact@HydraVTech.com?subject=Mail from customer of Hydra VR"
-                  >
-                    Send Us a Message
-                  </a>
+                  <a href="mailto:Contact@HydraVTech.com?subject=Mail from customer of Hydra VR">Send Us a Message</a>
                 </h2>
                 <span>Contact@HydraVTech.com</span>
               </div>
@@ -135,17 +140,12 @@
                 </div>
               </div>
             </div>
-            <div
-              class="content-container__right-item content-container__right-item--hide-phone"
-            >
+            <div class="content-container__right-item content-container__right-item--hide-phone">
               <div class="description">
                 <span>
-                  Vitae sapien pellentesque habitant morbi tristique senectus et
-                  netus et. Feugiat nibh sed pulvinar proin gravida hendrerit
-                  lectus. Mi sit amet mauris commodo quis imperdiet massa
-                  tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
-                  lectus sit amet est placerat in. Lectus magna fringilla urna
-                  porttitor rhoncus vitae.
+                  Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus.
+                  Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est
+                  placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.
                 </span>
               </div>
             </div>
@@ -165,17 +165,11 @@
               </div>
               <div class="description">
                 <span>
-                  Eget mi proin sed libero enim sed faucibus turpis. Nisl
-                  rhoncus mattis rhoncus urna neque viverra justo. Vivamus at
-                  augue eget arcu dictum. Ultrices gravida dictum fusce ut
-                  placerat orci. Aenean et tortor at risus viverra adipiscing at
-                  in. Mattis aliquam faucibus purus in massa. Est placerat in
-                  egestas erat imperdiet sed. Consequat semper viverra nam
-                  libero justo laoreet sit amet. Aliquam etiam erat velit
-                  scelerisque in dictum non consectetur a. Laoreet sit amet
-                  cursus sit amet. Vel eros donec ac odio tempor orci dapibus.
-                  Sem nulla pha retra diam sit amet nisl suscipit adipiscing
-                  bibendum. Leo a diam sollicitudi n tempor.
+                  Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus urna neque viverra justo. Vivamus at augue eget arcu
+                  dictum. Ultrices gravida dictum fusce ut placerat orci. Aenean et tortor at risus viverra adipiscing at in. Mattis aliquam faucibus
+                  purus in massa. Est placerat in egestas erat imperdiet sed. Consequat semper viverra nam libero justo laoreet sit amet. Aliquam
+                  etiam erat velit scelerisque in dictum non consectetur a. Laoreet sit amet cursus sit amet. Vel eros donec ac odio tempor orci
+                  dapibus. Sem nulla pha retra diam sit amet nisl suscipit adipiscing bibendum. Leo a diam sollicitudi n tempor.
                 </span>
               </div>
               <div class="btn-primary-container">
@@ -195,17 +189,12 @@
                 </div>
               </div>
             </div>
-            <div
-              class="content-container__right-item content-container__right-item--hide-phone"
-            >
+            <div class="content-container__right-item content-container__right-item--hide-phone">
               <div class="description">
                 <span>
-                  Vitae sapien pellentesque habitant morbi tristique senectus et
-                  netus et. Feugiat nibh sed pulvinar proin gravida hendrerit
-                  lectus. Mi sit amet mauris commodo quis imperdiet massa
-                  tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
-                  lectus sit amet est placerat in. Lectus magna fringilla urna
-                  porttitor rhoncus vitae.
+                  Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus.
+                  Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est
+                  placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.
                 </span>
               </div>
             </div>
@@ -218,19 +207,11 @@
               <ul class="features">
                 <li class="features__item">
                   <div class="features__item-image">
-                    <img
-                      class="simulation-img"
-                      src="./images/simulation.jpg"
-                      alt="Simulation"
-                    />
+                    <img class="simulation-img" src="./images/simulation.jpg" alt="Simulation" />
                   </div>
                   <h4>simulation</h4>
                   <div class="h-line"></div>
-                  <span>
-                    Vitae sapien pellentesque habitant morbi nunc. Viverra
-                    aliquet porttitor rhoncus libero justo laoreet sit amet
-                    vitae.
-                  </span>
+                  <span> Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae. </span>
                   <div class="btn-primary-container">
                     <button class="btn-primary">try it now</button>
                   </div>
@@ -241,11 +222,7 @@
                   </div>
                   <h4>education</h4>
                   <div class="h-line"></div>
-                  <span>
-                    Vitae sapien pellentesque habitant morbi nunc. Viverra
-                    aliquet porttitor rhoncus libero justo laoreet sit amet
-                    vitae.
-                  </span>
+                  <span> Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae. </span>
                   <div class="btn-primary-container">
                     <button class="btn-primary">try it now</button>
                   </div>
@@ -256,11 +233,7 @@
                   </div>
                   <h4>self-care</h4>
                   <div class="h-line"></div>
-                  <span>
-                    Vitae sapien pellentesque habitant morbi nunc. Viverra
-                    aliquet porttitor rhoncus libero justo laoreet sit amet
-                    vitae.
-                  </span>
+                  <span> Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae. </span>
                   <div class="btn-primary-container">
                     <button class="btn-primary">try it now</button>
                   </div>
@@ -271,11 +244,7 @@
                   </div>
                   <h4>outdoor</h4>
                   <div class="h-line"></div>
-                  <span>
-                    Vitae sapien pellentesque habitant morbi nunc. Viverra
-                    aliquet porttitor rhoncus libero justo laoreet sit amet
-                    vitae.
-                  </span>
+                  <span> Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae. </span>
                   <div class="btn-primary-container">
                     <button class="btn-primary">try it now</button>
                   </div>
@@ -291,14 +260,8 @@
           <div class="technologies-container">
             <div class="sexy-girl">
               <div class="title-container technologies__title">
-                <h2 class="title title--primary title--primary--resize-phone">
-                  technologies & hardware
-                </h2>
-                <h3
-                  class="title title--secondary title--secondary--resize-phone"
-                >
-                  used by hydra vr.
-                </h3>
+                <h2 class="title title--primary title--primary--resize-phone">technologies & hardware</h2>
+                <h3 class="title title--secondary title--secondary--resize-phone">used by hydra vr.</h3>
               </div>
             </div>
             <button class="btn-arrow-down">
@@ -312,32 +275,16 @@
               </button>
               <ul>
                 <li>
-                  <img
-                    class="unreal-engine technologies-brands__logo"
-                    src="./images/unrealEngine.png"
-                    alt="Unreal Engine Logo"
-                  />
+                  <img class="unreal-engine technologies-brands__logo" src="./images/unrealEngine.png" alt="Unreal Engine Logo" />
                 </li>
                 <li>
-                  <img
-                    class="technologies-brands__logo"
-                    src="./images/unity.png"
-                    alt="Unity Logo"
-                  />
+                  <img class="technologies-brands__logo" src="./images/unity.png" alt="Unity Logo" />
                 </li>
                 <li>
-                  <img
-                    class="technologies-brands__logo"
-                    src="./images/oculus.png"
-                    alt="Oculus Logo"
-                  />
+                  <img class="technologies-brands__logo" src="./images/oculus.png" alt="Oculus Logo" />
                 </li>
                 <li>
-                  <img
-                    class="technologies-brands__logo"
-                    src="./images/vive.png"
-                    alt="Vive Logo"
-                  />
+                  <img class="technologies-brands__logo" src="./images/vive.png" alt="Vive Logo" />
                 </li>
               </ul>
               <button class="btn-mobile-arrow">
@@ -357,17 +304,12 @@
                 </div>
               </div>
             </div>
-            <div
-              class="content-container__right-item content-container__right-item--hide-phone"
-            >
+            <div class="content-container__right-item content-container__right-item--hide-phone">
               <div class="description">
                 <span>
-                  Vitae sapien pellentesque habitant morbi tristique senectus et
-                  netus et. Feugiat nibh sed pulvinar proin gravida hendrerit
-                  lectus. Mi sit amet mauris commodo quis imperdiet massa
-                  tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
-                  lectus sit amet est placerat in. Lectus magna fringilla urna
-                  porttitor rhoncus vitae.
+                  Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus.
+                  Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est
+                  placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.
                 </span>
               </div>
             </div>
@@ -405,9 +347,7 @@
           <div class="form">
             <div class="title-container form__title">
               <h2 class="title title--primary">join hydra</h2>
-              <h3 class="title title--secondary">
-                Let's Build Your VR Experience
-              </h3>
+              <h3 class="title title--secondary">Let's Build Your VR Experience</h3>
             </div>
             <form class="main-form">
               <div class="main-form__wrap-inputs">
@@ -420,8 +360,7 @@
                     pattern="[A-Za-z]{1,25}"
                     title="Only characters. No more than 25 characters"
                     maxlength="25"
-                    required
-                  />
+                    required />
                 </div>
                 <div class="main-form__container-half">
                   <input
@@ -432,19 +371,12 @@
                     pattern="[A-Za-z]{1,25}"
                     title="Only characters. No more than 25 characters"
                     maxlength="25"
-                    required
-                  />
+                    required />
                 </div>
               </div>
               <div class="main-form__wrap-inputs">
                 <div class="main-form__container-half">
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Email"
-                    required
-                  />
+                  <input type="email" id="email" name="email" placeholder="Email" required />
                 </div>
                 <div class="main-form__container-half">
                   <input
@@ -454,8 +386,7 @@
                     placeholder="Phone Number"
                     pattern="\(\d{3}\) \d{3}-\d{4}"
                     title='Enter your phone number in the format "(123) 456-7890"'
-                    required
-                  />
+                    required />
                 </div>
               </div>
               <div class="main-form__container-full">
@@ -466,23 +397,14 @@
                   placeholder="Subject"
                   pattern="[^<>]*"
                   title="Symbols < and > are not allowed"
-                  required
-                />
+                  required />
               </div>
               <div class="main-form__container-full">
-                <textarea
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="10"
-                  placeholder="Tell Us Something..."
-                ></textarea>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Tell Us Something..."></textarea>
               </div>
               <div class="main-form__button">
                 <div class="btn-primary-container">
-                  <button class="btn-primary button-phone" type="button">
-                    send to hydra
-                  </button>
+                  <button class="btn-primary button-phone" type="button">send to hydra</button>
                 </div>
               </div>
             </form>
@@ -493,32 +415,22 @@
         <section>
           <div class="top-footer-container top-footer-container--curved-line">
             <div class="top-footer-nav--wrapper top-footer--separator">
-              <img
-                class="top-footer-logo"
-                src="./images/svg/logo.svg"
-                alt="Hydra VR Logo"
-              />
+              <img class="top-footer-logo" src="./images/svg/logo.svg" alt="Hydra VR Logo" />
             </div>
-            <div
-              class="top-footer-nav top-footer-nav--wrapper top-footer--separator"
-            >
+            <div class="top-footer-nav top-footer-nav--wrapper top-footer--separator">
               <a href="#about">about</a>
               <a href="#services">services</a>
               <a href="#technologies">technologies</a>
               <a href="#how-to">how to</a>
               <a href="#">join hydra</a>
             </div>
-            <div
-              class="top-footer-nav top-footer-nav--wrapper top-footer--separator"
-            >
+            <div class="top-footer-nav top-footer-nav--wrapper top-footer--separator">
               <a href="#">f.a.q</a>
               <a href="#">sitemap</a>
               <a href="#">conditions</a>
               <a href="#">licenses</a>
             </div>
-            <div
-              class="top-footer-nav top-footer-last top-footer-nav--wrapper top-footer--separator"
-            >
+            <div class="top-footer-nav top-footer-last top-footer-nav--wrapper top-footer--separator">
               <div>
                 <h3>socialize with hydra</h3>
               </div>
@@ -526,43 +438,31 @@
                 <a
                   href="https://facebook.com"
                   target="_blank"
-                  title="Create an account or log into Facebook. Connect with friends, family and other people you know. Share photos and videos, send messages and get updates."
-                >
+                  title="Create an account or log into Facebook. Connect with friends, family and other people you know. Share photos and videos, send messages and get updates.">
                   <img src="./images/svg/facebook.svg" alt="Facebook" />
                 </a>
                 <a
                   href="https://twitter.com"
                   target="_blank"
-                  title="Twitter. From breaking news and entertainment to sports and politics, get the full story with all the live commentary."
-                >
+                  title="Twitter. From breaking news and entertainment to sports and politics, get the full story with all the live commentary.">
                   <img src="./images/svg/twitter.svg" alt="Twitter" />
                 </a>
                 <a
                   href="https://linkedin.com"
                   target="_blank"
-                  title="LinkedIn. 750 million+ members | Manage your professional identity. Build and engage with your professional network. Access knowledge, insights and opportunities."
-                >
+                  title="LinkedIn. 750 million+ members | Manage your professional identity. Build and engage with your professional network. Access knowledge, insights and opportunities.">
                   <img src="./images/svg/linkedin.svg" alt="LinkedIn" />
                 </a>
-                <a
-                  href="https://youtube.com"
-                  target="_blank"
-                  title="Youtube. Share videos with loved ones and friends around the world."
-                >
+                <a href="https://youtube.com" target="_blank" title="Youtube. Share videos with loved ones and friends around the world.">
                   <img src="./images/svg/youtube.svg" alt="Youtube" />
                 </a>
                 <a
                   href="https://instagram.com"
                   target="_blank"
-                  title="Instagram. Create an account or log in to Instagram - A simple, fun & creative way to capture, edit & share photos, videos & messages with friends & family."
-                >
+                  title="Instagram. Create an account or log in to Instagram - A simple, fun & creative way to capture, edit & share photos, videos & messages with friends & family.">
                   <img src="./images/svg/instagram.svg" alt="Instagram" />
                 </a>
-                <a
-                  href="https://pinterest.com"
-                  target="_blank"
-                  title="Pinterest. Find recipes, home design tips, personal style and more ideas."
-                >
+                <a href="https://pinterest.com" target="_blank" title="Pinterest. Find recipes, home design tips, personal style and more ideas.">
                   <img src="./images/svg/pinterest.svg" alt="Pinterest" />
                 </a>
               </div>
@@ -574,13 +474,11 @@
         </section>
         <section>
           <div class="bottom-footer-container">
-            <h4>
-              2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS
-              RESERVED
-            </h4>
+            <h4>2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED</h4>
           </div>
         </section>
       </footer>
     </div>
+    <script src="./src/hamburgerMenu.js"></script>
   </body>
 </html>
