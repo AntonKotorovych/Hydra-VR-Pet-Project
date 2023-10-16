@@ -53,15 +53,6 @@ textarea {
   color: var(--text-color-white);
 }
 
-textarea:invalid {
-  border-color: var(--invalid-input);
-}
-
-textarea:valid {
-  /* border-color: var(--valid-input); */
-  border-color: none;
-}
-
 .main-form {
   width: 100%;
   display: flex;
@@ -89,4 +80,11 @@ textarea:valid {
 ::placeholder {
   font-size: var(--font-size-normal);
   color: var(--text-color-white);
+}
+
+.error-message {
+  display: none;
+  color: var(--error-message-color);
+  font-size: var(--font-size-small);
+  text-align: center;
 }

@@ -8,6 +8,8 @@ const subject = document.querySelector('input[name="subject"]');
 const textarea = document.querySelector('textarea[name="textarea"]');
 const submitBtn = document.querySelector('button[name="submit-btn"]');
 
+const errorMessage = document.querySelector('.error-message');
+
 mainForm.addEventListener('submit', e => {
   e.preventDefault();
 
@@ -20,8 +22,8 @@ mainForm.addEventListener('submit', e => {
     textarea: textarea.value,
   };
 
-  function validateFormData(firstName, lastName, email, phoneNumber, subject, textarea) {
-    let nameIsValid = true;
+  function formDataIsValid(firstName, lastName, email, phoneNumber, subject, textarea) {
+    let firstNameIsValid = true;
     let lastNameIsValid = true;
     let emailIsValid = true;
     let phoneNumberIsValid = true;
@@ -31,10 +33,10 @@ mainForm.addEventListener('submit', e => {
     const textRegExp = /^[a-zA-Z]{1,25}$/;
     const emailRegExp = /^[\w\.-]+@[\w\.-]+\.\w+$/;
     const phoneNumberRegExp = /\(\d{3}\) \d{3}-\d{4}/;
-    const textareaRegExp = /^[A-Za-z]{1,5000}$/;
+    const textareaRegExp = /^[\s\S]{1,5000}$/;
 
     if (!firstName.trim().match(textRegExp)) {
-      nameIsValid = false;
+      firstNameIsValid = false;
     }
 
     if (!lastName.trim().match(textRegExp)) {
@@ -57,10 +59,10 @@ mainForm.addEventListener('submit', e => {
       textareaIsValid = false;
     }
 
-    return [nameIsValid, lastNameIsValid, emailIsValid, phoneNumberIsValid, subjectIsValid, textareaIsValid];
+    return [firstNameIsValid, lastNameIsValid, emailIsValid, phoneNumberIsValid, subjectIsValid, textareaIsValid];
   }
 
-  const [nameIsValid, lastNameIsValid, emailIsValid, phoneNumberIsValid, subjectIsValid, textareaIsValid] = validateFormData(
+  const [firstNameIsValid, lastNameIsValid, emailIsValid, phoneNumberIsValid, subjectIsValid, textareaIsValid] = formDataIsValid(
     formData.firstName,
     formData.lastName,
     formData.email,
@@ -69,7 +71,65 @@ mainForm.addEventListener('submit', e => {
     formData.textarea
   );
 
-  console.log(formData);
+  console.log(firstNameIsValid, lastNameIsValid, emailIsValid, phoneNumberIsValid, subjectIsValid, textareaIsValid);
 
-  console.log(nameIsValid, lastNameIsValid, emailIsValid, phoneNumberIsValid, subjectIsValid, textareaIsValid);
+  if (!firstNameIsValid) {
+    firstName.classList.remove('valid');
+    firstName.classList.add('invalid');
+    firstName.nextElementSibling.style.display = 'block';
+  } else {
+    firstName.classList.remove('invalid');
+    firstName.classList.add('valid');
+    firstName.nextElementSibling.style.display = 'none';
+  }
+
+  if (!lastNameIsValid) {
+    lastName.classList.remove('valid');
+    lastName.classList.add('invalid');
+    lastName.nextElementSibling.style.display = 'block';
+  } else {
+    lastName.classList.remove('invalid');
+    lastName.classList.add('valid');
+    lastName.nextElementSibling.style.display = 'none';
+  }
+
+  if (!emailIsValid) {
+    email.classList.remove('valid');
+    email.classList.add('invalid');
+    email.nextElementSibling.style.display = 'block';
+  } else {
+    email.classList.remove('invalid');
+    email.classList.add('valid');
+    email.nextElementSibling.style.display = 'none';
+  }
+
+  if (!phoneNumberIsValid) {
+    phoneNumber.classList.remove('valid');
+    phoneNumber.classList.add('invalid');
+    phoneNumber.nextElementSibling.style.display = 'block';
+  } else {
+    phoneNumber.classList.remove('invalid');
+    phoneNumber.classList.add('valid');
+    phoneNumber.nextElementSibling.style.display = 'none';
+  }
+
+  if (!subjectIsValid) {
+    subject.classList.remove('valid');
+    subject.classList.add('invalid');
+    subject.nextElementSibling.style.display = 'block';
+  } else {
+    subject.classList.remove('invalid');
+    subject.classList.add('valid');
+    subject.nextElementSibling.style.display = 'none';
+  }
+
+  if (!textareaIsValid) {
+    textarea.classList.remove('valid');
+    textarea.classList.add('invalid');
+    textarea.nextElementSibling.style.display = 'block';
+  } else {
+    textarea.classList.remove('invalid');
+    textarea.classList.add('valid');
+    textarea.nextElementSibling.style.display = 'none';
+  }
 });

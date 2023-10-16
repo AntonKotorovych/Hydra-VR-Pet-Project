@@ -93,6 +93,18 @@ body {
   display: none;
 }
 
+.invalid {
+  border-color: var(--invalid-input);
+}
+
+.valid {
+  border-color: var(--valid-input);
+}
+
+.hidden {
+  display: none;
+}
+
 @media only screen and (max-width: 1370px) {
   .container {
     max-width: 90%;

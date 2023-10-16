@@ -353,9 +353,11 @@
               <div class="main-form__wrap-inputs">
                 <div class="main-form__container-half">
                   <input type="text" name="first-name" placeholder="First Name" title="Only characters. No more than 25 characters" maxlength="25" />
+                  <span class="error-message">Only characters. No more than 25 characters</span>
                 </div>
                 <div class="main-form__container-half">
                   <input type="text" name="last-name" placeholder="Last Name" title="Only characters. No more than 25 characters" maxlength="25" />
+                  <span class="error-message">Only characters. No more than 25 characters</span>
                 </div>
               </div>
               <div class="main-form__wrap-inputs">
@@ -366,16 +368,25 @@
                     name="email"
                     placeholder="Email"
                     title="Please fill a correct email address format. for example: 'admin@gmail.com'" />
+                  <span class="error-message">Please fill a correct email address format. for example: 'admin@gmail.com'</span>
                 </div>
                 <div class="main-form__container-half">
                   <input type="text" name="phone-number" placeholder="Phone Number" title='Enter your phone number in the format "(123) 456-7890"' />
+                  <span class="error-message">Enter your phone number in the format "(123) 456-7890"</span>
                 </div>
               </div>
               <div class="main-form__container-full">
                 <input type="text" name="subject" placeholder="Subject" title="Only characters. No more than 25 characters" />
+                <span class="error-message">Only characters. No more than 25 characters"</span>
               </div>
               <div class="main-form__container-full">
-                <textarea name="textarea" cols="30" rows="10" placeholder="Tell Us Something..."></textarea>
+                <textarea
+                  name="textarea"
+                  cols="30"
+                  rows="10"
+                  placeholder="Tell Us Something..."
+                  title="Textarea has not to be empty and also contain 5000 characters max"></textarea>
+                <span class="error-message">Textarea has not to be empty and also contain 5000 characters max</span>
               </div>
               <div class="main-form__button">
                 <div class="btn-primary-container">
