@@ -375,6 +375,26 @@
                   <span class="error-message">Enter your phone number in the format "(123) 456-7890"</span>
                 </div>
               </div>
+              <div class="main-form__wrap-inputs">
+                <div class="main-form__container-half">
+                  <select name="Country">
+                    <option value="United States of America">Select your Country</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="England">England</option>
+                    <option value="Germany">Germany</option>
+                    <option value="France">France</option>
+                    <option value="Mordor">Mordor (russian pederation)</option>
+                  </select>
+                </div>
+                <div class="main-form__container-half">
+                  <label for="age-check">Confirm that you are over 18 years old</label>
+                  <input type="checkbox" id="age-check" name="age-check" />
+                </div>
+              </div>
+              <div class="main-form__container-full">
+                <input type="radio" name="vr-size" value="Size-S" /> Size S <input type="radio" name="vr-size" value="size-m" /> Size M
+                <input type="radio" name="vr-size" value="Size-L" /> Size L
+              </div>
               <div class="main-form__container-full">
                 <input type="text" name="subject" placeholder="Subject" title="Only characters. No more than 25 characters" />
                 <span class="error-message">Only characters. No more than 25 characters"</span>
@@ -387,6 +407,9 @@
                   placeholder="Tell Us Something..."
                   title="Textarea has not to be empty and also contain 5000 characters max"></textarea>
                 <span class="error-message">Textarea has not to be empty and also contain 5000 characters max</span>
+              </div>
+              <div class="main-form__container-full">
+                <input type="range" min="1" max="10" value="10" />
               </div>
               <div class="main-form__button">
                 <div class="btn-primary-container">

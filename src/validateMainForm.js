@@ -135,6 +135,8 @@ mainForm.addEventListener('submit', e => {
   }
 
   async function sendFormUserData(formUserData) {
+    // Public access
+
     const url = 'https://hydra-vr-default-rtdb.firebaseio.com/';
 
     try {
