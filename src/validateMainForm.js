@@ -31,6 +31,7 @@ mainForm.addEventListener('submit', e => {
     let textareaIsValid = true;
 
     const textRegExp = /^[a-zA-Z]{1,25}$/;
+    const subjectRegExp = /^[A-Za-z ]{1,25}$/;
     const emailRegExp = /^[\w\.-]+@[\w\.-]+\.\w+$/;
     const phoneNumberRegExp = /\(\d{3}\) \d{3}-\d{4}/;
     const textareaRegExp = /^[\s\S]{1,5000}$/;
@@ -51,7 +52,7 @@ mainForm.addEventListener('submit', e => {
       phoneNumberIsValid = false;
     }
 
-    if (!subject.trim().match(textRegExp)) {
+    if (!subject.trim().match(subjectRegExp)) {
       subjectIsValid = false;
     }
 
@@ -132,4 +133,27 @@ mainForm.addEventListener('submit', e => {
     textarea.classList.add('valid');
     textarea.nextElementSibling.style.display = 'none';
   }
+
+  async function sendFormUserData(formUserData) {
+    const url = 'https://hydra-vr-default-rtdb.firebaseio.com/';
+
+    try {
+      const response = await fetch(`${url}users.json`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formUserData),
+      });
+
+      if (!response.ok) throw new Error(`HTTP error. Status: ${response.status}`);
+
+      const data = await response.json();
+      console.log('Succeed ', data);
+    } catch (err) {
+      console.error('unsuccessful ', err);
+    }
+  }
+
+  sendFormUserData(formData);
 });
