@@ -409,17 +409,21 @@
                 </div>
                 <div class="main-form__container-half">
                   <div class="age-validation">
-                    <input type="checkbox" class="age-validation__checkbox" id="age-check" name="age-check" />
                     <label for="age-check">Confirm that you are over 18 years old</label>
+                    <input type="checkbox" class="age-validation__checkbox" id="age-check" name="age-check" />
                   </div>
                 </div>
               </div>
               <div class="main-form__container-full">
-                <input type="radio" name="vr-size" value="Size-S" /> Size S <input type="radio" name="vr-size" value="size-m" /> Size M
-                <input type="radio" name="vr-size" value="Size-L" /> Size L
+                <input type="radio" id="size-s" name="vr-size" value="size-s" />
+                <label for="size-s">Size S</label>
+                <input type="radio" id="size-m" name="vr-size" value="size-m" />
+                <label for="size-m">Size M</label>
+                <input type="radio" id="size-l" name="vr-size" value="size-l" />
+                <label for="size-l">Size L</label>
               </div>
               <div class="main-form__container-full">
-                <input type="text" name="subject" placeholder="Subject" title="Only characters. No more than 25 characters" />
+                <input class="custom-input" type="text" name="subject" placeholder="Subject" title="Only characters. No more than 25 characters" />
                 <span class="error-message">Only characters. No more than 25 characters"</span>
               </div>
               <div class="main-form__container-full">

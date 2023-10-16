@@ -107,10 +107,11 @@ textarea {
 }
 
 .age-validation__checkbox {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   display: inline-block;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 /* Select country custom */
