@@ -88,3 +88,25 @@ textarea {
   font-size: var(--font-size-small);
   text-align: center;
 }
+
+.age-validation {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.age-validation label {
+  font-size: var(--font-size-medium);
+  color: var(--text-color-white);
+}
+
+.age-validation__checkbox {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border: 2px solid #000;
+  display: inline-block;
+  cursor: pointer;
+}
