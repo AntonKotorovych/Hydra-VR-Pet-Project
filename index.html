@@ -360,22 +360,22 @@
               </div>
               <div class="main-form__wrap-inputs">
                 <div class="main-form__container-half">
-                  <input type="email" id="email" name="email" placeholder="Email" />
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    title="Please fill a correct email address format. for example: 'admin@gmail.com'" />
                 </div>
                 <div class="main-form__container-half">
-                  <input
-                    type="text"
-                    name="phone-number"
-                    placeholder="Phone Number"
-                    pattern="\(\d{3}\) \d{3}-\d{4}"
-                    title='Enter your phone number in the format "(123) 456-7890"' />
+                  <input type="text" name="phone-number" placeholder="Phone Number" title='Enter your phone number in the format "(123) 456-7890"' />
                 </div>
               </div>
               <div class="main-form__container-full">
-                <input type="text" name="subject" placeholder="Subject" pattern="[^<>]*" title="Symbols < and > are not allowed" />
+                <input type="text" name="subject" placeholder="Subject" title="Only characters. No more than 25 characters" />
               </div>
               <div class="main-form__container-full">
-                <textarea name="" cols="30" rows="10" placeholder="Tell Us Something..."></textarea>
+                <textarea name="textarea" cols="30" rows="10" placeholder="Tell Us Something..."></textarea>
               </div>
               <div class="main-form__button">
                 <div class="btn-primary-container">

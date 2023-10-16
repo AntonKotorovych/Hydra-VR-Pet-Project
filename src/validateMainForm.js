@@ -5,9 +5,8 @@ const lastName = document.querySelector('input[name="last-name"]');
 const email = document.querySelector('input[name="email"]');
 const phoneNumber = document.querySelector('input[name="phone-number"]');
 const subject = document.querySelector('input[name="subject"]');
+const textarea = document.querySelector('textarea[name="textarea"]');
 const submitBtn = document.querySelector('button[name="submit-btn"]');
-
-console.log(mainForm);
 
 mainForm.addEventListener('submit', e => {
   e.preventDefault();
@@ -18,27 +17,59 @@ mainForm.addEventListener('submit', e => {
     email: email.value,
     phoneNumber: phoneNumber.value,
     subject: subject.value,
+    textarea: textarea.value,
   };
 
-  function validateFullName(firstName, lastName) {
+  function validateFormData(firstName, lastName, email, phoneNumber, subject, textarea) {
     let nameIsValid = true;
     let lastNameIsValid = true;
-    const regExp = /^[a-zA-Z]{1,25}$/;
+    let emailIsValid = true;
+    let phoneNumberIsValid = true;
+    let subjectIsValid = true;
+    let textareaIsValid = true;
 
-    if (!firstName.trim().match(regExp)) {
+    const textRegExp = /^[a-zA-Z]{1,25}$/;
+    const emailRegExp = /^[\w\.-]+@[\w\.-]+\.\w+$/;
+    const phoneNumberRegExp = /\(\d{3}\) \d{3}-\d{4}/;
+    const textareaRegExp = /^[A-Za-z]{1,5000}$/;
+
+    if (!firstName.trim().match(textRegExp)) {
       nameIsValid = false;
     }
 
-    if (!lastName.trim().match(regExp)) {
+    if (!lastName.trim().match(textRegExp)) {
       lastNameIsValid = false;
     }
 
-    return [nameIsValid, lastNameIsValid];
+    if (!email.trim().match(emailRegExp)) {
+      emailIsValid = false;
+    }
+
+    if (!phoneNumber.trim().match(phoneNumberRegExp)) {
+      phoneNumberIsValid = false;
+    }
+
+    if (!subject.trim().match(textRegExp)) {
+      subjectIsValid = false;
+    }
+
+    if (!textarea.trim().match(textareaRegExp)) {
+      textareaIsValid = false;
+    }
+
+    return [nameIsValid, lastNameIsValid, emailIsValid, phoneNumberIsValid, subjectIsValid, textareaIsValid];
   }
 
-  const [nameIsValid, lastNameIsValid] = validateFullName(formData.firstName, formData.lastName);
-
-  console.log(nameIsValid, lastNameIsValid);
+  const [nameIsValid, lastNameIsValid, emailIsValid, phoneNumberIsValid, subjectIsValid, textareaIsValid] = validateFormData(
+    formData.firstName,
+    formData.lastName,
+    formData.email,
+    formData.phoneNumber,
+    formData.subject,
+    formData.textarea
+  );
 
   console.log(formData);
+
+  console.log(nameIsValid, lastNameIsValid, emailIsValid, phoneNumberIsValid, subjectIsValid, textareaIsValid);
 });
