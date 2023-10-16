@@ -89,12 +89,16 @@ textarea {
   text-align: center;
 }
 
+/* Checkbox age validation */
+
 .age-validation {
   height: 60px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  user-select: none;
 }
 
 .age-validation label {
@@ -105,8 +109,25 @@ textarea {
 .age-validation__checkbox {
   width: 30px;
   height: 30px;
-  background-color: red;
-  border: 2px solid #000;
   display: inline-block;
   cursor: pointer;
+}
+
+/* Select country custom */
+
+.custom-select-country select {
+  width: 100%;
+  height: 72px;
+  padding-left: 40px;
+  border: 2px solid var(--text-color-white);
+  background: transparent;
+  cursor: pointer;
+  border-radius: 40px;
+  font-family: inherit;
+  font-size: var(--font-size-normal);
+  color: var(--text-color-white);
+}
+
+.custom-select-country select option {
+  color: black;
 }

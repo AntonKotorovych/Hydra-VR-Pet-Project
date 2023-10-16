@@ -352,17 +352,30 @@
             <form id="mainForm" name="main-form" class="main-form" method="post">
               <div class="main-form__wrap-inputs">
                 <div class="main-form__container-half">
-                  <input type="text" name="first-name" placeholder="First Name" title="Only characters. No more than 25 characters" maxlength="25" />
+                  <input
+                    class="custom-input"
+                    type="text"
+                    name="first-name"
+                    placeholder="First Name"
+                    title="Only characters. No more than 25 characters"
+                    maxlength="25" />
                   <span class="error-message">Only characters. No more than 25 characters</span>
                 </div>
                 <div class="main-form__container-half">
-                  <input type="text" name="last-name" placeholder="Last Name" title="Only characters. No more than 25 characters" maxlength="25" />
+                  <input
+                    class="custom-input"
+                    type="text"
+                    name="last-name"
+                    placeholder="Last Name"
+                    title="Only characters. No more than 25 characters"
+                    maxlength="25" />
                   <span class="error-message">Only characters. No more than 25 characters</span>
                 </div>
               </div>
               <div class="main-form__wrap-inputs">
                 <div class="main-form__container-half">
                   <input
+                    class="custom-input"
                     type="email"
                     id="email"
                     name="email"
@@ -371,20 +384,28 @@
                   <span class="error-message">Please fill a correct email address format. for example: 'admin@gmail.com'</span>
                 </div>
                 <div class="main-form__container-half">
-                  <input type="text" name="phone-number" placeholder="Phone Number" title='Enter your phone number in the format "(123) 456-7890"' />
+                  <input
+                    class="custom-input"
+                    type="text"
+                    name="phone-number"
+                    placeholder="Phone Number"
+                    title='Enter your phone number in the format "(123) 456-7890"' />
                   <span class="error-message">Enter your phone number in the format "(123) 456-7890"</span>
                 </div>
               </div>
               <div class="main-form__wrap-inputs">
                 <div class="main-form__container-half">
-                  <select name="Country">
-                    <option value="United States of America">Select your Country</option>
-                    <option value="Ukraine">Ukraine</option>
-                    <option value="England">England</option>
-                    <option value="Germany">Germany</option>
-                    <option value="France">France</option>
-                    <option value="Mordor">Mordor (russian pederation)</option>
-                  </select>
+                  <div class="custom-select-country">
+                    <select name="country" class="custom-input">
+                      <option value="0" disabled selected hidden>Select your Country</option>
+                      <option value="1">United States of America</option>
+                      <option value="2">Ukraine</option>
+                      <option value="3">England</option>
+                      <option value="4">Germany</option>
+                      <option value="5">France</option>
+                      <option value="6">Mordor (russian pederation)</option>
+                    </select>
+                  </div>
                 </div>
                 <div class="main-form__container-half">
                   <div class="age-validation">
@@ -491,6 +512,6 @@
       </footer>
     </div>
     <script src="./src/hamburgerMenu.js"></script>
-    <script type="module" src="./src/validateMainForm.js"></script>
+    <script src="./src/validateMainForm.js"></script>
   </body>
 </html>
