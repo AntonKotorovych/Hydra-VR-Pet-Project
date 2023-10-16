@@ -155,5 +155,5 @@ mainForm.addEventListener('submit', e => {
     }
   }
 
-  sendFormUserData(formData);
+  if (firstNameIsValid && lastNameIsValid && emailIsValid && phoneNumberIsValid && subjectIsValid && textareaIsValid) sendFormUserData(formData);
 });
