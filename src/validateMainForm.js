@@ -4,6 +4,8 @@ const firstName = document.querySelector('input[name="first-name"]');
 const lastName = document.querySelector('input[name="last-name"]');
 const email = document.querySelector('input[name="email"]');
 const phoneNumber = document.querySelector('input[name="phone-number"]');
+const selectCountry = document.querySelector('select[name="country"]');
+const checkbox = document.querySelector('input[name="age-check"]');
 const subject = document.querySelector('input[name="subject"]');
 const textarea = document.querySelector('textarea[name="textarea"]');
 const submitBtn = document.querySelector('button[name="submit-btn"]');
@@ -18,15 +20,19 @@ mainForm.addEventListener('submit', e => {
     lastName: lastName.value,
     email: email.value,
     phoneNumber: phoneNumber.value,
+    selectCountry: selectCountry.value,
+    checkbox: checkbox.value,
     subject: subject.value,
     textarea: textarea.value,
   };
 
-  function formDataIsValid(firstName, lastName, email, phoneNumber, subject, textarea) {
+  function formDataIsValid(firstName, lastName, email, phoneNumber, selectCountry, checkbox, subject, textarea) {
     let firstNameIsValid = true;
     let lastNameIsValid = true;
     let emailIsValid = true;
     let phoneNumberIsValid = true;
+    let selectCountryIsValid = true;
+    let checkboxIsChecked = true;
     let subjectIsValid = true;
     let textareaIsValid = true;
 
@@ -52,6 +58,14 @@ mainForm.addEventListener('submit', e => {
       phoneNumberIsValid = false;
     }
 
+    if (!selectCountry) {
+      selectCountryIsValid = false;
+    }
+
+    if (!checkbox.checked) {
+      checkboxIsChecked = false;
+    }
+
     if (!subject.trim().match(subjectRegExp)) {
       subjectIsValid = false;
     }
@@ -60,19 +74,48 @@ mainForm.addEventListener('submit', e => {
       textareaIsValid = false;
     }
 
-    return [firstNameIsValid, lastNameIsValid, emailIsValid, phoneNumberIsValid, subjectIsValid, textareaIsValid];
+    return [
+      firstNameIsValid,
+      lastNameIsValid,
+      emailIsValid,
+      phoneNumberIsValid,
+      selectCountryIsValid,
+      checkboxIsChecked,
+      subjectIsValid,
+      textareaIsValid,
+    ];
   }
 
-  const [firstNameIsValid, lastNameIsValid, emailIsValid, phoneNumberIsValid, subjectIsValid, textareaIsValid] = formDataIsValid(
+  const [
+    firstNameIsValid,
+    lastNameIsValid,
+    emailIsValid,
+    phoneNumberIsValid,
+    selectCountryIsValid,
+    checkboxIsChecked,
+    subjectIsValid,
+    textareaIsValid,
+  ] = formDataIsValid(
     formData.firstName,
     formData.lastName,
     formData.email,
     formData.phoneNumber,
+    formData.selectCountryIsValid,
+    formData.checkbox,
     formData.subject,
     formData.textarea
   );
 
-  console.log(firstNameIsValid, lastNameIsValid, emailIsValid, phoneNumberIsValid, subjectIsValid, textareaIsValid);
+  console.log(
+    firstNameIsValid,
+    lastNameIsValid,
+    emailIsValid,
+    phoneNumberIsValid,
+    selectCountryIsValid,
+    checkboxIsChecked,
+    subjectIsValid,
+    textareaIsValid
+  );
 
   if (!firstNameIsValid) {
     firstName.classList.remove('valid');

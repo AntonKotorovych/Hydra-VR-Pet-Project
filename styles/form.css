@@ -75,6 +75,7 @@ textarea {
 
 .main-form__button {
   align-self: center;
+  margin-top: 30px;
 }
 
 ::placeholder {
@@ -146,7 +147,7 @@ textarea {
 .radio-buttons {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   font-size: var(--font-size-medium);
   color: var(--text-color-white);
   height: 72px;
@@ -176,11 +177,9 @@ textarea {
 }
 
 .range-container {
-  width: 100%;
-}
-
-.range-container input {
-  width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .range-labels {
@@ -188,5 +187,15 @@ textarea {
   color: var(--text-color-white);
   display: flex;
   justify-content: space-between;
+  width: 100%;
   margin-bottom: 15px;
+}
+
+.range-labels span {
+  text-align: center;
+  width: calc(2%);
+}
+
+#ratingRange {
+  width: 100%;
 }
