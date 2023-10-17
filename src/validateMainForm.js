@@ -8,22 +8,23 @@ const selectCountry = document.querySelector('select[name="country"]');
 const checkbox = document.querySelector('input[name="age-check"]');
 const subject = document.querySelector('input[name="subject"]');
 const textarea = document.querySelector('textarea[name="textarea"]');
+const rateUs = document.getElementById('ratingRange');
 const submitBtn = document.querySelector('button[name="submit-btn"]');
 
 const errorMessage = document.querySelector('.error-message');
 
 mainForm.addEventListener('submit', e => {
   e.preventDefault();
-
   const formData = {
     firstName: firstName.value,
     lastName: lastName.value,
     email: email.value,
     phoneNumber: phoneNumber.value,
-    selectCountry: selectCountry.value,
-    checkbox: checkbox.value,
+    selectCountry: +selectCountry.value,
+    checkbox: checkbox.checked,
     subject: subject.value,
     textarea: textarea.value,
+    rateUs: rateUs.value,
   };
 
   function formDataIsValid(firstName, lastName, email, phoneNumber, selectCountry, checkbox, subject, textarea) {
@@ -58,11 +59,15 @@ mainForm.addEventListener('submit', e => {
       phoneNumberIsValid = false;
     }
 
-    if (!selectCountry) {
+    if (selectCountry === 0) {
       selectCountryIsValid = false;
+    } else if (selectCountry === 6) {
+      alert('Go and raise your country from its knees, russian dog');
+      selectCountryIsValid = false;
+      location.reload();
     }
 
-    if (!checkbox.checked) {
+    if (!checkbox) {
       checkboxIsChecked = false;
     }
 
@@ -100,21 +105,10 @@ mainForm.addEventListener('submit', e => {
     formData.lastName,
     formData.email,
     formData.phoneNumber,
-    formData.selectCountryIsValid,
+    formData.selectCountry,
     formData.checkbox,
     formData.subject,
     formData.textarea
-  );
-
-  console.log(
-    firstNameIsValid,
-    lastNameIsValid,
-    emailIsValid,
-    phoneNumberIsValid,
-    selectCountryIsValid,
-    checkboxIsChecked,
-    subjectIsValid,
-    textareaIsValid
   );
 
   if (!firstNameIsValid) {
@@ -155,6 +149,22 @@ mainForm.addEventListener('submit', e => {
     phoneNumber.classList.remove('invalid');
     phoneNumber.classList.add('valid');
     phoneNumber.nextElementSibling.style.display = 'none';
+  }
+
+  if (!selectCountryIsValid) {
+    selectCountry.classList.remove('valid');
+    selectCountry.classList.add('invalid');
+    selectCountry.nextElementSibling.style.display = 'block';
+  } else {
+    selectCountry.classList.remove('invalid');
+    selectCountry.classList.add('valid');
+    selectCountry.nextElementSibling.style.display = 'none';
+  }
+
+  if (!checkboxIsChecked) {
+    checkbox.nextElementSibling.style.display = 'block';
+  } else {
+    checkbox.nextElementSibling.style.display = 'none';
   }
 
   if (!subjectIsValid) {
@@ -200,5 +210,15 @@ mainForm.addEventListener('submit', e => {
     }
   }
 
-  if (firstNameIsValid && lastNameIsValid && emailIsValid && phoneNumberIsValid && subjectIsValid && textareaIsValid) sendFormUserData(formData);
+  if (
+    firstNameIsValid &&
+    lastNameIsValid &&
+    emailIsValid &&
+    phoneNumberIsValid &&
+    selectCountryIsValid &&
+    checkboxIsChecked &&
+    subjectIsValid &&
+    textareaIsValid
+  )
+    sendFormUserData(formData);
 });

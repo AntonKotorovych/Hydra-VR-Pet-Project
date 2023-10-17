@@ -94,11 +94,11 @@ body {
 }
 
 .invalid {
-  border-color: var(--invalid-input);
+  border-color: var(--invalid-input) !important;
 }
 
 .valid {
-  border-color: var(--valid-input);
+  border-color: var(--valid-input) !important;
 }
 
 .hidden {

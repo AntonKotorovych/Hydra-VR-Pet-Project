@@ -93,12 +93,12 @@ textarea {
 /* Checkbox age validation */
 
 .age-validation {
-  height: 60px;
+  height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   user-select: none;
 }
 
