@@ -6,6 +6,8 @@ const email = document.querySelector('input[name="email"]');
 const phoneNumber = document.querySelector('input[name="phone-number"]');
 const selectCountry = document.querySelector('select[name="country"]');
 const checkbox = document.querySelector('input[name="age-check"]');
+const vrSizeContainer = document.querySelector('.radio-buttons');
+const vrSize = document.getElementsByName('vr-size');
 const subject = document.querySelector('input[name="subject"]');
 const textarea = document.querySelector('textarea[name="textarea"]');
 const rateUs = document.getElementById('ratingRange');
@@ -15,6 +17,14 @@ const errorMessage = document.querySelector('.error-message');
 
 mainForm.addEventListener('submit', e => {
   e.preventDefault();
+  let curVrSize;
+  for (const radioButton of vrSize) {
+    if (radioButton.checked) {
+      curVrSize = radioButton.value;
+      break;
+    }
+  }
+
   const formData = {
     firstName: firstName.value,
     lastName: lastName.value,
@@ -22,12 +32,13 @@ mainForm.addEventListener('submit', e => {
     phoneNumber: phoneNumber.value,
     selectCountry: +selectCountry.value,
     checkbox: checkbox.checked,
+    vrSize: curVrSize,
     subject: subject.value,
     textarea: textarea.value,
     rateUs: rateUs.value,
   };
 
-  function formDataIsValid(firstName, lastName, email, phoneNumber, selectCountry, checkbox, subject, textarea) {
+  function formDataIsValid(firstName, lastName, email, phoneNumber, selectCountry, checkbox, vrSize, subject, textarea) {
     let firstNameIsValid = true;
     let lastNameIsValid = true;
     let emailIsValid = true;
@@ -36,6 +47,7 @@ mainForm.addEventListener('submit', e => {
     let checkboxIsChecked = true;
     let subjectIsValid = true;
     let textareaIsValid = true;
+    let vrSizeIsChecked = true;
 
     const textRegExp = /^[a-zA-Z]{1,25}$/;
     const subjectRegExp = /^[A-Za-z ]{1,25}$/;
@@ -71,6 +83,10 @@ mainForm.addEventListener('submit', e => {
       checkboxIsChecked = false;
     }
 
+    if (vrSize === undefined) {
+      vrSizeIsChecked = false;
+    }
+
     if (!subject.trim().match(subjectRegExp)) {
       subjectIsValid = false;
     }
@@ -86,6 +102,7 @@ mainForm.addEventListener('submit', e => {
       phoneNumberIsValid,
       selectCountryIsValid,
       checkboxIsChecked,
+      vrSizeIsChecked,
       subjectIsValid,
       textareaIsValid,
     ];
@@ -98,6 +115,7 @@ mainForm.addEventListener('submit', e => {
     phoneNumberIsValid,
     selectCountryIsValid,
     checkboxIsChecked,
+    vrSizeIsChecked,
     subjectIsValid,
     textareaIsValid,
   ] = formDataIsValid(
@@ -107,6 +125,7 @@ mainForm.addEventListener('submit', e => {
     formData.phoneNumber,
     formData.selectCountry,
     formData.checkbox,
+    formData.vrSize,
     formData.subject,
     formData.textarea
   );
@@ -167,6 +186,12 @@ mainForm.addEventListener('submit', e => {
     checkbox.nextElementSibling.style.display = 'none';
   }
 
+  if (!vrSizeIsChecked) {
+    vrSizeContainer.nextElementSibling.style.display = 'block';
+  } else {
+    vrSizeContainer.nextElementSibling.style.display = 'none';
+  }
+
   if (!subjectIsValid) {
     subject.classList.remove('valid');
     subject.classList.add('invalid');
@@ -217,8 +242,12 @@ mainForm.addEventListener('submit', e => {
     phoneNumberIsValid &&
     selectCountryIsValid &&
     checkboxIsChecked &&
+    vrSizeIsChecked &&
     subjectIsValid &&
     textareaIsValid
-  )
+  ) {
+    delete formData.checkbox;
+    formData.selectCountry = selectCountry[formData.selectCountry].textContent;
     sendFormUserData(formData);
+  }
 });
