@@ -349,7 +349,7 @@
               <h2 class="title title--primary">join hydra</h2>
               <h3 class="title title--secondary">Let's Build Your VR Experience</h3>
             </div>
-            <form id="mainForm" name="main-form" class="main-form" method="post">
+            <form id="mainForm" name="main-form" class="main-form" method="post" autocomplete="off">
               <div class="main-form__wrap-inputs">
                 <div class="main-form__container-half">
                   <input
@@ -358,6 +358,7 @@
                     name="first-name"
                     placeholder="First Name"
                     title="Only characters. No more than 25 characters"
+                    autocomplete="given-name"
                     maxlength="25" />
                   <span class="error-message">Only characters. No more than 25 characters</span>
                 </div>
@@ -368,6 +369,7 @@
                     name="last-name"
                     placeholder="Last Name"
                     title="Only characters. No more than 25 characters"
+                    autocomplete="family-name"
                     maxlength="25" />
                   <span class="error-message">Only characters. No more than 25 characters</span>
                 </div>
@@ -379,6 +381,7 @@
                     type="email"
                     id="email"
                     name="email"
+                    autocomplete="email"
                     placeholder="Email"
                     title="Please fill a correct email address format. for example: 'admin@gmail.com'" />
                   <span class="error-message">Please fill a correct email address format. for example: 'admin@gmail.com'</span>
@@ -389,6 +392,7 @@
                     type="text"
                     name="phone-number"
                     placeholder="Phone Number"
+                    autocomplete="tel"
                     title='Enter your phone number in the format "(123) 456-7890"' />
                   <span class="error-message">Enter your phone number in the format "(123) 456-7890"</span>
                 </div>
@@ -396,7 +400,7 @@
               <div class="main-form__wrap-inputs">
                 <div class="main-form__container-half">
                   <div class="custom-select-country">
-                    <select name="country" class="custom-input">
+                    <select name="country" class="custom-input" autocomplete="country">
                       <option value="0" disabled selected hidden>Select your Country</option>
                       <option value="1">United States of America</option>
                       <option value="2">Ukraine</option>

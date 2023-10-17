@@ -75,7 +75,6 @@ mainForm.addEventListener('submit', e => {
       selectCountryIsValid = false;
     } else if (selectCountry === 6) {
       alert('Go and raise your country from its knees, russian dog');
-      selectCountryIsValid = false;
       location.reload();
     }
 
