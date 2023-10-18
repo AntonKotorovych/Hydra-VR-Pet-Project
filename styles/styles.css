@@ -756,7 +756,7 @@ body {
   }
 
   .main-header__info-wrapper {
-    width: 80%;
+    width: 70%;
   }
 
   .main-header__geolocation h2,
@@ -767,19 +767,19 @@ body {
 
   #geolocation {
     position: absolute;
-    right: 11%;
+    right: 16%;
     z-index: 0;
   }
 
   #call {
     position: absolute;
-    right: -111%;
+    right: -116%;
     z-index: 0;
   }
 
   #message {
     position: absolute;
-    right: -211%;
+    right: -216%;
     z-index: 0;
   }
 
