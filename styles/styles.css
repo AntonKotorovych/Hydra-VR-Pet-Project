@@ -757,6 +757,7 @@ body {
 
   .main-header__info-wrapper {
     width: 70%;
+    transition: right 0.4s ease;
   }
 
   .main-header__geolocation h2,
