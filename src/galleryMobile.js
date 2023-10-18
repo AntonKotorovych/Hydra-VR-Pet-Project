@@ -4,10 +4,10 @@ const btnRightFeatures = document.querySelector('.btn-mobile-arrow--right-featur
 console.log(btnLeftFeatures);
 console.log(btnRightFeatures);
 
-let simulation = document.getElementById('simulation');
-let education = document.getElementById('education');
-let selfCare = document.getElementById('selfCare');
-let outdoor = document.getElementById('outdoor');
+const simulation = document.getElementById('simulation');
+const education = document.getElementById('education');
+const selfCare = document.getElementById('selfCare');
+const outdoor = document.getElementById('outdoor');
 
 let counterFeatures = 0;
 
@@ -44,12 +44,3 @@ btnLeftFeatures.addEventListener('click', () => {
   counterFeatures = (counterFeatures - 1 + 4) % 4;
   changeFeaturesView();
 });
-
-// window.addEventListener('resize', () => {
-//   if (window.innerWidth > 799) {
-//     geolocation.style.removeProperty('right');
-//     call.style.removeProperty('right');
-//     message.style.removeProperty('right');
-//     counter = 0;
-//   }
-// });

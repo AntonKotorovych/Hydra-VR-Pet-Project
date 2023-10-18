@@ -944,10 +944,6 @@ body {
 
   /* Technologies brands */
 
-  .technologies-brands ul li ~ li {
-    display: none;
-  }
-
   .technologies-brands ul li {
     display: flex;
     align-items: center;
@@ -958,6 +954,32 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .technologies-brands__brand {
+    transition: left 2s ease;
+  }
+
+  #unrealEngine {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #unity {
+    position: absolute;
+    left: 120%;
+  }
+
+  #oculus {
+    position: absolute;
+    left: 220%;
+  }
+
+  #vive {
+    position: absolute;
+    left: 320%;
   }
 
   .btn-mobile-arrow {
