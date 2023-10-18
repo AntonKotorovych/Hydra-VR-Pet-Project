@@ -9,13 +9,30 @@ console.log(geolocation, call, message);
 
 let counter = 0;
 
+function changeInfoView() {
+  if (counter === 0) {
+    geolocation.style.right = '16%';
+    call.style.right = '-116%';
+    message.style.right = '-216%';
+  } else if (counter === 1) {
+    geolocation.style.right = '116%';
+    call.style.right = '16%';
+    message.style.right = '-116%';
+  } else if (counter === 2) {
+    geolocation.style.right = '216%';
+    call.style.right = '116%';
+    message.style.right = '16%';
+  }
+}
+
 btnRight.addEventListener('click', () => {
   counter = (counter + 1) % 3;
   console.log(counter);
+  changeInfoView();
 });
 
 btnLeft.addEventListener('click', () => {
   counter = (counter - 1 + 3) % 3;
-
+  changeInfoView();
   console.log(counter);
 });
