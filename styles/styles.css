@@ -816,13 +816,9 @@ body {
     opacity: 0.5;
   }
 
-  .features {
-    flex-wrap: wrap;
-  }
-
   .btn-mobile-arrow--left-features {
     position: absolute;
-    left: -20px;
+    left: -1%;
     top: 48%;
     transform: translateY(-50%);
     z-index: 1;
@@ -898,15 +894,30 @@ body {
   .features {
     padding: 20px 0;
     position: relative;
-  }
-
-  .features__item ~ li {
-    display: none;
+    height: 550px;
   }
 
   .features__item {
-    width: 100%;
-    min-width: 0;
+    width: 95%;
+    height: 500px;
+    transition: right 0.4s ease;
+  }
+
+  #simulation {
+    position: absolute;
+    right: 0%;
+  }
+  #education {
+    position: absolute;
+    right: -120%;
+  }
+  #selfCare {
+    position: absolute;
+    right: -220%;
+  }
+  #outdoor {
+    position: absolute;
+    right: -320%;
   }
 
   /* Technologies */
@@ -1142,6 +1153,12 @@ body {
     background-image: url('../images/svg/curvedLines/curvedLineFooter2.svg');
     background-size: 100% 100%;
     z-index: -1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .btn-mobile-arrow--left-features {
+    left: -3%;
   }
 }
 

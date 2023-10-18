@@ -5,18 +5,18 @@ let geolocation = document.getElementById('geolocation');
 let call = document.getElementById('call');
 let message = document.getElementById('message');
 
-let counter = 0;
+let counterHeader = 0;
 
 function changeInfoView() {
-  if (counter === 0) {
+  if (counterHeader === 0) {
     geolocation.style.right = '16%';
-    call.style.right = '-116%';
-    message.style.right = '-216%';
-  } else if (counter === 1) {
+    call.style.right = '-84%';
+    message.style.right = '-184%';
+  } else if (counterHeader === 1) {
     geolocation.style.right = '116%';
     call.style.right = '16%';
-    message.style.right = '-116%';
-  } else if (counter === 2) {
+    message.style.right = '-84%';
+  } else if (counterHeader === 2) {
     geolocation.style.right = '216%';
     call.style.right = '116%';
     message.style.right = '16%';
@@ -24,15 +24,13 @@ function changeInfoView() {
 }
 
 btnRight.addEventListener('click', () => {
-  counter = (counter + 1) % 3;
-  console.log(counter);
+  counterHeader = (counterHeader + 1) % 3;
   changeInfoView();
 });
 
 btnLeft.addEventListener('click', () => {
-  counter = (counter - 1 + 3) % 3;
+  counterHeader = (counterHeader - 1 + 3) % 3;
   changeInfoView();
-  console.log(counter);
 });
 
 window.addEventListener('resize', () => {
@@ -40,6 +38,6 @@ window.addEventListener('resize', () => {
     geolocation.style.removeProperty('right');
     call.style.removeProperty('right');
     message.style.removeProperty('right');
-    counter = 0;
+    counterHeader = 0;
   }
 });
