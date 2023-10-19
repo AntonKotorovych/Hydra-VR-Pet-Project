@@ -1,21 +1,21 @@
-const mainForm = document.querySelector('form[name="main-form"]');
+const joinForm = document.getElementById('mainForm');
 
-const firstName = document.querySelector('input[name="first-name"]');
-const lastName = document.querySelector('input[name="last-name"]');
-const email = document.querySelector('input[name="email"]');
-const phoneNumber = document.querySelector('input[name="phone-number"]');
-const selectCountry = document.querySelector('select[name="country"]');
-const checkbox = document.querySelector('input[name="age-check"]');
+const firstName = document.getElementById('firstName');
+const lastName = document.getElementById('lastName');
+const email = document.getElementById('email');
+const phoneNumber = document.getElementById('phoneNumber');
+const selectCountry = document.getElementById('country');
+const checkbox = document.getElementById('ageCheck');
 const vrSizeContainer = document.querySelector('.radio-buttons');
-const vrSize = document.getElementsByName('vr-size');
-const subject = document.querySelector('input[name="subject"]');
-const textarea = document.querySelector('textarea[name="textarea"]');
+const vrSize = document.getElementsByName('vrSize');
+const subject = document.getElementById('subject');
+const textarea = document.getElementById('textarea');
 const rateUs = document.getElementById('ratingRange');
-const submitBtn = document.querySelector('button[name="submit-btn"]');
+const submitBtn = document.getElementById('submitBtn');
 
 const errorMessage = document.querySelector('.error-message');
 
-mainForm.addEventListener('submit', e => {
+joinForm.addEventListener('submit', e => {
   e.preventDefault();
   let curVrSize;
   for (const radioButton of vrSize) {
