@@ -11,16 +11,15 @@ const vrSize = document.getElementsByName('vrSize');
 const subject = document.getElementById('subject');
 const textarea = document.getElementById('textarea');
 const rateUs = document.getElementById('ratingRange');
+
 const submitBtn = document.getElementById('submitBtn');
 
-const errorMessage = document.querySelector('.error-message');
-
-joinForm.addEventListener('submit', e => {
-  e.preventDefault();
-  let curVrSize;
+joinForm.addEventListener('submit', event => {
+  event.preventDefault();
+  let currentVrSize;
   for (const radioButton of vrSize) {
     if (radioButton.checked) {
-      curVrSize = radioButton.value;
+      currentVrSize = radioButton.value;
       break;
     }
   }
@@ -32,7 +31,7 @@ joinForm.addEventListener('submit', e => {
     phoneNumber: phoneNumber.value,
     selectCountry: +selectCountry.value,
     checkbox: checkbox.checked,
-    vrSize: curVrSize,
+    vrSize: currentVrSize,
     subject: subject.value,
     textarea: textarea.value,
     rateUs: rateUs.value,

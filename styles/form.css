@@ -46,7 +46,6 @@ textarea {
   width: 100%;
   border: 2px solid var(--text-color-white);
   border-radius: 40px;
-  margin-bottom: 60px;
   padding-left: 40px;
   padding-top: 30px;
   font-size: var(--font-size-normal);
@@ -88,6 +87,7 @@ textarea {
   color: var(--error-message-color);
   font-size: var(--font-size-small);
   text-align: center;
+  height: 20px;
 }
 
 /* Checkbox age validation */
