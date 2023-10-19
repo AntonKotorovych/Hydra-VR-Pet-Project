@@ -83,11 +83,11 @@ textarea {
 }
 
 .error-message {
-  display: none;
+  display: inline-block;
   color: var(--error-message-color);
   font-size: var(--font-size-small);
   text-align: center;
-  height: 20px;
+  height: 10px;
 }
 
 /* Checkbox age validation */

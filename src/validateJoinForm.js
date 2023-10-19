@@ -88,14 +88,14 @@ joinForm.addEventListener('submit', event => {
     email: formState.email.node?.value,
     phoneNumber: formState.phoneNumber.node?.value,
     selectCountry: +formState.selectCountry.node?.value,
-    checkbox: formState.checkbox.checked,
     vrSize: formState.vrSize.node?.currentVrSize.id,
     subject: formState.subject.node?.value,
     textarea: formState.textarea.node?.value,
     rateUs: formState.rateUs.node?.value,
+    checkbox: formState.checkbox.checked,
   };
 
-  function formDataIsValid(firstName, lastName, email, phoneNumber, selectCountry, checkbox, vrSize, subject, textarea) {
+  function formDataIsValid() {
     let firstNameIsValid = true;
     let lastNameIsValid = true;
     let emailIsValid = true;
@@ -106,42 +106,42 @@ joinForm.addEventListener('submit', event => {
     let textareaIsValid = true;
     let vrSizeIsChecked = true;
 
-    if (!firstName.trim().match(textRegExp)) {
+    if (!formData.firstName.trim().match(textRegExp)) {
       firstNameIsValid = false;
     }
 
-    if (!lastName.trim().match(textRegExp)) {
+    if (!formData.lastName.trim().match(textRegExp)) {
       lastNameIsValid = false;
     }
 
-    if (!email.trim().match(emailRegExp)) {
+    if (!formData.email.trim().match(emailRegExp)) {
       emailIsValid = false;
     }
 
-    if (!phoneNumber.trim().match(phoneNumberRegExp)) {
+    if (!formData.phoneNumber.trim().match(phoneNumberRegExp)) {
       phoneNumberIsValid = false;
     }
 
-    if (selectCountry === 0) {
+    if (formData.selectCountry === 0) {
       selectCountryIsValid = false;
     } else if (selectCountry === 6) {
       alert('Go and raise your country from its knees, russian dog');
       location.reload();
     }
 
-    if (!checkbox) {
+    if (!formData.checkbox) {
       checkboxIsChecked = false;
     }
 
-    if (vrSize === undefined) {
+    if (formData.vrSize === undefined) {
       vrSizeIsChecked = false;
     }
 
-    if (!subject.trim().match(subjectRegExp)) {
+    if (!formData.subject.trim().match(subjectRegExp)) {
       subjectIsValid = false;
     }
 
-    if (!textarea.trim().match(textareaRegExp)) {
+    if (!formData.textarea.trim().match(textareaRegExp)) {
       textareaIsValid = false;
     }
 
@@ -151,10 +151,10 @@ joinForm.addEventListener('submit', event => {
       emailIsValid,
       phoneNumberIsValid,
       selectCountryIsValid,
-      checkboxIsChecked,
       vrSizeIsChecked,
       subjectIsValid,
       textareaIsValid,
+      checkboxIsChecked,
     ];
   }
 
@@ -168,17 +168,7 @@ joinForm.addEventListener('submit', event => {
     vrSizeIsChecked,
     subjectIsValid,
     textareaIsValid,
-  ] = formDataIsValid(
-    formData.firstName,
-    formData.lastName,
-    formData.email,
-    formData.phoneNumber,
-    formData.selectCountry,
-    formData.checkbox,
-    formData.vrSize,
-    formData.subject,
-    formData.textarea
-  );
+  ] = formDataIsValid();
 
   if (!firstNameIsValid) {
     firstName.classList.remove('valid');
