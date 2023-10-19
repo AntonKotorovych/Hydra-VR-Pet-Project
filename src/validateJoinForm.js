@@ -1,16 +1,75 @@
 const joinForm = document.getElementById('mainForm');
 
-const firstName = document.getElementById('firstName');
-const lastName = document.getElementById('lastName');
-const email = document.getElementById('email');
-const phoneNumber = document.getElementById('phoneNumber');
-const selectCountry = document.getElementById('country');
-const checkbox = document.getElementById('ageCheck');
-const vrSizeContainer = document.querySelector('.radio-buttons');
-const vrSize = document.getElementsByName('vrSize');
-const subject = document.getElementById('subject');
-const textarea = document.getElementById('textarea');
-const rateUs = document.getElementById('ratingRange');
+const errorTextEmptyField = 'This field must be filled';
+
+const formState = {
+  firstName: {
+    node: document.getElementById('firstName'),
+    error: {
+      emptyField: errorTextEmptyField,
+      incorrectField: 'Only characters. No more than 25 characters',
+    },
+  },
+  lastName: {
+    node: document.getElementById('lastName'),
+    error: {
+      emptyField: errorTextEmptyField,
+      incorrectField: 'Only characters. No more than 25 characters',
+    },
+  },
+  email: {
+    node: document.getElementById('email'),
+    error: {
+      emptyField: errorTextEmptyField,
+      incorrectField: 'Please fill a correct email address format. for example: "admin@gmail.com"',
+    },
+  },
+  phoneNumber: {
+    node: document.getElementById('phoneNumber'),
+    error: {
+      emptyField: errorTextEmptyField,
+      incorrectField: 'Enter your phone number in the format "(123) 456-7890"',
+    },
+  },
+  selectCounry: {
+    node: document.getElementById('country'),
+    error: {
+      emptyField: 'You have to select your country',
+    },
+  },
+  vrSizeContainer: {
+    node: document.querySelector('.radio-buttons'),
+  },
+  vrSize: {
+    node: document.getElementsByName('vrSize'),
+    error: {
+      emptyField: 'You have to choose size',
+    },
+  },
+  subject: {
+    node: document.getElementById('subject'),
+    error: {
+      emptyField: errorTextEmptyField,
+      incorrectField: 'Only characters. No more than 25 characters',
+    },
+  },
+  textarea: {
+    node: document.getElementById('textarea'),
+    error: {
+      emptyField: errorTextEmptyField,
+      incorrectField: 'Textarea has not to be empty and also contain 5000 characters max',
+    },
+  },
+  rateUs: {
+    node: document.getElementById('ratingRange'),
+  },
+  checkbox: {
+    node: document.getElementById('ageCheck'),
+    error: {
+      emptyField: 'You have to confirm that you are adult',
+    },
+  },
+};
 
 const submitBtn = document.getElementById('submitBtn');
 
