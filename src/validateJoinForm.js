@@ -31,7 +31,7 @@ const formState = {
       incorrectField: 'Enter your phone number in the format "(123) 456-7890"',
     },
   },
-  selectCounry: {
+  selectCountry: {
     node: document.getElementById('country'),
     error: {
       emptyField: 'You have to select your country',
@@ -41,7 +41,7 @@ const formState = {
     node: document.querySelector('.radio-buttons'),
   },
   vrSize: {
-    node: document.getElementsByName('vrSize'),
+    node: document.querySelector('input[name="vrSize"]:checked'),
     error: {
       emptyField: 'You have to choose size',
     },
@@ -73,27 +73,26 @@ const formState = {
 
 const submitBtn = document.getElementById('submitBtn');
 
+const textRegExp = /^[a-zA-Z]{1,25}$/;
+const subjectRegExp = /^[A-Za-z ]{1,25}$/;
+const emailRegExp = /^[\w\.-]+@[\w\.-]+\.\w+$/;
+const phoneNumberRegExp = /\(\d{3}\) \d{3}-\d{4}/;
+const textareaRegExp = /^[\s\S]{1,5000}$/;
+
 joinForm.addEventListener('submit', event => {
   event.preventDefault();
-  let currentVrSize;
-  for (const radioButton of vrSize) {
-    if (radioButton.checked) {
-      currentVrSize = radioButton.value;
-      break;
-    }
-  }
 
   const formData = {
-    firstName: firstName.value,
-    lastName: lastName.value,
-    email: email.value,
-    phoneNumber: phoneNumber.value,
-    selectCountry: +selectCountry.value,
-    checkbox: checkbox.checked,
-    vrSize: currentVrSize,
-    subject: subject.value,
-    textarea: textarea.value,
-    rateUs: rateUs.value,
+    firstName: formState.firstName.node?.value,
+    lastName: formState.lastName.node?.value,
+    email: formState.email.node?.value,
+    phoneNumber: formState.phoneNumber.node?.value,
+    selectCountry: +formState.selectCountry.node?.value,
+    checkbox: formState.checkbox.checked,
+    vrSize: formState.vrSize.node?.currentVrSize.id,
+    subject: formState.subject.node?.value,
+    textarea: formState.textarea.node?.value,
+    rateUs: formState.rateUs.node?.value,
   };
 
   function formDataIsValid(firstName, lastName, email, phoneNumber, selectCountry, checkbox, vrSize, subject, textarea) {
@@ -106,12 +105,6 @@ joinForm.addEventListener('submit', event => {
     let subjectIsValid = true;
     let textareaIsValid = true;
     let vrSizeIsChecked = true;
-
-    const textRegExp = /^[a-zA-Z]{1,25}$/;
-    const subjectRegExp = /^[A-Za-z ]{1,25}$/;
-    const emailRegExp = /^[\w\.-]+@[\w\.-]+\.\w+$/;
-    const phoneNumberRegExp = /\(\d{3}\) \d{3}-\d{4}/;
-    const textareaRegExp = /^[\s\S]{1,5000}$/;
 
     if (!firstName.trim().match(textRegExp)) {
       firstNameIsValid = false;
