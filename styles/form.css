@@ -94,44 +94,48 @@ textarea {
 
 .age-validation {
   height: 100%;
-  position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  user-select: none;
+  justify-content: flex-end;
 }
 
 .age-validation label {
   font-size: var(--font-size-medium);
   color: var(--text-color-white);
+  margin-left: 15px;
 }
 
 .age-validation__checkbox {
   width: 25px;
   height: 25px;
+
   display: inline-block;
   cursor: pointer;
-  margin-top: 10px;
 }
 
-/* Select country custom */
+/* Select country */
 
-.custom-select-country select {
-  width: 100%;
-  height: 72px;
-  padding-left: 40px;
-  border: 2px solid var(--text-color-white);
-  background: transparent;
-  cursor: pointer;
-  border-radius: 40px;
-  font-family: inherit;
-  font-size: var(--font-size-normal);
+select {
+  appearance: none;
+}
+
+.custom-select-country {
+  position: relative;
+}
+
+.custom-select-country::after {
+  content: '▼';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  right: 40px;
   color: var(--text-color-white);
+  font-size: var(--font-size-normal);
 }
 
 .custom-select-country select option {
-  color: black;
+  color: var(--text-color-black);
 }
 
 /* Radio buttons */
