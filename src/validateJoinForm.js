@@ -6,8 +6,6 @@ const emailRegExp = /^[\w\.-]+@[\w\.-]+\.\w+$/;
 const phoneNumberRegExp = /\(\d{3}\) \d{3}-\d{4}/;
 const textareaRegExp = /^[\s\S]{1,5000}$/;
 
-const submitBtn = document.getElementById('submitBtn');
-
 joinForm.addEventListener('submit', event => {
   event.preventDefault();
 
@@ -66,7 +64,7 @@ joinForm.addEventListener('submit', event => {
       subject: formState.subject.node?.value,
       textarea: formState.textarea.node?.value,
       rateUs: formState.rateUs.node?.value,
-      checkbox: formState.checkbox.node.checked,
+      checkbox: formState.checkbox.node?.checked,
     };
 
     if (formData.firstName === '') {
@@ -140,29 +138,31 @@ joinForm.addEventListener('submit', event => {
     }
   }
 
-  console.log(formState);
-
   formDataIsValid();
 
   // Function for rendering errors when fields are wrong
 
-  // function formFieldsShowError() {
-  //   for (const field in formState) {
-  //     let errorSpan;
+  function formFieldsShowError() {
+    for (const fieldName in formState) {
+      const field = formState[fieldName];
 
-  //     if (field.error !== '') {
-  //       field.node.classList.remove('valid');
-  //       field.node.classList.add('invalid');
-  //       errorSpan = document.getElementById(`${formState.field.node.id}Error`);
-  //       errorSpan.innerText = field.error;
-  //     }
-  //     field.node.classList.remove('invalid');
-  //     field.node.classList.add('valid');
-  //     errorSpan = document.getElementById(`${formState.field.node.id}Error`);
-  //     field.error = '';
-  //     errorSpan.innerText = field.error;
-  //   }
-  // }
+      let errorSpan;
+      if (field.error !== '') {
+        field.node.classList.remove('valid');
+        field.node.classList.add('invalid');
+        errorSpan = document.getElementById(`${field.node.id}Error`);
+        errorSpan.innerText = field.error;
+      } else {
+        field.node.classList.remove('invalid');
+        field.node.classList.add('valid');
+        errorSpan = document.getElementById(`${field.node.id}Error`);
+        field.error = '';
+        errorSpan.innerText = field.error;
+      }
+    }
+  }
+
+  formFieldsShowError();
 
   // formFieldsShowError();
 
