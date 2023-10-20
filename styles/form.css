@@ -197,9 +197,9 @@ select {
 
 .range-labels span {
   text-align: center;
-  width: calc(2%);
+  width: 2%;
 }
 
-#ratingRange {
+.rating-range {
   width: 100%;
 }
