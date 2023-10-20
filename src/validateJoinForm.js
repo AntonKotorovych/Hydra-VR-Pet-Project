@@ -53,20 +53,22 @@ const textareaRegExp = /^[\s\S]{1,5000}$/;
 joinForm.addEventListener('submit', event => {
   event.preventDefault();
 
-  const formData = {
-    firstName: formState.firstName.node?.value,
-    lastName: formState.lastName.node?.value,
-    email: formState.email.node?.value,
-    phoneNumber: formState.phoneNumber.node?.value,
-    selectCountry: +formState.selectCountry.node?.value,
-    vrSize: formState.vrSize.node?.currentVrSize.id,
-    subject: formState.subject.node?.value,
-    textarea: formState.textarea.node?.value,
-    rateUs: formState.rateUs.node?.value,
-    checkbox: formState.checkbox.checked,
-  };
+  // Function for mutating original formState errors
 
   function formDataIsValid() {
+    const formData = {
+      firstName: formState.firstName.node?.value,
+      lastName: formState.lastName.node?.value,
+      email: formState.email.node?.value,
+      phoneNumber: formState.phoneNumber.node?.value,
+      selectCountry: +formState.selectCountry.node?.value,
+      vrSize: formState.vrSize.node?.currentVrSize.id,
+      subject: formState.subject.node?.value,
+      textarea: formState.textarea.node?.value,
+      rateUs: formState.rateUs.node?.value,
+      checkbox: formState.checkbox.checked,
+    };
+
     if (formData.firstName === '') {
       formState.firstName.error = 'This field must not be empty';
     } else if (!formData.firstName.trim().match(textRegExp)) {
@@ -122,87 +124,29 @@ joinForm.addEventListener('submit', event => {
 
   formDataIsValid();
 
-  if (!firstNameIsValid) {
-    firstName.classList.remove('valid');
-    firstName.classList.add('invalid');
-    firstName.nextElementSibling.style.display = 'block';
-  } else {
-    firstName.classList.remove('invalid');
-    firstName.classList.add('valid');
-    firstName.nextElementSibling.style.display = 'none';
-  }
+  console.log(formState);
 
-  if (!lastNameIsValid) {
-    lastName.classList.remove('valid');
-    lastName.classList.add('invalid');
-    lastName.nextElementSibling.style.display = 'block';
-  } else {
-    lastName.classList.remove('invalid');
-    lastName.classList.add('valid');
-    lastName.nextElementSibling.style.display = 'none';
-  }
+  // Function for rendering errors when fields are wrong
 
-  if (!emailIsValid) {
-    email.classList.remove('valid');
-    email.classList.add('invalid');
-    email.nextElementSibling.style.display = 'block';
-  } else {
-    email.classList.remove('invalid');
-    email.classList.add('valid');
-    email.nextElementSibling.style.display = 'none';
-  }
+  // function formFieldsShowError() {
+  //   for (const field in formState) {
+  //     let errorSpan;
 
-  if (!phoneNumberIsValid) {
-    phoneNumber.classList.remove('valid');
-    phoneNumber.classList.add('invalid');
-    phoneNumber.nextElementSibling.style.display = 'block';
-  } else {
-    phoneNumber.classList.remove('invalid');
-    phoneNumber.classList.add('valid');
-    phoneNumber.nextElementSibling.style.display = 'none';
-  }
+  //     if (field.error !== '') {
+  //       field.node.classList.remove('valid');
+  //       field.node.classList.add('invalid');
+  //       errorSpan = document.getElementById(`${formState.field.node.id}Error`);
+  //       errorSpan.innerText = field.error;
+  //     }
+  //     field.node.classList.remove('invalid');
+  //     field.node.classList.add('valid');
+  //     errorSpan = document.getElementById(`${formState.field.node.id}Error`);
+  //     field.error = '';
+  //     errorSpan.innerText = field.error;
+  //   }
+  // }
 
-  if (!selectCountryIsValid) {
-    selectCountry.classList.remove('valid');
-    selectCountry.classList.add('invalid');
-    selectCountry.nextElementSibling.style.display = 'block';
-  } else {
-    selectCountry.classList.remove('invalid');
-    selectCountry.classList.add('valid');
-    selectCountry.nextElementSibling.style.display = 'none';
-  }
-
-  if (!checkboxIsChecked) {
-    checkbox.nextElementSibling.style.display = 'block';
-  } else {
-    checkbox.nextElementSibling.style.display = 'none';
-  }
-
-  if (!vrSizeIsChecked) {
-    vrSizeContainer.nextElementSibling.style.display = 'block';
-  } else {
-    vrSizeContainer.nextElementSibling.style.display = 'none';
-  }
-
-  if (!subjectIsValid) {
-    subject.classList.remove('valid');
-    subject.classList.add('invalid');
-    subject.nextElementSibling.style.display = 'block';
-  } else {
-    subject.classList.remove('invalid');
-    subject.classList.add('valid');
-    subject.nextElementSibling.style.display = 'none';
-  }
-
-  if (!textareaIsValid) {
-    textarea.classList.remove('valid');
-    textarea.classList.add('invalid');
-    textarea.nextElementSibling.style.display = 'block';
-  } else {
-    textarea.classList.remove('invalid');
-    textarea.classList.add('valid');
-    textarea.nextElementSibling.style.display = 'none';
-  }
+  // formFieldsShowError();
 
   async function sendFormUserData(formUserData) {
     // Public access
@@ -221,25 +165,26 @@ joinForm.addEventListener('submit', event => {
       if (!response.ok) throw new Error(`HTTP error. Status: ${response.status}`);
 
       const data = await response.json();
+      alert(`Succeed! Your form data has been sent. id: ${data}`);
       console.log('Succeed ', data);
     } catch (err) {
+      alert(`unsuccessful! Try again Error: ${err}`);
       console.error('unsuccessful ', err);
     }
   }
 
-  if (
-    firstNameIsValid &&
-    lastNameIsValid &&
-    emailIsValid &&
-    phoneNumberIsValid &&
-    selectCountryIsValid &&
-    checkboxIsChecked &&
-    vrSizeIsChecked &&
-    subjectIsValid &&
-    textareaIsValid
-  ) {
-    delete formData.checkbox;
-    formData.selectCountry = selectCountry[formData.selectCountry].textContent;
-    sendFormUserData(formData);
-  }
+  // if (
+  //   firstNameIsValid &&
+  //   lastNameIsValid &&
+  //   emailIsValid &&
+  //   phoneNumberIsValid &&
+  //   selectCountryIsValid &&
+  //   checkboxIsChecked &&
+  //   vrSizeIsChecked &&
+  //   subjectIsValid &&
+  //   textareaIsValid
+  // ) {
+  //   formData.selectCountry = selectCountry[formData.selectCountry].textContent;
+  //   sendFormUserData(formData);
+  // }
 });
