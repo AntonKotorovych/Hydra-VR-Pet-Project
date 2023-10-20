@@ -45,10 +45,10 @@ joinForm.addEventListener('submit', event => {
     rateUs: {
       node: document.getElementById('ratingRange'),
     },
-    // checkbox: {
-    //   node: document.getElementById('ageCheck'),
-    //   error: '',
-    // },
+    ageCheck: {
+      node: document.getElementById('ageCheck'),
+      error: '',
+    },
   };
 
   // Function for mutating original formState errors
@@ -63,7 +63,7 @@ joinForm.addEventListener('submit', event => {
       vrSize: formState.vrSize.node?.value,
       subject: formState.subject.node?.value,
       textarea: formState.textarea.node?.value,
-      // checkbox: formState.checkbox.node?.checked,
+      ageCheck: formState.ageCheck.node?.checked,
     };
 
     if (formData.firstName === '') {
@@ -108,11 +108,11 @@ joinForm.addEventListener('submit', event => {
       formState.selectCountry.error = '';
     }
 
-    // if (!formData.checkbox) {
-    //   formState.checkbox.error = 'You have to confirm that you are adult';
-    // } else {
-    //   formState.checkbox.error = '';
-    // }
+    if (!formData.ageCheck) {
+      formState.ageCheck.error = 'You have to confirm that you are adult';
+    } else {
+      formState.ageCheck.error = '';
+    }
 
     if (formData.vrSize === undefined) {
       formState.vrSize.error = 'You have to choose size';
@@ -136,8 +136,8 @@ joinForm.addEventListener('submit', event => {
       formState.textarea.error = '';
     }
 
-    console.log(formState);
-    console.log(formData);
+    console.log(formState.ageCheck);
+    console.log(formData.ageCheck);
   }
 
   formDataIsValid();
