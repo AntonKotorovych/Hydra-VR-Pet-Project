@@ -45,10 +45,10 @@ joinForm.addEventListener('submit', event => {
     // rateUs: {
     //   node: document.getElementById('ratingRange'),
     // },
-    checkbox: {
-      node: document.getElementById('ageCheck'),
-      error: '',
-    },
+    // checkbox: {
+    //   node: document.getElementById('ageCheck'),
+    //   error: '',
+    // },
   };
 
   // Function for mutating original formState errors
@@ -63,7 +63,7 @@ joinForm.addEventListener('submit', event => {
       // vrSize: formState.vrSize.node?.value,
       subject: formState.subject.node?.value,
       textarea: formState.textarea.node.value,
-      checkbox: formState.checkbox.node?.checked,
+      // checkbox: formState.checkbox.node?.checked,
     };
 
     if (formData.firstName === '') {
@@ -109,11 +109,11 @@ joinForm.addEventListener('submit', event => {
     //   formState.selectCountry.error = '';
     // }
 
-    if (!formData.checkbox) {
-      formState.checkbox.error = 'You have to confirm that you are adult';
-    } else {
-      formState.checkbox.error = '';
-    }
+    // if (!formData.checkbox) {
+    //   formState.checkbox.error = 'You have to confirm that you are adult';
+    // } else {
+    //   formState.checkbox.error = '';
+    // }
 
     // if (formState.vrSize.node === null) {
     //   formState.vrSize.error = 'You have to choose size';
@@ -138,58 +138,58 @@ joinForm.addEventListener('submit', event => {
     } else {
       formState.textarea.error = '';
     }
+    console.log(formState);
+    console.log(formData);
   }
 
   formDataIsValid();
 
   // Function for rendering errors when fields are wrong
 
-  console.log(formState);
+  // function formFieldsShowError() {
+  //   for (const fieldName in formState) {
+  //     const field = formState[fieldName];
 
-  function formFieldsShowError() {
-    for (const fieldName in formState) {
-      const field = formState[fieldName];
+  //     // Can't decide that bug with node null better
 
-      // Can't decide that bug with node null better
+  //     if (field.error !== '') {
+  //       field.node.classList.remove('valid');
+  //       field.node.classList.add('invalid');
+  //       console.log(document.getElementById(`${fieldName}Error`));
+  //       console.log(`${fieldName}Error`);
+  //       // console.log(errorSpan.innerText);
+  //       // errorSpan.innerText = field.error;
+  //     }
+  //   }
+  //   console.log(formState);
+  // }
 
-      if (field.error !== '') {
-        field.node.classList.remove('valid');
-        field.node.classList.add('invalid');
-        console.log(document.getElementById(`${fieldName}Error`));
-        console.log(`${fieldName}Error`);
-        // console.log(errorSpan.innerText);
-        // errorSpan.innerText = field.error;
-      }
-    }
-    console.log(formState);
-  }
+  // formFieldsShowError();
 
-  formFieldsShowError();
+  // async function sendFormUserData(formUserData) {
+  //   // Public access
 
-  async function sendFormUserData(formUserData) {
-    // Public access
+  //   const url = 'https://hydra-vr-default-rtdb.firebaseio.com/';
 
-    const url = 'https://hydra-vr-default-rtdb.firebaseio.com/';
+  //   try {
+  //     const response = await fetch(`${url}users.json`, {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify(formUserData),
+  //     });
 
-    try {
-      const response = await fetch(`${url}users.json`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formUserData),
-      });
+  //     if (!response.ok) throw new Error(`HTTP error. Status: ${response.status}`);
 
-      if (!response.ok) throw new Error(`HTTP error. Status: ${response.status}`);
-
-      const data = await response.json();
-      alert(`Succeed! Your form data has been sent. id: ${data}`);
-      console.log('Succeed ', data);
-    } catch (err) {
-      alert(`unsuccessful! Try again Error: ${err}`);
-      console.error('unsuccessful ', err);
-    }
-  }
+  //     const data = await response.json();
+  //     alert(`Succeed! Your form data has been sent. id: ${data}`);
+  //     console.log('Succeed ', data);
+  //   } catch (err) {
+  //     alert(`unsuccessful! Try again Error: ${err}`);
+  //     console.error('unsuccessful ', err);
+  //   }
+  // }
 
   // if (
   //   firstNameIsValid &&
