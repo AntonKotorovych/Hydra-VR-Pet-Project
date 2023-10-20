@@ -1,73 +1,44 @@
 const joinForm = document.getElementById('mainForm');
 
-const errorTextEmptyField = 'This field must be filled';
-
 const formState = {
   firstName: {
     node: document.getElementById('firstName'),
-    error: {
-      emptyField: errorTextEmptyField,
-      incorrectField: 'Only characters. No more than 25 characters',
-    },
+    error: '',
   },
   lastName: {
     node: document.getElementById('lastName'),
-    error: {
-      emptyField: errorTextEmptyField,
-      incorrectField: 'Only characters. No more than 25 characters',
-    },
+    error: '',
   },
   email: {
     node: document.getElementById('email'),
-    error: {
-      emptyField: errorTextEmptyField,
-      incorrectField: 'Please fill a correct email address format. for example: "admin@gmail.com"',
-    },
+    error: '',
   },
   phoneNumber: {
     node: document.getElementById('phoneNumber'),
-    error: {
-      emptyField: errorTextEmptyField,
-      incorrectField: 'Enter your phone number in the format "(123) 456-7890"',
-    },
+    error: '',
   },
   selectCountry: {
     node: document.getElementById('country'),
-    error: {
-      emptyField: 'You have to select your country',
-    },
-  },
-  vrSizeContainer: {
-    node: document.querySelector('.radio-buttons'),
+    error: '',
   },
   vrSize: {
     node: document.querySelector('input[name="vrSize"]:checked'),
-    error: {
-      emptyField: 'You have to choose size',
-    },
+    error: '',
   },
   subject: {
     node: document.getElementById('subject'),
-    error: {
-      emptyField: errorTextEmptyField,
-      incorrectField: 'Only characters. No more than 25 characters',
-    },
+    error: '',
   },
   textarea: {
     node: document.getElementById('textarea'),
-    error: {
-      emptyField: errorTextEmptyField,
-      incorrectField: 'Textarea has not to be empty and also contain 5000 characters max',
-    },
+    error: '',
   },
   rateUs: {
     node: document.getElementById('ratingRange'),
   },
   checkbox: {
     node: document.getElementById('ageCheck'),
-    error: {
-      emptyField: 'You have to confirm that you are adult',
-    },
+    error: '',
   },
 };
 
@@ -96,79 +67,60 @@ joinForm.addEventListener('submit', event => {
   };
 
   function formDataIsValid() {
-    let firstNameIsValid = true;
-    let lastNameIsValid = true;
-    let emailIsValid = true;
-    let phoneNumberIsValid = true;
-    let selectCountryIsValid = true;
-    let checkboxIsChecked = true;
-    let subjectIsValid = true;
-    let textareaIsValid = true;
-    let vrSizeIsChecked = true;
-
-    if (!formData.firstName.trim().match(textRegExp)) {
-      firstNameIsValid = false;
+    if (formData.firstName === '') {
+      formState.firstName.error = 'This field must not be empty';
+    } else if (!formData.firstName.trim().match(textRegExp)) {
+      formState.firstName.error = 'Only characters. No more than 25 characters';
     }
 
-    if (!formData.lastName.trim().match(textRegExp)) {
-      lastNameIsValid = false;
+    if (formData.lastName === '') {
+      formState.lastName.error = 'This field must not be empty';
+    } else if (!formData.lastName.trim().match(textRegExp)) {
+      formState.lastName.error = 'Only characters. No more than 25 characters';
     }
 
-    if (!formData.email.trim().match(emailRegExp)) {
-      emailIsValid = false;
+    if (formData.email === '') {
+      formState.email.error = 'This field must not be empty';
+    } else if (!formData.email.trim().match(emailRegExp)) {
+      formState.email.error = 'Please fill a correct email address format. for example: "admin@gmail.com"';
     }
 
-    if (!formData.phoneNumber.trim().match(phoneNumberRegExp)) {
-      phoneNumberIsValid = false;
+    if (formData.phoneNumber === '') {
+      formState.phoneNumber.error = 'This field must not be empty';
+    } else if (!formData.phoneNumber.trim().match(phoneNumberRegExp)) {
+      formState.phoneNumber.error = 'Enter your phone number in the format "(123) 456-7890"';
     }
 
     if (formData.selectCountry === 0) {
-      selectCountryIsValid = false;
+      formState.selectCountry.error = 'You have to select your country';
     } else if (selectCountry === 6) {
+      formState.selectCountry.error = 'Go away from this site';
       alert('Go and raise your country from its knees, russian dog');
       location.reload();
     }
 
     if (!formData.checkbox) {
-      checkboxIsChecked = false;
+      formState.checkbox.error = 'You have to confirm that you are adult';
     }
 
     if (formData.vrSize === undefined) {
-      vrSizeIsChecked = false;
+      formState.vrSize.error = 'You have to choose size';
     }
 
-    if (!formData.subject.trim().match(subjectRegExp)) {
-      subjectIsValid = false;
+    if (formData.subject === '') {
+      formState.subject.error = 'This field must not be empty';
+    } else if (!formData.subject.trim().match(subjectRegExp)) {
+      formState.subject.error = 'Only characters. No more than 25 characters';
     }
 
-    if (!formData.textarea.trim().match(textareaRegExp)) {
-      textareaIsValid = false;
+    if (formData.textarea === '') {
+      formState.textarea.error = 'This field must not be empty';
+    } else if (!formData.textarea.trim().match(textareaRegExp)) {
+      formState.textarea.error = 'Textarea has not to be empty and also contain 5000 characters max';
     }
-
-    return [
-      firstNameIsValid,
-      lastNameIsValid,
-      emailIsValid,
-      phoneNumberIsValid,
-      selectCountryIsValid,
-      vrSizeIsChecked,
-      subjectIsValid,
-      textareaIsValid,
-      checkboxIsChecked,
-    ];
   }
 
-  const [
-    firstNameIsValid,
-    lastNameIsValid,
-    emailIsValid,
-    phoneNumberIsValid,
-    selectCountryIsValid,
-    checkboxIsChecked,
-    vrSizeIsChecked,
-    subjectIsValid,
-    textareaIsValid,
-  ] = formDataIsValid();
+  formDataIsValid();
 
   if (!firstNameIsValid) {
     firstName.classList.remove('valid');
