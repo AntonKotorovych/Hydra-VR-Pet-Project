@@ -42,9 +42,9 @@ joinForm.addEventListener('submit', event => {
       node: document.getElementById('textarea'),
       error: '',
     },
-    // rateUs: {
-    //   node: document.getElementById('ratingRange'),
-    // },
+    rateUs: {
+      node: document.getElementById('ratingRange'),
+    },
     // checkbox: {
     //   node: document.getElementById('ageCheck'),
     //   error: '',
@@ -62,7 +62,7 @@ joinForm.addEventListener('submit', event => {
       selectCountry: formState.selectCountry.node?.value,
       vrSize: formState.vrSize.node?.value,
       subject: formState.subject.node?.value,
-      textarea: formState.textarea.node.value,
+      textarea: formState.textarea.node?.value,
       // checkbox: formState.checkbox.node?.checked,
     };
 
@@ -136,7 +136,7 @@ joinForm.addEventListener('submit', event => {
       formState.textarea.error = '';
     }
 
-    console.log(formState.vrSize);
+    console.log(formState);
     console.log(formData);
   }
 
@@ -147,6 +147,8 @@ joinForm.addEventListener('submit', event => {
   function formFieldsShowError() {
     for (const fieldName in formState) {
       const field = formState[fieldName];
+
+      if (fieldName === 'rateUs') continue;
 
       if (field.node === null) {
         document.getElementById(`vrSizeError`).innerText = field.error;
