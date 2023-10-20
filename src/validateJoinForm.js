@@ -30,10 +30,10 @@ joinForm.addEventListener('submit', event => {
       node: document.getElementById('selectCountry'),
       error: '',
     },
-    // vrSize: {
-    //   node: document.querySelector('input[name="vrSize"]:checked'),
-    //   error: '',
-    // },
+    vrSize: {
+      node: document.querySelector('input[name="vrSize"]:checked'),
+      error: '',
+    },
     subject: {
       node: document.getElementById('subject'),
       error: '',
@@ -60,7 +60,7 @@ joinForm.addEventListener('submit', event => {
       email: formState.email.node?.value,
       phoneNumber: formState.phoneNumber.node?.value,
       selectCountry: formState.selectCountry.node?.value,
-      // vrSize: formState.vrSize.node?.value,
+      vrSize: formState.vrSize.node?.value,
       subject: formState.subject.node?.value,
       textarea: formState.textarea.node.value,
       // checkbox: formState.checkbox.node?.checked,
@@ -114,13 +114,11 @@ joinForm.addEventListener('submit', event => {
     //   formState.checkbox.error = '';
     // }
 
-    // if (formState.vrSize.node === null) {
-    //   formState.vrSize.error = 'You have to choose size';
-    //   formState.vrSize.node = '';
-    //   formData.vrSize = '';
-    // } else {
-    //   formState.vrSize.error = '';
-    // }
+    if (formData.vrSize === undefined) {
+      formState.vrSize.error = 'You have to choose size';
+    } else {
+      formState.vrSize.error = '';
+    }
 
     if (formData.subject === '') {
       formState.subject.error = 'This field must not be empty';
@@ -137,6 +135,9 @@ joinForm.addEventListener('submit', event => {
     } else {
       formState.textarea.error = '';
     }
+
+    console.log(formState.vrSize);
+    console.log(formData);
   }
 
   formDataIsValid();
@@ -147,7 +148,9 @@ joinForm.addEventListener('submit', event => {
     for (const fieldName in formState) {
       const field = formState[fieldName];
 
-      if (field.error !== '') {
+      if (field.node === null) {
+        document.getElementById(`vrSizeError`).innerText = field.error;
+      } else if (field.error !== '' && field.node !== null) {
         field.node.classList.remove('valid');
         field.node.classList.add('invalid');
         document.getElementById(`${fieldName}Error`).innerText = field.error;
