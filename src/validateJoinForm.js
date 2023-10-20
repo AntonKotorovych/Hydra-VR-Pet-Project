@@ -155,10 +155,11 @@ joinForm.addEventListener('submit', event => {
       if (field.error !== '') {
         field.node.classList.remove('valid');
         field.node.classList.add('invalid');
-        // errorSpan.innerText = field.error;
+        document.getElementById(`${fieldName}Error`).innerText = field.error;
       } else if (field.error === '') {
         field.node.classList.remove('invalid');
         field.node.classList.add('valid');
+        document.getElementById(`${fieldName}Error`).innerText = '';
       }
     }
   }
