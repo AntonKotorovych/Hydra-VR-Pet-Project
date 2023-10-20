@@ -16,7 +16,6 @@ export async function sendFormUserData(formUserData) {
 
     alert(`Succeed! Your form data has been sent.`);
     console.log('Succeed');
-    console.log(formUserData);
   } catch (err) {
     alert(`Unsuccessful! Try again`);
     console.error('unsuccessful');
