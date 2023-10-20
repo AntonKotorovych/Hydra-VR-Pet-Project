@@ -4,7 +4,7 @@ const textRegExp = /^[a-zA-Z]{1,25}$/;
 const subjectRegExp = /^[A-Za-z ]{1,25}$/;
 const emailRegExp = /^[\w\.-]+@[\w\.-]+\.\w+$/;
 const phoneNumberRegExp = /\(\d{3}\) \d{3}-\d{4}/;
-const textareaRegExp = /^[\s\S]{1,5000}$/;
+const textareaRegExp = /^[a-zA-Z]{1,5000}$/;
 
 joinForm.addEventListener('submit', event => {
   event.preventDefault();
@@ -146,25 +146,24 @@ joinForm.addEventListener('submit', event => {
 
   // Function for rendering errors when fields are wrong
 
-  // function formFieldsShowError() {
-  //   for (const fieldName in formState) {
-  //     const field = formState[fieldName];
+  function formFieldsShowError() {
+    for (const fieldName in formState) {
+      const field = formState[fieldName];
+      console.log(field);
+      console.log(field.node.value);
 
-  //     // Can't decide that bug with node null better
+      if (field.error !== '') {
+        field.node.classList.remove('valid');
+        field.node.classList.add('invalid');
+        // errorSpan.innerText = field.error;
+      } else if (field.error === '') {
+        field.node.classList.remove('invalid');
+        field.node.classList.add('valid');
+      }
+    }
+  }
 
-  //     if (field.error !== '') {
-  //       field.node.classList.remove('valid');
-  //       field.node.classList.add('invalid');
-  //       console.log(document.getElementById(`${fieldName}Error`));
-  //       console.log(`${fieldName}Error`);
-  //       // console.log(errorSpan.innerText);
-  //       // errorSpan.innerText = field.error;
-  //     }
-  //   }
-  //   console.log(formState);
-  // }
-
-  // formFieldsShowError();
+  formFieldsShowError();
 
   // async function sendFormUserData(formUserData) {
   //   // Public access
