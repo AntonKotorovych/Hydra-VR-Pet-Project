@@ -1,57 +1,57 @@
 const joinForm = document.getElementById('mainForm');
 
-const formState = {
-  firstName: {
-    node: document.getElementById('firstName'),
-    error: '',
-  },
-  lastName: {
-    node: document.getElementById('lastName'),
-    error: '',
-  },
-  email: {
-    node: document.getElementById('email'),
-    error: '',
-  },
-  phoneNumber: {
-    node: document.getElementById('phoneNumber'),
-    error: '',
-  },
-  selectCountry: {
-    node: document.getElementById('country'),
-    error: '',
-  },
-  vrSize: {
-    node: document.querySelector('input[name="vrSize"]:checked'),
-    error: '',
-  },
-  subject: {
-    node: document.getElementById('subject'),
-    error: '',
-  },
-  textarea: {
-    node: document.getElementById('textarea'),
-    error: '',
-  },
-  rateUs: {
-    node: document.getElementById('ratingRange'),
-  },
-  checkbox: {
-    node: document.getElementById('ageCheck'),
-    error: '',
-  },
-};
-
-const submitBtn = document.getElementById('submitBtn');
-
 const textRegExp = /^[a-zA-Z]{1,25}$/;
 const subjectRegExp = /^[A-Za-z ]{1,25}$/;
 const emailRegExp = /^[\w\.-]+@[\w\.-]+\.\w+$/;
 const phoneNumberRegExp = /\(\d{3}\) \d{3}-\d{4}/;
 const textareaRegExp = /^[\s\S]{1,5000}$/;
 
+const submitBtn = document.getElementById('submitBtn');
+
 joinForm.addEventListener('submit', event => {
   event.preventDefault();
+
+  const formState = {
+    firstName: {
+      node: document.getElementById('firstName'),
+      error: '',
+    },
+    lastName: {
+      node: document.getElementById('lastName'),
+      error: '',
+    },
+    email: {
+      node: document.getElementById('email'),
+      error: '',
+    },
+    phoneNumber: {
+      node: document.getElementById('phoneNumber'),
+      error: '',
+    },
+    selectCountry: {
+      node: document.getElementById('country'),
+      error: '',
+    },
+    vrSize: {
+      node: document.querySelector('input[name="vrSize"]:checked'),
+      error: '',
+    },
+    subject: {
+      node: document.getElementById('subject'),
+      error: '',
+    },
+    textarea: {
+      node: document.getElementById('textarea'),
+      error: '',
+    },
+    rateUs: {
+      node: document.getElementById('ratingRange'),
+    },
+    checkbox: {
+      node: document.getElementById('ageCheck'),
+      error: '',
+    },
+  };
 
   // Function for mutating original formState errors
 
@@ -61,70 +61,88 @@ joinForm.addEventListener('submit', event => {
       lastName: formState.lastName.node?.value,
       email: formState.email.node?.value,
       phoneNumber: formState.phoneNumber.node?.value,
-      selectCountry: +formState.selectCountry.node?.value,
-      vrSize: formState.vrSize.node?.currentVrSize.id,
+      selectCountry: formState.selectCountry.node?.value,
+      vrSize: formState.vrSize.node?.value,
       subject: formState.subject.node?.value,
       textarea: formState.textarea.node?.value,
       rateUs: formState.rateUs.node?.value,
-      checkbox: formState.checkbox.checked,
+      checkbox: formState.checkbox.node.checked,
     };
 
     if (formData.firstName === '') {
       formState.firstName.error = 'This field must not be empty';
     } else if (!formData.firstName.trim().match(textRegExp)) {
       formState.firstName.error = 'Only characters. No more than 25 characters';
+    } else {
+      formState.firstName.error = '';
     }
 
     if (formData.lastName === '') {
       formState.lastName.error = 'This field must not be empty';
     } else if (!formData.lastName.trim().match(textRegExp)) {
       formState.lastName.error = 'Only characters. No more than 25 characters';
+    } else {
+      formState.lastName.error = '';
     }
 
     if (formData.email === '') {
       formState.email.error = 'This field must not be empty';
     } else if (!formData.email.trim().match(emailRegExp)) {
       formState.email.error = 'Please fill a correct email address format. for example: "admin@gmail.com"';
+    } else {
+      formState.email.error = '';
     }
 
     if (formData.phoneNumber === '') {
       formState.phoneNumber.error = 'This field must not be empty';
     } else if (!formData.phoneNumber.trim().match(phoneNumberRegExp)) {
       formState.phoneNumber.error = 'Enter your phone number in the format "(123) 456-7890"';
+    } else {
+      formState.phoneNumber.error = '';
     }
 
     if (formData.selectCountry === 0) {
       formState.selectCountry.error = 'You have to select your country';
-    } else if (selectCountry === 6) {
+    } else if (formData.selectCountry === 'mordor') {
       formState.selectCountry.error = 'Go away from this site';
       alert('Go and raise your country from its knees, russian dog');
       location.reload();
+    } else {
+      formState.selectCountry.error = '';
     }
 
     if (!formData.checkbox) {
       formState.checkbox.error = 'You have to confirm that you are adult';
+    } else {
+      formState.checkbox.error = '';
     }
 
-    if (formData.vrSize === undefined) {
+    if (formState.vrSize.node === null) {
       formState.vrSize.error = 'You have to choose size';
+    } else {
+      formState.vrSize.error = '';
     }
 
     if (formData.subject === '') {
       formState.subject.error = 'This field must not be empty';
     } else if (!formData.subject.trim().match(subjectRegExp)) {
       formState.subject.error = 'Only characters. No more than 25 characters';
+    } else {
+      formState.subject.error = '';
     }
 
     if (formData.textarea === '') {
       formState.textarea.error = 'This field must not be empty';
     } else if (!formData.textarea.trim().match(textareaRegExp)) {
       formState.textarea.error = 'Textarea has not to be empty and also contain 5000 characters max';
+    } else {
+      formState.textarea.error = '';
     }
   }
 
-  formDataIsValid();
-
   console.log(formState);
+
+  formDataIsValid();
 
   // Function for rendering errors when fields are wrong
 

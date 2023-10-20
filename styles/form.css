@@ -126,7 +126,7 @@ select {
 .custom-select-country::after {
   content: '▼';
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   pointer-events: none;
   right: 40px;
