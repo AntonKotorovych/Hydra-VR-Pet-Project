@@ -1,3 +1,5 @@
+import { sendFormUserData } from './fetchForm.js';
+
 const joinForm = document.getElementById('mainForm');
 
 const textRegExp = /^[a-zA-Z]{1,25}$/;
@@ -51,7 +53,7 @@ joinForm.addEventListener('submit', event => {
     },
   };
 
-  // Function for mutating original formState errors
+  // Function for mutate original formState errors
 
   function formDataIsValid() {
     const formData = {
@@ -136,11 +138,17 @@ joinForm.addEventListener('submit', event => {
       formState.textarea.error = '';
     }
 
-    console.log(formState.ageCheck);
-    console.log(formData.ageCheck);
-  }
+    // Add value to object
 
-  formDataIsValid();
+    for (const validItem in formState) {
+      const inputData = formState[validItem];
+      if (inputData.error === '') {
+        inputData.value = inputData.node.value;
+      } else if (validItem === 'rateUs') {
+        inputData.value = inputData.node.value;
+      }
+    }
+  }
 
   // Function for rendering errors when fields are wrong
 
@@ -164,45 +172,11 @@ joinForm.addEventListener('submit', event => {
     }
   }
 
+  formDataIsValid();
   formFieldsShowError();
 
-  // async function sendFormUserData(formUserData) {
-  //   // Public access
+  console.log(formState);
+  // Send Form to Firebase
 
-  //   const url = 'https://hydra-vr-default-rtdb.firebaseio.com/';
-
-  //   try {
-  //     const response = await fetch(`${url}users.json`, {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //       body: JSON.stringify(formUserData),
-  //     });
-
-  //     if (!response.ok) throw new Error(`HTTP error. Status: ${response.status}`);
-
-  //     const data = await response.json();
-  //     alert(`Succeed! Your form data has been sent. id: ${data}`);
-  //     console.log('Succeed ', data);
-  //   } catch (err) {
-  //     alert(`unsuccessful! Try again Error: ${err}`);
-  //     console.error('unsuccessful ', err);
-  //   }
-  // }
-
-  // if (
-  //   firstNameIsValid &&
-  //   lastNameIsValid &&
-  //   emailIsValid &&
-  //   phoneNumberIsValid &&
-  //   selectCountryIsValid &&
-  //   checkboxIsChecked &&
-  //   vrSizeIsChecked &&
-  //   subjectIsValid &&
-  //   textareaIsValid
-  // ) {
-  //   formData.selectCountry = selectCountry[formData.selectCountry].textContent;
-  //   sendFormUserData(formData);
-  // }
+  // sendFormUserData(formState);
 });
