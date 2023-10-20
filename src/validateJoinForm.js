@@ -26,10 +26,10 @@ joinForm.addEventListener('submit', event => {
       node: document.getElementById('phoneNumber'),
       error: '',
     },
-    // selectCountry: {
-    //   node: document.getElementById('country'),
-    //   error: '',
-    // },
+    selectCountry: {
+      node: document.getElementById('selectCountry'),
+      error: '',
+    },
     // vrSize: {
     //   node: document.querySelector('input[name="vrSize"]:checked'),
     //   error: '',
@@ -59,7 +59,7 @@ joinForm.addEventListener('submit', event => {
       lastName: formState.lastName.node?.value,
       email: formState.email.node?.value,
       phoneNumber: formState.phoneNumber.node?.value,
-      // selectCountry: formState.selectCountry.node?.value,
+      selectCountry: formState.selectCountry.node?.value,
       // vrSize: formState.vrSize.node?.value,
       subject: formState.subject.node?.value,
       textarea: formState.textarea.node.value,
@@ -98,16 +98,15 @@ joinForm.addEventListener('submit', event => {
       formState.phoneNumber.error = '';
     }
 
-    // if (formData.selectCountry === null) {
-    //   formState.selectCountry = '';
-    //   formState.selectCountry.error = 'You have to select your country';
-    // } else if (formData.selectCountry === 'mordor') {
-    //   formState.selectCountry.error = 'Go away from this site';
-    //   alert('Go and raise your country from its knees, russian dog');
-    //   location.reload();
-    // } else {
-    //   formState.selectCountry.error = '';
-    // }
+    if (formData.selectCountry === '0') {
+      formState.selectCountry.error = 'You have to select your country';
+    } else if (formData.selectCountry === 'mordor') {
+      formState.selectCountry.error = 'Go away from this site';
+      alert('Go and raise your country from its knees, russian dog');
+      location.reload();
+    } else {
+      formState.selectCountry.error = '';
+    }
 
     // if (!formData.checkbox) {
     //   formState.checkbox.error = 'You have to confirm that you are adult';
@@ -138,8 +137,6 @@ joinForm.addEventListener('submit', event => {
     } else {
       formState.textarea.error = '';
     }
-    console.log(formState);
-    console.log(formData);
   }
 
   formDataIsValid();
@@ -149,8 +146,6 @@ joinForm.addEventListener('submit', event => {
   function formFieldsShowError() {
     for (const fieldName in formState) {
       const field = formState[fieldName];
-      console.log(field);
-      console.log(field.node.value);
 
       if (field.error !== '') {
         field.node.classList.remove('valid');
