@@ -26,14 +26,14 @@ joinForm.addEventListener('submit', event => {
       node: document.getElementById('phoneNumber'),
       error: '',
     },
-    selectCountry: {
-      node: document.getElementById('country'),
-      error: '',
-    },
-    vrSize: {
-      node: document.querySelector('input[name="vrSize"]:checked'),
-      error: '',
-    },
+    // selectCountry: {
+    //   node: document.getElementById('country'),
+    //   error: '',
+    // },
+    // vrSize: {
+    //   node: document.querySelector('input[name="vrSize"]:checked'),
+    //   error: '',
+    // },
     subject: {
       node: document.getElementById('subject'),
       error: '',
@@ -42,9 +42,9 @@ joinForm.addEventListener('submit', event => {
       node: document.getElementById('textarea'),
       error: '',
     },
-    rateUs: {
-      node: document.getElementById('ratingRange'),
-    },
+    // rateUs: {
+    //   node: document.getElementById('ratingRange'),
+    // },
     checkbox: {
       node: document.getElementById('ageCheck'),
       error: '',
@@ -59,18 +59,17 @@ joinForm.addEventListener('submit', event => {
       lastName: formState.lastName.node?.value,
       email: formState.email.node?.value,
       phoneNumber: formState.phoneNumber.node?.value,
-      selectCountry: formState.selectCountry.node?.value,
-      vrSize: formState.vrSize.node?.value,
+      // selectCountry: formState.selectCountry.node?.value,
+      // vrSize: formState.vrSize.node?.value,
       subject: formState.subject.node?.value,
-      textarea: formState.textarea.node?.value,
-      rateUs: formState.rateUs.node?.value,
+      textarea: formState.textarea.node.value,
       checkbox: formState.checkbox.node?.checked,
     };
 
     if (formData.firstName === '') {
       formState.firstName.error = 'This field must not be empty';
     } else if (!formData.firstName.trim().match(textRegExp)) {
-      formState.firstName.error = 'Only characters. No more than 25 characters';
+      formState.firstName.error = 'Only latin characters. No more than 25 characters';
     } else {
       formState.firstName.error = '';
     }
@@ -78,7 +77,7 @@ joinForm.addEventListener('submit', event => {
     if (formData.lastName === '') {
       formState.lastName.error = 'This field must not be empty';
     } else if (!formData.lastName.trim().match(textRegExp)) {
-      formState.lastName.error = 'Only characters. No more than 25 characters';
+      formState.lastName.error = 'Only latin characters. No more than 25 characters';
     } else {
       formState.lastName.error = '';
     }
@@ -99,15 +98,16 @@ joinForm.addEventListener('submit', event => {
       formState.phoneNumber.error = '';
     }
 
-    if (formData.selectCountry === 0) {
-      formState.selectCountry.error = 'You have to select your country';
-    } else if (formData.selectCountry === 'mordor') {
-      formState.selectCountry.error = 'Go away from this site';
-      alert('Go and raise your country from its knees, russian dog');
-      location.reload();
-    } else {
-      formState.selectCountry.error = '';
-    }
+    // if (formData.selectCountry === null) {
+    //   formState.selectCountry = '';
+    //   formState.selectCountry.error = 'You have to select your country';
+    // } else if (formData.selectCountry === 'mordor') {
+    //   formState.selectCountry.error = 'Go away from this site';
+    //   alert('Go and raise your country from its knees, russian dog');
+    //   location.reload();
+    // } else {
+    //   formState.selectCountry.error = '';
+    // }
 
     if (!formData.checkbox) {
       formState.checkbox.error = 'You have to confirm that you are adult';
@@ -115,16 +115,18 @@ joinForm.addEventListener('submit', event => {
       formState.checkbox.error = '';
     }
 
-    if (formState.vrSize.node === null) {
-      formState.vrSize.error = 'You have to choose size';
-    } else {
-      formState.vrSize.error = '';
-    }
+    // if (formState.vrSize.node === null) {
+    //   formState.vrSize.error = 'You have to choose size';
+    //   formState.vrSize.node = '';
+    //   formData.vrSize = '';
+    // } else {
+    //   formState.vrSize.error = '';
+    // }
 
     if (formData.subject === '') {
       formState.subject.error = 'This field must not be empty';
     } else if (!formData.subject.trim().match(subjectRegExp)) {
-      formState.subject.error = 'Only characters. No more than 25 characters';
+      formState.subject.error = 'Only latin characters';
     } else {
       formState.subject.error = '';
     }
@@ -132,7 +134,7 @@ joinForm.addEventListener('submit', event => {
     if (formData.textarea === '') {
       formState.textarea.error = 'This field must not be empty';
     } else if (!formData.textarea.trim().match(textareaRegExp)) {
-      formState.textarea.error = 'Textarea has not to be empty and also contain 5000 characters max';
+      formState.textarea.error = 'Only latin characters, and also contain 5000 characters max';
     } else {
       formState.textarea.error = '';
     }
@@ -142,29 +144,27 @@ joinForm.addEventListener('submit', event => {
 
   // Function for rendering errors when fields are wrong
 
+  console.log(formState);
+
   function formFieldsShowError() {
     for (const fieldName in formState) {
       const field = formState[fieldName];
 
-      let errorSpan;
+      // Can't decide that bug with node null better
+
       if (field.error !== '') {
         field.node.classList.remove('valid');
         field.node.classList.add('invalid');
-        errorSpan = document.getElementById(`${field.node.id}Error`);
-        errorSpan.innerText = field.error;
-      } else {
-        field.node.classList.remove('invalid');
-        field.node.classList.add('valid');
-        errorSpan = document.getElementById(`${field.node.id}Error`);
-        field.error = '';
-        errorSpan.innerText = field.error;
+        console.log(document.getElementById(`${fieldName}Error`));
+        console.log(`${fieldName}Error`);
+        // console.log(errorSpan.innerText);
+        // errorSpan.innerText = field.error;
       }
     }
+    console.log(formState);
   }
 
   formFieldsShowError();
-
-  // formFieldsShowError();
 
   async function sendFormUserData(formUserData) {
     // Public access
