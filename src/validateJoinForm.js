@@ -175,8 +175,18 @@ joinForm.addEventListener('submit', event => {
   formDataIsValid();
   formFieldsShowError();
 
-  console.log(formState);
   // Send Form to Firebase
 
-  // sendFormUserData(formState);
+  let formIsValid = true;
+
+  for (const inputIsValid in formState) {
+    if (inputIsValid === 'rateUs') continue;
+
+    if (formState[inputIsValid].error !== '') {
+      formIsValid = false;
+      break;
+    }
+  }
+
+  if (formIsValid) sendFormUserData(formState);
 });
