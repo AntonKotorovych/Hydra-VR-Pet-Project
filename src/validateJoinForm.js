@@ -174,7 +174,9 @@ joinForm.addEventListener('submit', event => {
 
   formDataIsValid();
   formFieldsShowError();
+
   // Tracking inputs value changing
+
   joinForm.addEventListener('input', event => {
     if (event.target.id === 'ratingRange') return;
     event.target.classList.remove('invalid');
