@@ -174,6 +174,13 @@ joinForm.addEventListener('submit', event => {
 
   formDataIsValid();
   formFieldsShowError();
+  // Tracking inputs value changing
+  joinForm.addEventListener('input', event => {
+    if (event.target.id === 'ratingRange') return;
+    event.target.classList.remove('invalid');
+    event.target.classList.remove('valid');
+    document.getElementById(`${event.target.name}Error`).innerText = '';
+  });
 
   // Send Form to Firebase
 
