@@ -99,6 +99,11 @@ textarea {
   align-items: flex-end;
 }
 
+.age-validation__wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .age-validation label {
   font-size: var(--font-size-medium);
   color: var(--text-color-white);
