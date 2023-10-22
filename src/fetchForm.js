@@ -1,4 +1,4 @@
-export async function sendFormUserData(formUserData) {
+export async function createUser(user) {
   // Public access
 
   const url = 'https://hydra-vr-default-rtdb.firebaseio.com/';
@@ -9,16 +9,14 @@ export async function sendFormUserData(formUserData) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(formUserData),
+      body: JSON.stringify(user),
     });
 
     if (!response.ok) throw new Error(`HTTP error. Status: ${response.status}`);
 
     alert(`Succeed! Your form data has been sent.`);
-    console.log('Succeed');
     location.reload();
   } catch (err) {
     alert(`Unsuccessful! Try again`);
-    console.error('unsuccessful');
   }
 }

@@ -1,4 +1,4 @@
-import { sendFormUserData } from './fetchForm.js';
+import { createUser } from './fetchForm.js';
 
 const joinForm = document.getElementById('joinForm');
 
@@ -55,7 +55,7 @@ joinForm.addEventListener('submit', event => {
 
   // Function for mutate original formState errors
 
-  function formDataIsValid() {
+  function getIsFormValid() {
     const formData = {
       firstName: formState.firstName.node?.value.trim(),
       lastName: formState.lastName.node?.value.trim(),
@@ -116,7 +116,7 @@ joinForm.addEventListener('submit', event => {
       formState.ageCheck.error = '';
     }
 
-    if (formData.vrSize === undefined) {
+    if (!formData.vrSize) {
       formState.vrSize.error = 'You have to choose size';
     } else {
       formState.vrSize.error = '';
@@ -152,7 +152,7 @@ joinForm.addEventListener('submit', event => {
 
   // Function for rendering errors when fields are wrong
 
-  function formFieldsShowError() {
+  function showFieldsErrors() {
     for (const fieldName in formState) {
       const field = formState[fieldName];
 
@@ -172,8 +172,8 @@ joinForm.addEventListener('submit', event => {
     }
   }
 
-  formDataIsValid();
-  formFieldsShowError();
+  getIsFormValid();
+  showFieldsErrors();
 
   // Tracking inputs value changing
 
@@ -197,5 +197,5 @@ joinForm.addEventListener('submit', event => {
     }
   }
 
-  if (formIsValid) sendFormUserData(formState);
+  if (formIsValid) createUser(formState);
 });
