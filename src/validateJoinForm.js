@@ -1,6 +1,6 @@
 import { sendFormUserData } from './fetchForm.js';
 
-const joinForm = document.getElementById('mainForm');
+const joinForm = document.getElementById('joinForm');
 
 const textRegExp = /^[a-zA-Z]{1,25}$/;
 const subjectRegExp = /^[A-Za-z ]{1,25}$/;
@@ -57,20 +57,20 @@ joinForm.addEventListener('submit', event => {
 
   function formDataIsValid() {
     const formData = {
-      firstName: formState.firstName.node?.value,
-      lastName: formState.lastName.node?.value,
-      email: formState.email.node?.value,
-      phoneNumber: formState.phoneNumber.node?.value,
+      firstName: formState.firstName.node?.value.trim(),
+      lastName: formState.lastName.node?.value.trim(),
+      email: formState.email.node?.value.trim(),
+      phoneNumber: formState.phoneNumber.node?.value.trim(),
       selectCountry: formState.selectCountry.node?.value,
       vrSize: formState.vrSize.node?.value,
-      subject: formState.subject.node?.value,
-      textarea: formState.textarea.node?.value,
+      subject: formState.subject.node?.value.trim(),
+      textarea: formState.textarea.node?.value.trim(),
       ageCheck: formState.ageCheck.node?.checked,
     };
 
     if (formData.firstName === '') {
       formState.firstName.error = 'This field must not be empty';
-    } else if (!formData.firstName.trim().match(textRegExp)) {
+    } else if (!formData.firstName.match(textRegExp)) {
       formState.firstName.error = 'Only latin characters. No more than 25 characters';
     } else {
       formState.firstName.error = '';
@@ -78,7 +78,7 @@ joinForm.addEventListener('submit', event => {
 
     if (formData.lastName === '') {
       formState.lastName.error = 'This field must not be empty';
-    } else if (!formData.lastName.trim().match(textRegExp)) {
+    } else if (!formData.lastName.match(textRegExp)) {
       formState.lastName.error = 'Only latin characters. No more than 25 characters';
     } else {
       formState.lastName.error = '';
@@ -86,7 +86,7 @@ joinForm.addEventListener('submit', event => {
 
     if (formData.email === '') {
       formState.email.error = 'This field must not be empty';
-    } else if (!formData.email.trim().match(emailRegExp)) {
+    } else if (!formData.email.match(emailRegExp)) {
       formState.email.error = 'Please fill a correct email address format. for example: "admin@gmail.com"';
     } else {
       formState.email.error = '';
@@ -94,7 +94,7 @@ joinForm.addEventListener('submit', event => {
 
     if (formData.phoneNumber === '') {
       formState.phoneNumber.error = 'This field must not be empty';
-    } else if (!formData.phoneNumber.trim().match(phoneNumberRegExp)) {
+    } else if (!formData.phoneNumber.match(phoneNumberRegExp)) {
       formState.phoneNumber.error = 'Enter your phone number in the format "(123) 456-7890"';
     } else {
       formState.phoneNumber.error = '';
@@ -124,7 +124,7 @@ joinForm.addEventListener('submit', event => {
 
     if (formData.subject === '') {
       formState.subject.error = 'This field must not be empty';
-    } else if (!formData.subject.trim().match(subjectRegExp)) {
+    } else if (!formData.subject.match(subjectRegExp)) {
       formState.subject.error = 'Only latin characters';
     } else {
       formState.subject.error = '';
@@ -132,7 +132,7 @@ joinForm.addEventListener('submit', event => {
 
     if (formData.textarea === '') {
       formState.textarea.error = 'This field must not be empty';
-    } else if (!formData.textarea.trim().match(textareaRegExp)) {
+    } else if (!formData.textarea.match(textareaRegExp)) {
       formState.textarea.error = 'Only latin characters, and also contain 5000 characters max';
     } else {
       formState.textarea.error = '';
