@@ -56,20 +56,21 @@
 }
 
 .main-header__message a,
-.main-header__call a {
+.main-header__call a,
+.main-header__geolocation a {
   text-decoration: none;
-  color: var(--text-color-white);
 }
 
-.main-header__message a:hover,
-.main-header__call a:hover {
-  transition: color 0.4s ease;
+.main-header__scale {
+  transition: transform 0.25s ease;
+}
+
+.main-header__scale:hover {
+  transform: scale(1.03);
+}
+
+.main-header__scale:hover h2,
+.main-header__scale:hover span {
   color: var(--text-color-link);
-  border-color: var(--text-color-white);
-}
-
-.main-header__message h2:hover,
-.main-header__call h2:hover {
-  transition: transform 0.4s ease;
-  transform: scale(1.05);
+  transition: color 0.25s ease;
 }

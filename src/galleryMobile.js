@@ -1,9 +1,6 @@
 const btnLeftFeatures = document.querySelector('.btn-mobile-arrow--left-features');
 const btnRightFeatures = document.querySelector('.btn-mobile-arrow--right-features');
 
-console.log(btnLeftFeatures);
-console.log(btnRightFeatures);
-
 const simulation = document.getElementById('simulation');
 const education = document.getElementById('education');
 const selfCare = document.getElementById('selfCare');
