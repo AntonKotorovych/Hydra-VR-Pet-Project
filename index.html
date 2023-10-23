@@ -349,29 +349,31 @@
               <h2 class="title title--primary">join hydra</h2>
               <h3 class="title title--secondary">Let's Build Your VR Experience</h3>
             </div>
-            <form id="mainForm" name="main-form" class="main-form" method="post" autocomplete="off">
+            <form id="joinForm" name="joinForm" class="main-form" autocomplete="off">
               <div class="main-form__wrap-inputs">
                 <div class="main-form__container-half">
                   <input
                     class="custom-input"
                     type="text"
-                    name="first-name"
+                    id="firstName"
+                    name="firstName"
                     placeholder="First Name"
                     title="Only characters. No more than 25 characters"
-                    autocomplete="given-name"
-                    maxlength="25" />
-                  <span class="error-message">Only characters. No more than 25 characters</span>
+                    maxlength="25"
+                    autocomplete="none" />
+                  <span class="error-message" id="firstNameError"></span>
                 </div>
                 <div class="main-form__container-half">
                   <input
                     class="custom-input"
                     type="text"
-                    name="last-name"
+                    id="lastName"
+                    name="lastName"
                     placeholder="Last Name"
                     title="Only characters. No more than 25 characters"
-                    autocomplete="family-name"
-                    maxlength="25" />
-                  <span class="error-message">Only characters. No more than 25 characters</span>
+                    maxlength="25"
+                    autocomplete="none" />
+                  <span class="error-message" id="lastNameError"></span>
                 </div>
               </div>
               <div class="main-form__wrap-inputs">
@@ -381,42 +383,36 @@
                     type="email"
                     id="email"
                     name="email"
-                    autocomplete="email"
                     placeholder="Email"
-                    title="Please fill a correct email address format. for example: 'admin@gmail.com'" />
-                  <span class="error-message">Please fill a correct email address format. for example: 'admin@gmail.com'</span>
+                    title="Please fill a correct email address format. for example: 'admin@gmail.com'"
+                    autocomplete="none" />
+                  <span class="error-message" id="emailError"></span>
                 </div>
                 <div class="main-form__container-half">
                   <input
                     class="custom-input"
                     type="text"
-                    name="phone-number"
+                    id="phoneNumber"
+                    name="phoneNumber"
                     placeholder="Phone Number"
-                    autocomplete="tel"
-                    title='Enter your phone number in the format "(123) 456-7890"' />
-                  <span class="error-message">Enter your phone number in the format "(123) 456-7890"</span>
+                    title='Enter your phone number in the format "(123) 456-7890"'
+                    autocomplete="none" />
+                  <span class="error-message" id="phoneNumberError"></span>
                 </div>
               </div>
               <div class="main-form__wrap-inputs">
-                <div class="main-form__container-half">
+                <div class="main-form__container-full">
                   <div class="custom-select-country">
-                    <select name="country" class="custom-input" autocomplete="country">
+                    <select id="selectCountry" name="selectCountry" class="custom-input" autocomplete="country">
                       <option value="0" disabled selected hidden>Select your Country</option>
-                      <option value="1">United States of America</option>
-                      <option value="2">Ukraine</option>
-                      <option value="3">England</option>
-                      <option value="4">Germany</option>
-                      <option value="5">France</option>
-                      <option value="6">Mordor (russian pederation)</option>
+                      <option value="usa">United States of America</option>
+                      <option value="ukraine">Ukraine</option>
+                      <option value="england">England</option>
+                      <option value="germany">Germany</option>
+                      <option value="france">France</option>
+                      <option value="mordor">Mordor (russian pederation)</option>
                     </select>
-                    <span class="error-message">You have to select your country</span>
-                  </div>
-                </div>
-                <div class="main-form__container-half">
-                  <div class="age-validation">
-                    <label for="age-check">Are you 18 years old?</label>
-                    <input type="checkbox" class="age-validation__checkbox" id="age-check" name="age-check" />
-                    <span class="error-message">You have to confirm that you are adult</span>
+                    <span class="error-message" id="selectCountryError"></span>
                   </div>
                 </div>
               </div>
@@ -424,32 +420,39 @@
                 <div class="radio-title">choose your preferred vr size</div>
                 <div class="radio-buttons">
                   <div class="radio-buttons__element">
-                    <input type="radio" id="size-s" name="vr-size" value="size-s" />
+                    <input type="radio" id="size-s" name="vrSize" value="size-s" />
                     <label for="size-s">Size S</label>
                   </div>
                   <div class="radio-buttons__element">
-                    <input type="radio" id="size-m" name="vr-size" value="size-m" />
+                    <input type="radio" id="size-m" name="vrSize" value="size-m" />
                     <label for="size-m">Size M</label>
                   </div>
                   <div class="radio-buttons__element">
-                    <input type="radio" id="size-l" name="vr-size" value="size-l" />
+                    <input type="radio" id="size-l" name="vrSize" value="size-l" checked />
                     <label for="size-l">Size L</label>
                   </div>
                 </div>
-                <span class="error-message">You have to choose size</span>
+                <span class="error-message" id="vrSizeError"></span>
               </div>
               <div class="main-form__container-full">
-                <input class="custom-input" type="text" name="subject" placeholder="Subject" title="Only characters. No more than 25 characters" />
-                <span class="error-message">Only characters. No more than 25 characters"</span>
+                <input
+                  class="custom-input"
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Subject"
+                  title="Only characters. No more than 25 characters" />
+                <span class="error-message" id="subjectError"></span>
               </div>
               <div class="main-form__container-full">
                 <textarea
+                  id="textarea"
                   name="textarea"
                   cols="30"
                   rows="10"
                   placeholder="Tell Us Something..."
                   title="Textarea has not to be empty and also contain 5000 characters max"></textarea>
-                <span class="error-message">Textarea has not to be empty and also contain 5000 characters max</span>
+                <span class="error-message" id="textareaError"></span>
               </div>
               <div class="main-form__container-full">
                 <div class="range-title">please, rate us!</div>
@@ -466,12 +469,21 @@
                     <span>9</span>
                     <span>10</span>
                   </div>
-                  <input type="range" min="1" max="10" value="10" id="ratingRange" />
+                  <input type="range" class="rating-range" min="1" max="10" value="10" id="ratingRange" />
+                </div>
+              </div>
+              <div class="main-form__container-full">
+                <div class="age-validation">
+                  <div class="age-validation__wrapper">
+                    <input type="checkbox" class="age-validation__checkbox" id="ageCheck" name="ageCheck" />
+                    <label for="ageCheck">Are you 18 years old?</label>
+                  </div>
+                  <span class="error-message" id="ageCheckError"></span>
                 </div>
               </div>
               <div class="main-form__button">
                 <div class="btn-primary-container">
-                  <button class="btn-primary button-phone" name="submit-btn" type="submit">send to hydra</button>
+                  <button class="btn-primary button-phone" id="submitBtn" name="submitBtn" type="submit">send to hydra</button>
                 </div>
               </div>
             </form>
@@ -546,10 +558,11 @@
         </section>
       </footer>
     </div>
-    <script src="./src/hamburgerMenu.js"></script>
+    <script type="module" src="./src/hamburgerMenu.js"></script>
     <script src="./src/galleryMobileHeader.js"></script>
     <script src="./src/galleryMobile.js"></script>
     <script src="./src/galleryBrands.js"></script>
-    <script src="./src/validateMainForm.js"></script>
+    <script type="module" src="./src/validateJoinForm.js"></script>
+    <script type="module" src="./src/createUser.js"></script>
   </body>
 </html>
