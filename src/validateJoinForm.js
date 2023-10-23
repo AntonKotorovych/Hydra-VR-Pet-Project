@@ -8,6 +8,24 @@ const emailRegExp = /^[\w\.-]+@[\w\.-]+\.\w+$/;
 const phoneNumberRegExp = /\(\d{3}\) \d{3}-\d{4}/;
 const textareaRegExp = /^[a-zA-Z]{1,5000}$/;
 
+function showFieldsErrors(obj) {
+  for (const fieldName in obj) {
+    const field = obj[fieldName];
+
+    if (fieldName === 'rateUs') continue;
+
+    if (field.error !== '') {
+      field.node.classList.remove('valid');
+      field.node.classList.add('invalid');
+      document.getElementById(`${fieldName}Error`).innerText = field.error;
+    } else if (field.error === '') {
+      field.node.classList.remove('invalid');
+      field.node.classList.add('valid');
+      document.getElementById(`${fieldName}Error`).innerText = '';
+    }
+  }
+}
+
 joinForm.addEventListener('submit', event => {
   event.preventDefault();
 
@@ -138,64 +156,48 @@ joinForm.addEventListener('submit', event => {
       formState.textarea.error = '';
     }
 
-    // Add value to object
+    let formIsValid = true;
 
-    for (const validItem in formState) {
-      const inputData = formState[validItem];
-      if (inputData.error === '') {
-        inputData.value = inputData.node.value;
-      } else if (validItem === 'rateUs') {
-        inputData.value = inputData.node.value;
+    for (const inputIsValid in formState) {
+      if (inputIsValid === 'rateUs') continue;
+
+      if (formState[inputIsValid].error !== '') {
+        formIsValid = false;
+        break;
       }
+    }
+
+    if (formIsValid) {
+      return true;
+    } else {
+      return false;
     }
   }
 
-  // Function for rendering errors when fields are wrong
-
-  function showFieldsErrors() {
-    for (const fieldName in formState) {
-      const field = formState[fieldName];
-
-      if (fieldName === 'rateUs') continue;
-
-      if (field.node === null) {
-        document.getElementById(`vrSizeError`).innerText = field.error;
-      } else if (field.error !== '' && field.node !== null) {
-        field.node.classList.remove('valid');
-        field.node.classList.add('invalid');
-        document.getElementById(`${fieldName}Error`).innerText = field.error;
-      } else if (field.error === '') {
-        field.node.classList.remove('invalid');
-        field.node.classList.add('valid');
-        document.getElementById(`${fieldName}Error`).innerText = '';
-      }
-    }
-  }
-
-  getIsFormValid();
-  showFieldsErrors();
+  const formIsValid = getIsFormValid();
+  showFieldsErrors(formState);
 
   // Tracking inputs value changing
 
-  joinForm.addEventListener('input', event => {
-    if (event.target.id === 'ratingRange') return;
-    event.target.classList.remove('invalid');
-    event.target.classList.remove('valid');
-    document.getElementById(`${event.target.name}Error`).innerText = '';
+  joinForm.addEventListener('input', () => {
+    getIsFormValid();
+    showFieldsErrors(formState);
   });
 
   // Send Form to Firebase
 
-  let formIsValid = true;
+  function createUserValues() {
+    let userObj = {};
 
-  for (const inputIsValid in formState) {
-    if (inputIsValid === 'rateUs') continue;
-
-    if (formState[inputIsValid].error !== '') {
-      formIsValid = false;
-      break;
+    for (const input in formState) {
+      const inputValue = formState[input].node.value;
+      userObj[input] = inputValue;
     }
+    return userObj;
   }
 
-  if (formIsValid) createUser(formState);
+  if (formIsValid) {
+    const validFormData = createUserValues();
+    createUser(validFormData);
+  }
 });
