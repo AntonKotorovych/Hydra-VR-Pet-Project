@@ -1,4 +1,4 @@
-import { createUser } from './fetchForm.js';
+import { createUser } from './createUser.js';
 
 const joinForm = document.getElementById('joinForm');
 
