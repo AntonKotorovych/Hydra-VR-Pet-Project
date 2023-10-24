@@ -1,3 +1,12 @@
+// Features
+const simulation = document.getElementById('simulation');
+const education = document.getElementById('education');
+const selfCare = document.getElementById('selfCare');
+const outdoor = document.getElementById('outdoor');
+
+const btnRightFeatures = document.getElementById('btnRightFeatures');
+const btnLeftFeatures = document.getElementById('btnLeftFeatures');
+
 // Brand Logos
 
 const unrealEngine = document.getElementById('unrealEngine');
@@ -15,9 +24,10 @@ const interactionDesign = document.getElementById('interactionDesign');
 const vrUserTesting = document.getElementById('vrUserTesting');
 const vrDeploy = document.getElementById('vrDeploy');
 
-const btnRightBuildFeatures = document.getElementById('btnRightFeatures');
-const btnLeftBuildFeatures = document.getElementById('btnLeftFeatures');
+const btnRightBuildFeatures = document.getElementById('btnRightBuildFeatures');
+const btnLeftBuildFeatures = document.getElementById('btnLeftBuildFeatures');
 
+let counterFeatures = 0;
 let counterBrands = 0;
 let counterBuildFeatures = 0;
 
@@ -44,6 +54,18 @@ function changeBrandsView(counter, item1, item2, item3, item4) {
     item4.style.left = '50%';
   }
 }
+
+// Features switch handler
+
+btnRightFeatures.addEventListener('click', () => {
+  counterFeatures = (counterFeatures + 1) % 4;
+  changeBrandsView(counterFeatures, simulation, education, selfCare, outdoor);
+});
+
+btnLeftFeatures.addEventListener('click', () => {
+  counterFeatures = (counterFeatures - 1 + 4) % 4;
+  changeBrandsView(counterFeatures, simulation, education, selfCare, outdoor);
+});
 
 // Brands switch handler
 

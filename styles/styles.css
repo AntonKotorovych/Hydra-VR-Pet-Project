@@ -904,24 +904,31 @@ body {
   .features__item {
     width: 95%;
     height: 500px;
-    transition: right 0.4s ease;
+    transition: left 0.4s ease;
   }
 
   #simulation {
     position: absolute;
-    right: 0%;
+    left: 50%;
+    transform: translate(-51%);
   }
+
   #education {
     position: absolute;
-    right: -120%;
+    left: 150%;
+    transform: translate(-51%);
   }
+
   #selfCare {
     position: absolute;
-    right: -220%;
+    left: 250%;
+    transform: translate(-51%);
   }
+
   #outdoor {
     position: absolute;
-    right: -320%;
+    left: 350%;
+    transform: translate(-51%);
   }
 
   /* Technologies */
