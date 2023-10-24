@@ -1,37 +1,31 @@
-// Main Header Info
+function createNodeItems(keys) {
+  return keys.map(key => {
+    return document.getElementById(key);
+  });
+}
 
-const geolocation = document.getElementById('geolocation');
-const call = document.getElementById('call');
-const message = document.getElementById('message');
+// Main Header Info
+const MAIN_HEADER_INFO = createNodeItems(['geolocation', 'call', 'message']);
 
 const btnRightHeaderInfo = document.querySelector('.btn-mobile-header--right');
 const btnLeftHeaderInfo = document.querySelector('.btn-mobile-header--left');
 
 // Features
-const simulation = document.getElementById('simulation');
-const education = document.getElementById('education');
-const selfCare = document.getElementById('selfCare');
-const outdoor = document.getElementById('outdoor');
+const FEATURES = createNodeItems(['simulation', 'education', 'selfCare', 'outdoor']);
 
 const btnRightFeatures = document.getElementById('btnRightFeatures');
 const btnLeftFeatures = document.getElementById('btnLeftFeatures');
 
 // Brand Logos
 
-const unrealEngine = document.getElementById('unrealEngine');
-const unity = document.getElementById('unity');
-const oculus = document.getElementById('oculus');
-const vive = document.getElementById('vive');
+const BRAND_LOGOS = createNodeItems(['unrealEngine', 'unity', 'oculus', 'vive']);
 
 const btnRightBrands = document.getElementById('btnRightBrands');
 const btnLeftBrands = document.getElementById('btnLeftBrands');
 
 // Build Features
 
-const conceptionDesign = document.getElementById('conceptionDesign');
-const interactionDesign = document.getElementById('interactionDesign');
-const vrUserTesting = document.getElementById('vrUserTesting');
-const vrDeploy = document.getElementById('vrDeploy');
+const BUILD_FEATURES = createNodeItems(['conceptionDesign', 'interactionDesign', 'vrUserTesting', 'vrDeploy']);
 
 const btnRightBuildFeatures = document.getElementById('btnRightBuildFeatures');
 const btnLeftBuildFeatures = document.getElementById('btnLeftBuildFeatures');
@@ -43,82 +37,67 @@ let counterBuildFeatures = 0;
 
 // Reusable Function to change items view
 
-function changeGalleryView(counter, item1, item2, item3, item4) {
-  if (counter === 0) {
-    item1.style.left = '50%';
-    item2.style.left = '150%';
-    item3.style.left = '250%';
-    if (item4) {
-      item4.style.left = '350%';
-    }
-  } else if (counter === 1) {
-    item1.style.left = '-50%';
-    item2.style.left = '50%';
-    item3.style.left = '150%';
-    if (item4) {
-      item4.style.left = '250%';
-    }
-  } else if (counter === 2) {
-    item1.style.left = '-150%';
-    item2.style.left = '-50%';
-    item3.style.left = '50%';
-    if (item4) {
-      item4.style.left = '150%';
-    }
-  } else if (counter === 3) {
-    item1.style.left = '-250%';
-    item2.style.left = '-150%';
-    item3.style.left = '-50%';
-    if (item4) {
-      item4.style.left = '50%';
-    }
+function changeGalleryView(counter, items) {
+  const leftValues = [
+    ['50%', '150%', '250%', '350%'],
+    ['-50%', '50%', '150%', '250%'],
+    ['-150%', '-50%', '50%', '150%'],
+    ['-250%', '-150%', '-50%', '50%'],
+  ];
+
+  if (counter < 0 || counter > 3) {
+    return;
   }
+
+  items.forEach((item, index) => {
+    item.style.left = leftValues[counter][index];
+  });
 }
 
 // Main Header Info switch handler
 
 btnRightHeaderInfo.addEventListener('click', () => {
   counterMainHeaderInfo = (counterMainHeaderInfo + 1) % 3;
-  changeGalleryView(counterMainHeaderInfo, geolocation, call, message);
+  changeGalleryView(counterMainHeaderInfo, MAIN_HEADER_INFO);
 });
 
 btnLeftHeaderInfo.addEventListener('click', () => {
   counterMainHeaderInfo = (counterMainHeaderInfo - 1 + 3) % 3;
-  changeGalleryView(counterMainHeaderInfo, geolocation, call, message);
+  changeGalleryView(counterMainHeaderInfo, MAIN_HEADER_INFO);
 });
 
 // Features switch handler
 
 btnRightFeatures.addEventListener('click', () => {
   counterFeatures = (counterFeatures + 1) % 4;
-  changeGalleryView(counterFeatures, simulation, education, selfCare, outdoor);
+  changeGalleryView(counterFeatures, FEATURES);
 });
 
 btnLeftFeatures.addEventListener('click', () => {
   counterFeatures = (counterFeatures - 1 + 4) % 4;
-  changeGalleryView(counterFeatures, simulation, education, selfCare, outdoor);
+  changeGalleryView(counterFeatures, FEATURES);
 });
 
 // Brands switch handler
 
 btnRightBrands.addEventListener('click', () => {
   counterBrands = (counterBrands + 1) % 4;
-  changeGalleryView(counterBrands, unrealEngine, unity, oculus, vive);
+  changeGalleryView(counterBrands, BRAND_LOGOS);
 });
 
 btnLeftBrands.addEventListener('click', () => {
   counterBrands = (counterBrands - 1 + 4) % 4;
-  changeGalleryView(counterBrands, unrealEngine, unity, oculus, vive);
+  changeGalleryView(counterBrands, BRAND_LOGOS);
 });
 
 // Build Features switch handler
 
 btnRightBuildFeatures.addEventListener('click', () => {
   counterBuildFeatures = (counterBuildFeatures + 1) % 4;
-  changeGalleryView(counterBuildFeatures, conceptionDesign, interactionDesign, vrUserTesting, vrDeploy);
+  changeGalleryView(counterBuildFeatures, BUILD_FEATURES);
 });
 
 btnLeftBuildFeatures.addEventListener('click', () => {
   counterBuildFeatures = (counterBuildFeatures - 1 + 4) % 4;
-  changeGalleryView(counterBuildFeatures, conceptionDesign, interactionDesign, vrUserTesting, vrDeploy);
+  changeGalleryView(counterBuildFeatures, BUILD_FEATURES);
 });
