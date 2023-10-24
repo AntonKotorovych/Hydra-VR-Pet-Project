@@ -1,43 +1,70 @@
-const btnLeftBrands = document.getElementById('btnLeftBrands');
-const btnRightBrands = document.getElementById('btnRightBrands');
+// Brand Logos
 
 const unrealEngine = document.getElementById('unrealEngine');
 const unity = document.getElementById('unity');
 const oculus = document.getElementById('oculus');
 const vive = document.getElementById('vive');
 
-let counterBrands = 0;
+const btnRightBrands = document.getElementById('btnRightBrands');
+const btnLeftBrands = document.getElementById('btnLeftBrands');
 
-function changeBrandsView() {
-  if (counterBrands === 0) {
-    unrealEngine.style.left = '50%';
-    unity.style.left = '150%';
-    oculus.style.left = '250%';
-    vive.style.left = '350%';
-  } else if (counterBrands === 1) {
-    unrealEngine.style.left = '-50%';
-    unity.style.left = '50%';
-    oculus.style.left = '150%';
-    vive.style.left = '250%';
-  } else if (counterBrands === 2) {
-    unrealEngine.style.left = '-150%';
-    unity.style.left = '-50%';
-    oculus.style.left = '50%';
-    vive.style.left = '150%';
-  } else if (counterBrands === 3) {
-    unrealEngine.style.left = '-250%';
-    unity.style.left = '-150%';
-    oculus.style.left = '-50%';
-    vive.style.left = '50%';
+// Build Features
+
+const conceptionDesign = document.getElementById('conceptionDesign');
+const interactionDesign = document.getElementById('interactionDesign');
+const vrUserTesting = document.getElementById('vrUserTesting');
+const vrDeploy = document.getElementById('vrDeploy');
+
+const btnRightBuildFeatures = document.getElementById('btnRightFeatures');
+const btnLeftBuildFeatures = document.getElementById('btnLeftFeatures');
+
+let counterBrands = 0;
+let counterBuildFeatures = 0;
+
+function changeBrandsView(counter, item1, item2, item3, item4) {
+  if (counter === 0) {
+    item1.style.left = '50%';
+    item2.style.left = '150%';
+    item3.style.left = '250%';
+    item4.style.left = '350%';
+  } else if (counter === 1) {
+    item1.style.left = '-50%';
+    item2.style.left = '50%';
+    item3.style.left = '150%';
+    item4.style.left = '250%';
+  } else if (counter === 2) {
+    item1.style.left = '-150%';
+    item2.style.left = '-50%';
+    item3.style.left = '50%';
+    item4.style.left = '150%';
+  } else if (counter === 3) {
+    item1.style.left = '-250%';
+    item2.style.left = '-150%';
+    item3.style.left = '-50%';
+    item4.style.left = '50%';
   }
 }
 
+// Brands switch handler
+
 btnRightBrands.addEventListener('click', () => {
   counterBrands = (counterBrands + 1) % 4;
-  changeBrandsView();
+  changeBrandsView(counterBrands, unrealEngine, unity, oculus, vive);
 });
 
 btnLeftBrands.addEventListener('click', () => {
   counterBrands = (counterBrands - 1 + 4) % 4;
-  changeBrandsView();
+  changeBrandsView(counterBrands, unrealEngine, unity, oculus, vive);
+});
+
+// Build Features switch handler
+
+btnRightBuildFeatures.addEventListener('click', () => {
+  counterBuildFeatures = (counterBuildFeatures + 1) % 4;
+  changeBrandsView(counterBuildFeatures, conceptionDesign, interactionDesign, vrUserTesting, vrDeploy);
+});
+
+btnLeftBuildFeatures.addEventListener('click', () => {
+  counterBuildFeatures = (counterBuildFeatures - 1 + 4) % 4;
+  changeBrandsView(counterBuildFeatures, conceptionDesign, interactionDesign, vrUserTesting, vrDeploy);
 });
