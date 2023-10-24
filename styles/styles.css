@@ -961,7 +961,7 @@ body {
   }
 
   .technologies-brands__brand {
-    transition: left 2s ease;
+    transition: left 0.4s ease;
   }
 
   #unrealEngine {
@@ -974,19 +974,22 @@ body {
   #unity {
     position: absolute;
     top: 50%;
-    left: 120%;
+    left: 150%;
+    transform: translate(-50%, -50%);
   }
 
   #oculus {
     position: absolute;
     top: 50%;
-    left: 220%;
+    left: 250%;
+    transform: translate(-50%, -50%);
   }
 
   #vive {
     position: absolute;
     top: 50%;
-    left: 320%;
+    left: 350%;
+    transform: translate(-50%, -50%);
   }
 
   .btn-mobile-arrow {

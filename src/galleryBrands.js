@@ -11,63 +11,33 @@ let counterBrands = 0;
 function changeBrandsView() {
   if (counterBrands === 0) {
     unrealEngine.style.left = '50%';
-    unrealEngine.style.transform = 'translate(-50%, -50%)';
-
-    unity.style.removeProperty('transform');
-    unity.style.left = '110%';
-
-    oculus.style.removeProperty('transform');
-    oculus.style.left = '210%';
-
-    vive.style.removeProperty('transform');
-    vive.style.left = '310%';
+    unity.style.left = '150%';
+    oculus.style.left = '250%';
+    vive.style.left = '350%';
   } else if (counterBrands === 1) {
+    unrealEngine.style.left = '-50%';
     unity.style.left = '50%';
-    unity.style.transform = 'translate(-50%, -50%)';
-
-    unrealEngine.style.removeProperty('transform');
-    unrealEngine.style.left = '-110%';
-
-    oculus.style.removeProperty('transform');
-    oculus.style.left = '110%';
-
-    vive.style.removeProperty('transform');
-    vive.style.left = '210%';
+    oculus.style.left = '150%';
+    vive.style.left = '250%';
   } else if (counterBrands === 2) {
+    unrealEngine.style.left = '-150%';
+    unity.style.left = '-50%';
     oculus.style.left = '50%';
-    oculus.style.transform = 'translate(-50%, -50%)';
-
-    unrealEngine.style.removeProperty('transform');
-    unrealEngine.style.left = '-110%';
-
-    unity.style.removeProperty('transform');
-    unity.style.left = '-110%';
-
-    vive.style.removeProperty('transform');
-    vive.style.left = '-210%';
+    vive.style.left = '150%';
   } else if (counterBrands === 3) {
+    unrealEngine.style.left = '-250%';
+    unity.style.left = '-150%';
+    oculus.style.left = '-50%';
     vive.style.left = '50%';
-    vive.style.transform = 'translate(-50%, -50%)';
-
-    unrealEngine.style.removeProperty('transform');
-    unrealEngine.style.left = '-210%';
-
-    unity.style.removeProperty('transform');
-    unity.style.left = '-310%';
-
-    oculus.style.removeProperty('transform');
-    oculus.style.left = '410%';
   }
 }
 
 btnRightBrands.addEventListener('click', () => {
   counterBrands = (counterBrands + 1) % 4;
-  console.log(counterBrands);
   changeBrandsView();
 });
 
 btnLeftBrands.addEventListener('click', () => {
   counterBrands = (counterBrands - 1 + 4) % 4;
-  console.log(counterBrands);
   changeBrandsView();
 });
