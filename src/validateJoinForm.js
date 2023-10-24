@@ -8,17 +8,17 @@ const emailRegExp = /^[\w\.-]+@[\w\.-]+\.\w+$/;
 const phoneNumberRegExp = /\(\d{3}\) \d{3}-\d{4}/;
 const textareaRegExp = /^[a-zA-Z]{1,5000}$/;
 
-function showFieldsErrors(obj) {
-  for (const fieldName in obj) {
-    const field = obj[fieldName];
+function showFieldsErrors(userData) {
+  for (const fieldName in userData) {
+    const field = userData[fieldName];
 
     if (fieldName === 'rateUs') continue;
 
-    if (field.error !== '') {
+    if (field.error) {
       field.node.classList.remove('valid');
       field.node.classList.add('invalid');
       document.getElementById(`${fieldName}Error`).innerText = field.error;
-    } else if (field.error === '') {
+    } else {
       field.node.classList.remove('invalid');
       field.node.classList.add('valid');
       document.getElementById(`${fieldName}Error`).innerText = '';
@@ -167,11 +167,7 @@ joinForm.addEventListener('submit', event => {
       }
     }
 
-    if (formIsValid) {
-      return true;
-    } else {
-      return false;
-    }
+    if (formIsValid) return formIsValid;
   }
 
   const formIsValid = getIsFormValid();
