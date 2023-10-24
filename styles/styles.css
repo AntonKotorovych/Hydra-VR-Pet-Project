@@ -1041,6 +1041,7 @@ body {
   .build-features__item {
     align-items: center;
     max-width: 100%;
+    width: 40%;
   }
 
   .feature {
