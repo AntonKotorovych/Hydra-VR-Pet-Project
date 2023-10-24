@@ -770,25 +770,23 @@ body {
     display: none;
   }
 
-  #geolocation {
+  #geolocation,
+  #call,
+  #message {
     position: absolute;
-    left: 50%;
     transform: translate(-50%, 0%);
-    z-index: 0;
+  }
+
+  #geolocation {
+    left: 50%;
   }
 
   #call {
-    position: absolute;
     left: 150%;
-    transform: translate(-50%, 0%);
-    z-index: 0;
   }
 
   #message {
-    position: absolute;
     left: 250%;
-    transform: translate(-50%, 0%);
-    z-index: 0;
   }
 
   .main-header__info-separator::after {
@@ -910,28 +908,28 @@ body {
     transition: left 0.4s ease;
   }
 
-  #simulation {
+  #simulation,
+  #education,
+  #selfCare,
+  #outdoor {
     position: absolute;
-    left: 50%;
     transform: translate(-51%);
+  }
+
+  #simulation {
+    left: 50%;
   }
 
   #education {
-    position: absolute;
     left: 150%;
-    transform: translate(-51%);
   }
 
   #selfCare {
-    position: absolute;
     left: 250%;
-    transform: translate(-51%);
   }
 
   #outdoor {
-    position: absolute;
     left: 350%;
-    transform: translate(-51%);
   }
 
   /* Technologies */
@@ -974,32 +972,28 @@ body {
     transition: left 0.4s ease;
   }
 
-  #unrealEngine {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  #unity {
-    position: absolute;
-    top: 50%;
-    left: 150%;
-    transform: translate(-50%, -50%);
-  }
-
-  #oculus {
-    position: absolute;
-    top: 50%;
-    left: 250%;
-    transform: translate(-50%, -50%);
-  }
-
+  #unrealEngine,
+  #unity,
+  #oculus,
   #vive {
     position: absolute;
     top: 50%;
-    left: 350%;
     transform: translate(-50%, -50%);
+  }
+  #unrealEngine {
+    left: 50%;
+  }
+
+  #unity {
+    left: 150%;
+  }
+
+  #oculus {
+    left: 250%;
+  }
+
+  #vive {
+    left: 350%;
   }
 
   .btn-mobile-arrow {
@@ -1055,32 +1049,29 @@ body {
     text-align: center;
   }
 
-  #conceptionDesign {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  #interactionDesign {
-    position: absolute;
-    top: 50%;
-    left: 150%;
-    transform: translate(-50%, -50%);
-  }
-
-  #vrUserTesting {
-    position: absolute;
-    top: 50%;
-    left: 250%;
-    transform: translate(-50%, -50%);
-  }
-
+  #conceptionDesign,
+  #interactionDesign,
+  #vrUserTesting,
   #vrDeploy {
     position: absolute;
     top: 50%;
-    left: 350%;
     transform: translate(-50%, -50%);
+  }
+
+  #conceptionDesign {
+    left: 50%;
+  }
+
+  #interactionDesign {
+    left: 150%;
+  }
+
+  #vrUserTesting {
+    left: 250%;
+  }
+
+  #vrDeploy {
+    left: 350%;
   }
 
   .content-container--fix-padding-phone {
