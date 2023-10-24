@@ -46,22 +46,30 @@ function changeGalleryView(counter, item1, item2, item3, item4) {
     item1.style.left = '50%';
     item2.style.left = '150%';
     item3.style.left = '250%';
-    item4.style.left = '350%';
+    if (item4) {
+      item4.style.left = '350%';
+    }
   } else if (counter === 1) {
     item1.style.left = '-50%';
     item2.style.left = '50%';
     item3.style.left = '150%';
-    item4.style.left = '250%';
+    if (item4) {
+      item4.style.left = '250%';
+    }
   } else if (counter === 2) {
     item1.style.left = '-150%';
     item2.style.left = '-50%';
     item3.style.left = '50%';
-    item4.style.left = '150%';
+    if (item4) {
+      item4.style.left = '150%';
+    }
   } else if (counter === 3) {
     item1.style.left = '-250%';
     item2.style.left = '-150%';
     item3.style.left = '-50%';
-    item4.style.left = '50%';
+    if (item4) {
+      item4.style.left = '50%';
+    }
   }
 }
 
@@ -70,13 +78,13 @@ function changeGalleryView(counter, item1, item2, item3, item4) {
 btnRightHeaderInfo.addEventListener('click', () => {
   counterMainHeaderInfo = (counterMainHeaderInfo + 1) % 3;
   changeGalleryView(counterMainHeaderInfo, geolocation, call, message);
-  console.log('lol');
+  console.log(counterMainHeaderInfo);
 });
 
 btnLeftHeaderInfo.addEventListener('click', () => {
   counterMainHeaderInfo = (counterMainHeaderInfo - 1 + 3) % 3;
   changeGalleryView(counterMainHeaderInfo, geolocation, call, message);
-  console.log('rofl');
+  console.log(counterMainHeaderInfo);
 });
 
 // Features switch handler
