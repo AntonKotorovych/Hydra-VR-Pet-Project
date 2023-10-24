@@ -1,3 +1,12 @@
+// Main Header Info
+
+const geolocation = document.getElementById('geolocation');
+const call = document.getElementById('call');
+const message = document.getElementById('message');
+
+const btnRightHeaderInfo = document.querySelector('.btn-mobile-header--right');
+const btnLeftHeaderInfo = document.querySelector('.btn-mobile-header--left');
+
 // Features
 const simulation = document.getElementById('simulation');
 const education = document.getElementById('education');
@@ -27,11 +36,12 @@ const vrDeploy = document.getElementById('vrDeploy');
 const btnRightBuildFeatures = document.getElementById('btnRightBuildFeatures');
 const btnLeftBuildFeatures = document.getElementById('btnLeftBuildFeatures');
 
+let counterMainHeaderInfo = 0;
 let counterFeatures = 0;
 let counterBrands = 0;
 let counterBuildFeatures = 0;
 
-function changeBrandsView(counter, item1, item2, item3, item4) {
+function changeGalleryView(counter, item1, item2, item3, item4) {
   if (counter === 0) {
     item1.style.left = '50%';
     item2.style.left = '150%';
@@ -55,38 +65,52 @@ function changeBrandsView(counter, item1, item2, item3, item4) {
   }
 }
 
+// Main Header Info switch handler
+
+btnRightHeaderInfo.addEventListener('click', () => {
+  counterMainHeaderInfo = (counterMainHeaderInfo + 1) % 3;
+  changeGalleryView(counterMainHeaderInfo, geolocation, call, message);
+  console.log('lol');
+});
+
+btnLeftHeaderInfo.addEventListener('click', () => {
+  counterMainHeaderInfo = (counterMainHeaderInfo - 1 + 3) % 3;
+  changeGalleryView(counterMainHeaderInfo, geolocation, call, message);
+  console.log('rofl');
+});
+
 // Features switch handler
 
 btnRightFeatures.addEventListener('click', () => {
   counterFeatures = (counterFeatures + 1) % 4;
-  changeBrandsView(counterFeatures, simulation, education, selfCare, outdoor);
+  changeGalleryView(counterFeatures, simulation, education, selfCare, outdoor);
 });
 
 btnLeftFeatures.addEventListener('click', () => {
   counterFeatures = (counterFeatures - 1 + 4) % 4;
-  changeBrandsView(counterFeatures, simulation, education, selfCare, outdoor);
+  changeGalleryView(counterFeatures, simulation, education, selfCare, outdoor);
 });
 
 // Brands switch handler
 
 btnRightBrands.addEventListener('click', () => {
   counterBrands = (counterBrands + 1) % 4;
-  changeBrandsView(counterBrands, unrealEngine, unity, oculus, vive);
+  changeGalleryView(counterBrands, unrealEngine, unity, oculus, vive);
 });
 
 btnLeftBrands.addEventListener('click', () => {
   counterBrands = (counterBrands - 1 + 4) % 4;
-  changeBrandsView(counterBrands, unrealEngine, unity, oculus, vive);
+  changeGalleryView(counterBrands, unrealEngine, unity, oculus, vive);
 });
 
 // Build Features switch handler
 
 btnRightBuildFeatures.addEventListener('click', () => {
   counterBuildFeatures = (counterBuildFeatures + 1) % 4;
-  changeBrandsView(counterBuildFeatures, conceptionDesign, interactionDesign, vrUserTesting, vrDeploy);
+  changeGalleryView(counterBuildFeatures, conceptionDesign, interactionDesign, vrUserTesting, vrDeploy);
 });
 
 btnLeftBuildFeatures.addEventListener('click', () => {
   counterBuildFeatures = (counterBuildFeatures - 1 + 4) % 4;
-  changeBrandsView(counterBuildFeatures, conceptionDesign, interactionDesign, vrUserTesting, vrDeploy);
+  changeGalleryView(counterBuildFeatures, conceptionDesign, interactionDesign, vrUserTesting, vrDeploy);
 });
