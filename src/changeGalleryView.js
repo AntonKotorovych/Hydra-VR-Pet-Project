@@ -41,6 +41,8 @@ let counterFeatures = 0;
 let counterBrands = 0;
 let counterBuildFeatures = 0;
 
+// Reusable Function to change items view
+
 function changeGalleryView(counter, item1, item2, item3, item4) {
   if (counter === 0) {
     item1.style.left = '50%';
@@ -78,13 +80,11 @@ function changeGalleryView(counter, item1, item2, item3, item4) {
 btnRightHeaderInfo.addEventListener('click', () => {
   counterMainHeaderInfo = (counterMainHeaderInfo + 1) % 3;
   changeGalleryView(counterMainHeaderInfo, geolocation, call, message);
-  console.log(counterMainHeaderInfo, counterFeatures, counterBrands, counterBuildFeatures);
 });
 
 btnLeftHeaderInfo.addEventListener('click', () => {
   counterMainHeaderInfo = (counterMainHeaderInfo - 1 + 3) % 3;
   changeGalleryView(counterMainHeaderInfo, geolocation, call, message);
-  console.log(counterMainHeaderInfo, counterFeatures, counterBrands, counterBuildFeatures);
 });
 
 // Features switch handler
@@ -92,13 +92,11 @@ btnLeftHeaderInfo.addEventListener('click', () => {
 btnRightFeatures.addEventListener('click', () => {
   counterFeatures = (counterFeatures + 1) % 4;
   changeGalleryView(counterFeatures, simulation, education, selfCare, outdoor);
-  console.log(counterMainHeaderInfo, counterFeatures, counterBrands, counterBuildFeatures);
 });
 
 btnLeftFeatures.addEventListener('click', () => {
   counterFeatures = (counterFeatures - 1 + 4) % 4;
   changeGalleryView(counterFeatures, simulation, education, selfCare, outdoor);
-  console.log(counterMainHeaderInfo, counterFeatures, counterBrands, counterBuildFeatures);
 });
 
 // Brands switch handler
@@ -106,13 +104,11 @@ btnLeftFeatures.addEventListener('click', () => {
 btnRightBrands.addEventListener('click', () => {
   counterBrands = (counterBrands + 1) % 4;
   changeGalleryView(counterBrands, unrealEngine, unity, oculus, vive);
-  console.log(counterMainHeaderInfo, counterFeatures, counterBrands, counterBuildFeatures);
 });
 
 btnLeftBrands.addEventListener('click', () => {
   counterBrands = (counterBrands - 1 + 4) % 4;
   changeGalleryView(counterBrands, unrealEngine, unity, oculus, vive);
-  console.log(counterMainHeaderInfo, counterFeatures, counterBrands, counterBuildFeatures);
 });
 
 // Build Features switch handler
@@ -120,11 +116,9 @@ btnLeftBrands.addEventListener('click', () => {
 btnRightBuildFeatures.addEventListener('click', () => {
   counterBuildFeatures = (counterBuildFeatures + 1) % 4;
   changeGalleryView(counterBuildFeatures, conceptionDesign, interactionDesign, vrUserTesting, vrDeploy);
-  console.log(counterMainHeaderInfo, counterFeatures, counterBrands, counterBuildFeatures);
 });
 
 btnLeftBuildFeatures.addEventListener('click', () => {
   counterBuildFeatures = (counterBuildFeatures - 1 + 4) % 4;
   changeGalleryView(counterBuildFeatures, conceptionDesign, interactionDesign, vrUserTesting, vrDeploy);
-  console.log(counterMainHeaderInfo, counterFeatures, counterBrands, counterBuildFeatures);
 });
