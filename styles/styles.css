@@ -365,7 +365,7 @@ body {
   /* Introduction */
 
   .content-container {
-    padding-top: 60;
+    padding-top: 65px;
   }
 
   .long-arrow-flex img {
@@ -956,10 +956,6 @@ body {
     background-size: 230%;
   }
 
-  .correct-scroll-position {
-    padding: 0;
-  }
-
   /* Technologies brands */
 
   .technologies-brands ul li {
@@ -1025,6 +1021,10 @@ body {
   }
 
   /* Build Features */
+
+  .how-to-section {
+    padding-top: 50px;
+  }
 
   .build-features {
     position: relative;
@@ -1111,6 +1111,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 38px;
   }
 
   .form__title h2 {
