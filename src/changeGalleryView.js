@@ -102,6 +102,8 @@ btnLeftBuildFeatures.addEventListener('click', () => {
   changeGalleryView(counterBuildFeatures, BUILD_FEATURES);
 });
 
+// Checking window size for Main Header Info block to avoid bug
+
 function checkWindowSize() {
   if (window.innerWidth >= 800) {
     MAIN_HEADER_INFO.forEach(item => (item.style.left = '0%'));
