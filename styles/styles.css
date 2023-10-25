@@ -105,6 +105,12 @@ body {
   display: none;
 }
 
+#geolocation,
+#call,
+#message {
+  left: 0%;
+}
+
 @media only screen and (max-width: 1370px) {
   .container {
     max-width: 90%;
