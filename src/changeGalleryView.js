@@ -101,3 +101,16 @@ btnLeftBuildFeatures.addEventListener('click', () => {
   counterBuildFeatures = (counterBuildFeatures - 1 + 4) % 4;
   changeGalleryView(counterBuildFeatures, BUILD_FEATURES);
 });
+
+// Checking window size for Main Header Info block to avoid bug
+
+function checkWindowSize() {
+  if (window.innerWidth >= 800) {
+    MAIN_HEADER_INFO.forEach(item => (item.style.left = '0%'));
+  } else if (window.innerWidth <= 799) {
+    changeGalleryView(counterMainHeaderInfo, MAIN_HEADER_INFO);
+  }
+}
+
+window.addEventListener('load', checkWindowSize);
+window.addEventListener('resize', checkWindowSize);

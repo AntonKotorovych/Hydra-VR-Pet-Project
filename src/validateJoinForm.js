@@ -167,7 +167,7 @@ joinForm.addEventListener('submit', event => {
       }
     }
 
-    if (formIsValid) return formIsValid;
+    return formIsValid;
   }
 
   const formIsValid = getIsFormValid();
