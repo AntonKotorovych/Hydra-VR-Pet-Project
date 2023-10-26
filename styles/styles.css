@@ -93,6 +93,24 @@ body {
   display: none;
 }
 
+.invalid {
+  border-color: var(--invalid-input) !important;
+}
+
+.valid {
+  border-color: var(--valid-input) !important;
+}
+
+.hidden {
+  display: none;
+}
+
+#geolocation,
+#call,
+#message {
+  left: 0%;
+}
+
 @media only screen and (max-width: 1370px) {
   .container {
     max-width: 90%;
@@ -347,7 +365,7 @@ body {
   /* Introduction */
 
   .content-container {
-    padding-top: 60;
+    padding-top: 65px;
   }
 
   .long-arrow-flex img {
@@ -527,6 +545,10 @@ body {
     align-items: center;
   }
 
+  body {
+    overflow-x: hidden;
+  }
+
   main {
     width: 100%;
   }
@@ -548,7 +570,7 @@ body {
 
   .btn-nav-menu {
     max-width: none;
-    width: 70%;
+    width: 100%;
     height: 50px;
     margin-top: 15px;
     padding: 0 10px;
@@ -576,6 +598,10 @@ body {
   .navbar-menu--mobile {
     display: flex;
     flex-direction: column;
+  }
+
+  .navbar-hamburger-menu__buttons a {
+    width: 70%;
   }
 
   .navbar-hamburger-button--open {
@@ -740,19 +766,33 @@ body {
   }
 
   .main-header__info-wrapper {
-    width: 90%;
+    width: 70%;
+    transition: left 0.4s ease;
   }
 
-  .main-header__info-wrapper ~ div {
+  .main-header__geolocation h2,
+  .main-header__call h2,
+  .main-header__message h2 {
     display: none;
   }
 
-  .main-header__geolocation span {
-    font-size: var(--font-size-normal);
+  #geolocation,
+  #call,
+  #message {
+    position: absolute;
+    transform: translate(-50%, 0%);
   }
 
-  .main-header__geolocation h2 {
-    display: none;
+  #geolocation {
+    left: 50%;
+  }
+
+  #call {
+    left: 150%;
+  }
+
+  #message {
+    left: 250%;
   }
 
   .main-header__info-separator::after {
@@ -787,13 +827,9 @@ body {
     opacity: 0.5;
   }
 
-  .features {
-    flex-wrap: wrap;
-  }
-
   .btn-mobile-arrow--left-features {
     position: absolute;
-    left: -20px;
+    left: -1%;
     top: 48%;
     transform: translateY(-50%);
     z-index: 1;
@@ -869,15 +905,37 @@ body {
   .features {
     padding: 20px 0;
     position: relative;
-  }
-
-  .features__item ~ li {
-    display: none;
+    height: 550px;
   }
 
   .features__item {
-    width: 100%;
-    min-width: 0;
+    width: 95%;
+    height: 500px;
+    transition: left 0.4s ease;
+  }
+
+  #simulation,
+  #education,
+  #selfCare,
+  #outdoor {
+    position: absolute;
+    transform: translate(-51%);
+  }
+
+  #simulation {
+    left: 50%;
+  }
+
+  #education {
+    left: 150%;
+  }
+
+  #selfCare {
+    left: 250%;
+  }
+
+  #outdoor {
+    left: 350%;
   }
 
   /* Technologies */
@@ -898,15 +956,7 @@ body {
     background-size: 230%;
   }
 
-  .correct-scroll-position {
-    padding: 0;
-  }
-
   /* Technologies brands */
-
-  .technologies-brands ul li ~ li {
-    display: none;
-  }
 
   .technologies-brands ul li {
     display: flex;
@@ -918,6 +968,34 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .technologies-brands__brand {
+    transition: left 0.4s ease;
+  }
+
+  #unrealEngine,
+  #unity,
+  #oculus,
+  #vive {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #unrealEngine {
+    left: 50%;
+  }
+
+  #unity {
+    left: 150%;
+  }
+
+  #oculus {
+    left: 250%;
+  }
+
+  #vive {
+    left: 350%;
   }
 
   .btn-mobile-arrow {
@@ -944,8 +1022,11 @@ body {
 
   /* Build Features */
 
+  .how-to-section {
+    padding-top: 50px;
+  }
+
   .build-features {
-    margin: 40px 0 100px;
     position: relative;
     display: flex;
     align-items: center;
@@ -957,23 +1038,46 @@ body {
     width: 0;
   }
 
-  .build-features ul li ~ li {
-    display: none;
-  }
-
   .build-features__item {
     align-items: center;
     max-width: 100%;
+    width: 40%;
   }
 
   .feature {
     max-width: 100%;
     position: relative;
+    transition: left 0.4s ease;
   }
 
   .feature-title {
     padding: 0;
     text-align: center;
+  }
+
+  #conceptionDesign,
+  #interactionDesign,
+  #vrUserTesting,
+  #vrDeploy {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #conceptionDesign {
+    left: 50%;
+  }
+
+  #interactionDesign {
+    left: 150%;
+  }
+
+  #vrUserTesting {
+    left: 250%;
+  }
+
+  #vrDeploy {
+    left: 350%;
   }
 
   .content-container--fix-padding-phone {
@@ -1007,6 +1111,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 38px;
   }
 
   .form__title h2 {
@@ -1113,6 +1218,12 @@ body {
     background-image: url('../images/svg/curvedLines/curvedLineFooter2.svg');
     background-size: 100% 100%;
     z-index: -1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .btn-mobile-arrow--left-features {
+    left: -3%;
   }
 }
 

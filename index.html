@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="./images/favicons/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fasthand&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
@@ -32,8 +36,12 @@
               <li><a class="navbar-menu__link" href="#how-to">how to</a></li>
             </ul>
             <div class="navbar-buttons">
-              <button class="btn-outline">contact us</button>
-              <button class="btn-primary">join hydra</button>
+              <a href="mailto:Contact@HydraVTech.com?subject=Mail from customer of Hydra VR" target="_blank">
+                <button class="btn-outline">contact us</button>
+              </a>
+              <a href="#joinHydra">
+                <button class="btn-primary">join hydra</button>
+              </a>
             </div>
             <button class="navbar-hamburger-button--open navbar-button--show">
               <img src="./images/svg/hamburgerMenu.svg" alt="" />
@@ -61,8 +69,12 @@
             </ul>
           </div>
           <div class="navbar-hamburger-menu__buttons container">
-            <button class="btn-outline btn-nav-menu">contact us</button>
-            <button class="btn-primary btn-nav-menu">join hydra</button>
+            <a href="mailto:Contact@HydraVTech.com?subject=Mail from customer of Hydra VR" target="_blank">
+              <button class="btn-outline btn-nav-menu">contact us</button>
+            </a>
+            <a href="#joinHydra">
+              <button class="btn-primary btn-nav-menu">join hydra</button>
+            </a>
           </div>
         </aside>
       </div>
@@ -85,7 +97,7 @@
             <br />
             <div class="main-header__navigation">
               <div class="btn-primary-container">
-                <button class="btn-primary">build your world</button>
+                <a href="#services"><button class="btn-primary">build your world</button></a>
               </div>
               <img class="arrow-image" src="./images/svg/arrowRight.svg" alt="Next" />
             </div>
@@ -101,27 +113,31 @@
             <button class="btn-mobile-header--left">
               <img src="./images/svg/headerArrowPhone.svg" alt="" />
             </button>
-            <div class="main-header__info-wrapper main-header__info-separator">
+            <div class="main-header__info-wrapper main-header__info-separator" id="geolocation">
               <img src="./images/svg/location.svg" alt="Geolocation" />
-              <div class="main-header__geolocation">
-                <h2>Pay Us a Visit</h2>
-                <span>Union St, Seattle, WA 98101, United States</span>
+              <div class="main-header__geolocation main-header__scale">
+                <a href="https://maps.app.goo.gl/q2TqyJBdPy1E8Pnu7" target="_blank">
+                  <h2>Pay Us a Visit</h2>
+                  <span>Union St, Seattle, WA 98101, United States</span>
+                </a>
               </div>
             </div>
-            <div class="main-header__info-wrapper main-header__info-separator">
+            <div class="main-header__info-wrapper main-header__info-separator" id="call">
               <img src="./images/svg/phoneCall.svg" alt="Call us" />
-              <div class="main-header__call">
-                <h2><a href="tel:+11011111010">Give Us a Call</a></h2>
-                <span>(110) 1111-1010</span>
+              <div class="main-header__call main-header__scale">
+                <a href="tel:+11011111010">
+                  <h2>Give Us a Call</h2>
+                  <span>(110) 1111-1010</span>
+                </a>
               </div>
             </div>
-            <div class="main-header__info-wrapper main-header__info-separator">
+            <div class="main-header__info-wrapper main-header__info-separator" id="message">
               <img src="./images/svg/mail.svg" alt="Send us a message" />
-              <div class="main-header__message">
-                <h2>
-                  <a href="mailto:Contact@HydraVTech.com?subject=Mail from customer of Hydra VR">Send Us a Message</a>
-                </h2>
-                <span>Contact@HydraVTech.com</span>
+              <div class="main-header__message main-header__scale">
+                <a href="mailto:Contact@HydraVTech.com?subject=Mail from customer of Hydra VR" target="_blank">
+                  <h2>Send Us a Message</h2>
+                  <span>Contact@HydraVTech.com</span>
+                </a>
               </div>
             </div>
             <button class="btn-mobile-header--right">
@@ -173,7 +189,7 @@
                 </span>
               </div>
               <div class="btn-primary-container">
-                <button class="btn-primary">let's get in touch</button>
+                <a href="#joinHydra"><button class="btn-primary">let's get in touch</button></a>
               </div>
             </div>
           </div>
@@ -201,11 +217,11 @@
           </div>
           <section class="features-curved-line">
             <div class="features-container">
-              <button class="btn-mobile-arrow btn-mobile-arrow--left-features">
+              <button class="btn-mobile-arrow btn-mobile-arrow--left-features" id="btnLeftFeatures">
                 <img src="./images/svg/arrLeftPhone.svg" alt="" />
               </button>
               <ul class="features">
-                <li class="features__item">
+                <li class="features__item" id="simulation">
                   <div class="features__item-image">
                     <img class="simulation-img" src="./images/simulation.jpg" alt="Simulation" />
                   </div>
@@ -213,10 +229,10 @@
                   <div class="h-line"></div>
                   <span> Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae. </span>
                   <div class="btn-primary-container">
-                    <button class="btn-primary">try it now</button>
+                    <a href="#joinHydra"><button class="btn-primary">try it now</button></a>
                   </div>
                 </li>
-                <li class="features__item">
+                <li class="features__item" id="education">
                   <div class="features__item-image">
                     <img src="./images/education.jpg" alt="Education" />
                   </div>
@@ -224,33 +240,33 @@
                   <div class="h-line"></div>
                   <span> Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae. </span>
                   <div class="btn-primary-container">
-                    <button class="btn-primary">try it now</button>
+                    <a href="#joinHydra"><button class="btn-primary">try it now</button></a>
                   </div>
                 </li>
-                <li class="features__item">
+                <li class="features__item" id="selfCare">
                   <div class="features__item-image">
-                    <img src="./images/selfCare.jpg" alt="Education" />
+                    <img src="./images/selfCare.jpg" alt="Self-care" />
                   </div>
                   <h4>self-care</h4>
                   <div class="h-line"></div>
                   <span> Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae. </span>
                   <div class="btn-primary-container">
-                    <button class="btn-primary">try it now</button>
+                    <a href="#joinHydra"><button class="btn-primary">try it now</button></a>
                   </div>
                 </li>
-                <li class="features__item">
+                <li class="features__item" id="outdoor">
                   <div class="features__item-image">
-                    <img src="./images/outdoor.jpg" alt="Education" />
+                    <img src="./images/outdoor.jpg" alt="Outdoor" />
                   </div>
                   <h4>outdoor</h4>
                   <div class="h-line"></div>
                   <span> Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae. </span>
                   <div class="btn-primary-container">
-                    <button class="btn-primary">try it now</button>
+                    <a href="#joinHydra"><button class="btn-primary">try it now</button></a>
                   </div>
                 </li>
               </ul>
-              <button class="btn-mobile-arrow btn-mobile-arrow--right-features">
+              <button class="btn-mobile-arrow btn-mobile-arrow--right-features" id="btnRightFeatures">
                 <img src="./images/svg/arrRightPhone.svg" alt="" />
               </button>
             </div>
@@ -265,35 +281,37 @@
               </div>
             </div>
             <button class="btn-arrow-down">
-              <img src="./images/svg/arrRightPhone.svg" alt="" />
+              <a href="#joinHydra">
+                <img src="./images/svg/arrRightPhone.svg" alt="" />
+              </a>
             </button>
           </div>
           <section>
             <div class="technologies-brands">
-              <button class="btn-mobile-arrow">
+              <button class="btn-mobile-arrow" id="btnLeftBrands">
                 <img src="./images/svg/arrLeftPhone.svg" alt="" />
               </button>
               <ul>
-                <li>
+                <li class="technologies-brands__brand" id="unrealEngine">
                   <img class="unreal-engine technologies-brands__logo" src="./images/unrealEngine.png" alt="Unreal Engine Logo" />
                 </li>
-                <li>
+                <li class="technologies-brands__brand" id="unity">
                   <img class="technologies-brands__logo" src="./images/unity.png" alt="Unity Logo" />
                 </li>
-                <li>
+                <li class="technologies-brands__brand" id="oculus">
                   <img class="technologies-brands__logo" src="./images/oculus.png" alt="Oculus Logo" />
                 </li>
-                <li>
+                <li class="technologies-brands__brand" id="vive">
                   <img class="technologies-brands__logo" src="./images/vive.png" alt="Vive Logo" />
                 </li>
               </ul>
-              <button class="btn-mobile-arrow">
+              <button class="btn-mobile-arrow" id="btnRightBrands">
                 <img src="./images/svg/arrRightPhone.svg" alt="" />
               </button>
             </div>
           </section>
         </section>
-        <section id="how-to">
+        <section class="how-to-section" id="how-to">
           <div class="content-container content-container--fix-padding-phone">
             <div class="content-container__left-item">
               <div class="title-container">
@@ -317,94 +335,173 @@
         </section>
         <section>
           <div class="build-features">
-            <button class="btn-mobile-arrow">
+            <button class="btn-mobile-arrow" id="btnLeftBuildFeatures">
               <img src="./images/svg/arrLeftPhone.svg" alt="" />
             </button>
             <ul>
-              <li class="build-features__item feature">
+              <li class="build-features__item feature" id="conceptionDesign">
                 <div class="feature-circle">01</div>
                 <span class="feature-title"> 3D Conception & Design </span>
               </li>
-              <li class="build-features__item feature">
+              <li class="build-features__item feature" id="interactionDesign">
                 <div class="feature-circle">02</div>
                 <span class="feature-title"> Interaction Design </span>
               </li>
-              <li class="build-features__item feature">
+              <li class="build-features__item feature" id="vrUserTesting">
                 <div class="feature-circle">03</div>
                 <span class="feature-title"> VR World User Testing </span>
               </li>
-              <li class="build-features__item feature">
+              <li class="build-features__item feature" id="vrDeploy">
                 <div class="feature-circle">04</div>
                 <span class="feature-title">Hydra VR Deploy</span>
               </li>
             </ul>
-            <button class="btn-mobile-arrow">
+            <button class="btn-mobile-arrow" id="btnRightBuildFeatures">
               <img src="./images/svg/arrRightPhone.svg" alt="" />
             </button>
           </div>
         </section>
-        <section>
+        <section id="joinHydra">
           <div class="form">
             <div class="title-container form__title">
               <h2 class="title title--primary">join hydra</h2>
               <h3 class="title title--secondary">Let's Build Your VR Experience</h3>
             </div>
-            <form class="main-form">
+            <form id="joinForm" name="joinForm" class="main-form" autocomplete="off">
               <div class="main-form__wrap-inputs">
                 <div class="main-form__container-half">
                   <input
+                    class="custom-input"
                     type="text"
-                    id="first-name"
-                    name="first-name"
+                    id="firstName"
+                    name="firstName"
                     placeholder="First Name"
-                    pattern="[A-Za-z]{1,25}"
                     title="Only characters. No more than 25 characters"
                     maxlength="25"
-                    required />
+                    autocomplete="none" />
+                  <span class="error-message" id="firstNameError"></span>
                 </div>
                 <div class="main-form__container-half">
                   <input
+                    class="custom-input"
                     type="text"
-                    id="last-name"
-                    name="last-name"
+                    id="lastName"
+                    name="lastName"
                     placeholder="Last Name"
-                    pattern="[A-Za-z]{1,25}"
                     title="Only characters. No more than 25 characters"
                     maxlength="25"
-                    required />
+                    autocomplete="none" />
+                  <span class="error-message" id="lastNameError"></span>
                 </div>
               </div>
               <div class="main-form__wrap-inputs">
                 <div class="main-form__container-half">
-                  <input type="email" id="email" name="email" placeholder="Email" required />
+                  <input
+                    class="custom-input"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    title="Please fill a correct email address format. for example: 'admin@gmail.com'"
+                    autocomplete="none" />
+                  <span class="error-message" id="emailError"></span>
                 </div>
                 <div class="main-form__container-half">
                   <input
+                    class="custom-input"
                     type="text"
-                    id="tel"
-                    name="tel"
+                    id="phoneNumber"
+                    name="phoneNumber"
                     placeholder="Phone Number"
-                    pattern="\(\d{3}\) \d{3}-\d{4}"
                     title='Enter your phone number in the format "(123) 456-7890"'
-                    required />
+                    autocomplete="none" />
+                  <span class="error-message" id="phoneNumberError"></span>
+                </div>
+              </div>
+              <div class="main-form__wrap-inputs">
+                <div class="main-form__container-full">
+                  <div class="custom-select-country">
+                    <select id="selectCountry" name="selectCountry" class="custom-input" autocomplete="country">
+                      <option value="0" disabled selected hidden>Select your Country</option>
+                      <option value="usa">United States of America</option>
+                      <option value="ukraine">Ukraine</option>
+                      <option value="england">England</option>
+                      <option value="germany">Germany</option>
+                      <option value="france">France</option>
+                      <option value="mordor">Mordor (russian pederation)</option>
+                    </select>
+                    <span class="error-message" id="selectCountryError"></span>
+                  </div>
                 </div>
               </div>
               <div class="main-form__container-full">
+                <div class="radio-title">choose your preferred vr size</div>
+                <div class="radio-buttons">
+                  <div class="radio-buttons__element">
+                    <input type="radio" id="size-s" name="vrSize" value="size-s" />
+                    <label for="size-s">Size S</label>
+                  </div>
+                  <div class="radio-buttons__element">
+                    <input type="radio" id="size-m" name="vrSize" value="size-m" />
+                    <label for="size-m">Size M</label>
+                  </div>
+                  <div class="radio-buttons__element">
+                    <input type="radio" id="size-l" name="vrSize" value="size-l" checked />
+                    <label for="size-l">Size L</label>
+                  </div>
+                </div>
+                <span class="error-message" id="vrSizeError"></span>
+              </div>
+              <div class="main-form__container-full">
                 <input
+                  class="custom-input"
                   type="text"
                   id="subject"
                   name="subject"
                   placeholder="Subject"
-                  pattern="[^<>]*"
-                  title="Symbols < and > are not allowed"
-                  required />
+                  title="Only characters. No more than 25 characters" />
+                <span class="error-message" id="subjectError"></span>
               </div>
               <div class="main-form__container-full">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Tell Us Something..."></textarea>
+                <textarea
+                  id="textarea"
+                  name="textarea"
+                  cols="30"
+                  rows="10"
+                  placeholder="Tell Us Something..."
+                  title="Textarea has not to be empty and also contain 5000 characters max"></textarea>
+                <span class="error-message" id="textareaError"></span>
+              </div>
+              <div class="main-form__container-full">
+                <div class="range-title">please, rate us!</div>
+                <div class="range-container">
+                  <div class="range-labels">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                  </div>
+                  <input type="range" class="rating-range" min="1" max="10" value="10" id="ratingRange" />
+                </div>
+              </div>
+              <div class="main-form__container-full">
+                <div class="age-validation">
+                  <div class="age-validation__wrapper">
+                    <input type="checkbox" class="age-validation__checkbox" id="ageCheck" name="ageCheck" />
+                    <label for="ageCheck">Are you 18 years old?</label>
+                  </div>
+                  <span class="error-message" id="ageCheckError"></span>
+                </div>
               </div>
               <div class="main-form__button">
                 <div class="btn-primary-container">
-                  <button class="btn-primary button-phone" type="button">send to hydra</button>
+                  <button class="btn-primary button-phone" id="submitBtn" name="submitBtn" type="submit">send to hydra</button>
                 </div>
               </div>
             </form>
@@ -422,7 +519,7 @@
               <a href="#services">services</a>
               <a href="#technologies">technologies</a>
               <a href="#how-to">how to</a>
-              <a href="#">join hydra</a>
+              <a href="#joinHydra">join hydra</a>
             </div>
             <div class="top-footer-nav top-footer-nav--wrapper top-footer--separator">
               <a href="#">f.a.q</a>
@@ -467,7 +564,7 @@
                 </a>
               </div>
               <div class="btn-primary-container">
-                <button class="btn-primary">build your world</button>
+                <a href="#joinHydra"><button class="btn-primary">build your world</button></a>
               </div>
             </div>
           </div>
@@ -479,6 +576,9 @@
         </section>
       </footer>
     </div>
-    <script src="./src/hamburgerMenu.js"></script>
+    <script type="module" src="./src/hamburgerMenu.js"></script>
+    <script type="module" src="./src/changeGalleryView.js"></script>
+    <script type="module" src="./src/validateJoinForm.js"></script>
+    <script type="module" src="./src/createUser.js"></script>
   </body>
 </html>

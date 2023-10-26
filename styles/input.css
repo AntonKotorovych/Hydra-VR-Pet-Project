@@ -1,4 +1,4 @@
-input {
+.custom-input {
   background: transparent;
   font-family: inherit;
   height: 72px;
@@ -8,12 +8,4 @@ input {
   font-size: var(--font-size-normal);
   color: var(--text-color-white);
   padding-left: 40px;
-}
-
-input:invalid {
-  border-color: var(--invalid-input);
-}
-
-input:valid {
-  border-color: var(--valid-input);
 }

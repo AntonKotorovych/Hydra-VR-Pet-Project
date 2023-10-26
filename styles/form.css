@@ -46,19 +46,10 @@ textarea {
   width: 100%;
   border: 2px solid var(--text-color-white);
   border-radius: 40px;
-  margin-bottom: 60px;
   padding-left: 40px;
   padding-top: 30px;
   font-size: var(--font-size-normal);
   color: var(--text-color-white);
-}
-
-textarea:invalid {
-  border-color: var(--invalid-input);
-}
-
-textarea:valid {
-  border-color: var(--valid-input);
 }
 
 .main-form {
@@ -83,9 +74,137 @@ textarea:valid {
 
 .main-form__button {
   align-self: center;
+  margin-top: 30px;
 }
 
 ::placeholder {
   font-size: var(--font-size-normal);
   color: var(--text-color-white);
+}
+
+.error-message {
+  display: block;
+  color: var(--error-message-color);
+  font-size: var(--font-size-small);
+  text-align: center;
+  height: 10px;
+}
+
+/* Checkbox age validation */
+
+.age-validation {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.age-validation__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.age-validation label {
+  font-size: var(--font-size-medium);
+  color: var(--text-color-white);
+  margin-left: 15px;
+}
+
+.age-validation__checkbox {
+  width: 25px;
+  height: 25px;
+
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Select country */
+
+select {
+  appearance: none;
+}
+
+.custom-select-country {
+  position: relative;
+}
+
+.custom-select-country::after {
+  content: '▼';
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  right: 40px;
+  color: var(--text-color-white);
+  font-size: var(--font-size-normal);
+}
+
+.custom-select-country select option {
+  color: var(--text-color-black);
+}
+
+/* Radio buttons */
+
+.radio-title {
+  text-transform: uppercase;
+  font-size: var(--font-size-medium);
+  color: var(--text-color-white);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.radio-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: var(--font-size-medium);
+  color: var(--text-color-white);
+  height: 72px;
+}
+
+.radio-buttons input {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.radio-buttons__element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Range */
+
+.range-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: var(--font-size-large);
+  color: var(--text-color-white);
+  margin-bottom: 30px;
+}
+
+.range-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.range-labels {
+  font-size: var(--font-size-medium);
+  color: var(--text-color-white);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.range-labels span {
+  text-align: center;
+  width: 2%;
+}
+
+.rating-range {
+  width: 100%;
 }
