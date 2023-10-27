@@ -104,13 +104,24 @@ btnLeftBuildFeatures.addEventListener('click', () => {
 
 // Checking window size for Main Header Info block to avoid bug
 
-function checkWindowSize() {
-  if (window.innerWidth >= 800) {
-    MAIN_HEADER_INFO.forEach(item => (item.style.left = '0%'));
-  } else if (window.innerWidth <= 799) {
+let isMobile = window.innerWidth < 800;
+let currentIsMobile = isMobile;
+
+function applyMainHeaderStyles() {
+  if (currentIsMobile) {
     changeGalleryView(counterMainHeaderInfo, MAIN_HEADER_INFO);
+  } else {
+    MAIN_HEADER_INFO.forEach(item => (item.style.left = '0%'));
   }
 }
 
-window.addEventListener('load', checkWindowSize);
+function checkWindowSize() {
+  const newIsMobile = window.innerWidth < 800;
+  if (newIsMobile !== currentIsMobile) {
+    currentIsMobile = newIsMobile;
+    applyMainHeaderStyles();
+  }
+}
+
+window.addEventListener('load', applyMainHeaderStyles);
 window.addEventListener('resize', checkWindowSize);
