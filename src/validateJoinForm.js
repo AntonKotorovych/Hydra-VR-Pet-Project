@@ -171,6 +171,22 @@ joinForm.addEventListener('submit', event => {
   }
 
   const formIsValid = getIsFormValid();
+
+  if (!formIsValid) {
+    let elementWithError;
+    for (let firstInputWithError in formState) {
+      const curErrorElement = formState[firstInputWithError];
+      if (curErrorElement.error !== '') {
+        elementWithError = curErrorElement.node;
+        window.scrollTo({
+          top: elementWithError.offsetTop - 80,
+          behavior: 'smooth',
+        });
+        break;
+      }
+    }
+  }
+
   showFieldsErrors(formState);
 
   // Tracking inputs value changing
