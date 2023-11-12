@@ -6,7 +6,7 @@ const textRegExp = /^[a-zA-Z]{1,25}$/;
 const subjectRegExp = /^[A-Za-z ]{1,25}$/;
 const emailRegExp = /^[\w\.-]+@[\w\.-]+\.\w+$/;
 const phoneNumberRegExp = /\(\d{3}\) \d{3}-\d{4}/;
-const textareaRegExp = /^[a-zA-Z]{1,5000}$/;
+const textareaRegExp = /^[^<>а-яА-ЯёЁ]{1,5000}$/;
 
 function showFieldsErrors(userData) {
   for (const fieldName in userData) {
